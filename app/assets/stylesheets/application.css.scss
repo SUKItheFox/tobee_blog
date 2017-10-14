@@ -36,14 +36,14 @@ a {
 	left: 0;
 	top: 0;
 	height: 100%;
-	background: #f5f7f9;
+	background: #459dba;
 	padding: 7em 0 0 0;
-	border-right: 1px solid #d6dce0;
+	border-right: 1px solid black;
 	#logo {
-		width: 40px;
+		width: 15px;
 		position: absolute;
-		right: 3em;
-		top: 3em;
+		right: 8em;
+		top: 1em;
 	}
 	ul {
 		list-style: none;
@@ -53,16 +53,67 @@ a {
 			font-weight: 700;
 			font-size: 0.7em;
 			text-transform: uppercase;
-			color: #33acb7;
+			color: #FF9E17;
 		}
 		li {
 			padding: .5em 0;
 			a {
-				color: #9eafba;
+				color: #000000;
 				text-decoration: none;
 				transition: all .4s ease;
 				&:hover {
-					color: #33acb7;
+					color: #FF9E17;
+				}
+			}
+		}
+		.active {
+			a {
+				color: #33acb7;
+			}
+		}
+	}
+	.sign_in {
+		position: absolute;
+		right: 3em;
+		top: 80%;
+		font-size: .8em;
+		color: #000000;
+	}
+}
+
+#sidebar_right {
+	width: 250px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100%;
+	background: #459dba;
+	padding: 7em 0 0 0;
+	border-left: 1px solid black;
+	#logo {
+		width: 40px;
+		position: absolute;
+		right: 3em;
+		top: 3em;
+	}
+	ul {
+		list-style: none;
+		text-align: left;
+		padding-right: 3em;
+		.category {
+			font-weight: 700;
+			font-size: 0.7em;
+			text-transform: uppercase;
+			color: #FF9E17;
+		}
+		li {
+			padding: .5em 0;
+			a {
+				color: #000000;
+				text-decoration: none;
+				transition: all .4s ease;
+				&:hover {
+					color: #FF9E17;
 				}
 			}
 		}
@@ -80,6 +131,7 @@ a {
 		color: #9eafba;
 	}
 }
+
 
 .button {
 	outline: none;
@@ -106,24 +158,27 @@ a {
 
 #main_content {
 	margin-left: 250px;
+	margin-right: 250px;
 	#header {
 		padding: 1em 3em;
-		border-bottom: 1px solid #d6dce0;
-		background: #f5f7f9;
-		color: #9eafba;
+		border-bottom: 1px solid black;
+		background: #FF9E17;
+		color: #000000;
 		p {
-			display: inline;
+			display: inherit;
+			margin-left: 25px;
+			
 		}
 		a {
-			color: #9eafba;
+			color: #000000;
 			text-decoration: none;
 		}
 		.buttons {
-			float: right;
+			float: center;
 			margin-top: -6px;
 			.button {
 				font-size: .8em;
-				margin-left: .5em;
+				margin-left: 0.5em;
 			}
 		}
 	}

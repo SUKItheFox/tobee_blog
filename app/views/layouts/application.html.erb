@@ -18,18 +18,17 @@
   		</div>
 
   		<ul>
-  			<li class="category">Website</li>
+  			<li class="category">To Bee</li>
   			<li><%= link_to "Blog", root_path %></li>
   			<li><%= link_to "About Me", about_path %></li>
   		</ul>
 
   		<ul>
   			<li class="category">Social</li>
-  			<li><a href="https://github.com/SUKItheFox">Github</a></li>
-  			<li><a href="mailto:mari.michelson@gmail.com">Email</a></li> 			
+  			<li><a href="mailto:leviendeleeuw@protonmail.com">Email</a></li> 			
   		</ul>
       <% if !user_signed_in? %>
-  		  <p class="sign_in"><%= link_to "Admin Fox to Log In", new_user_session_path %></p>
+  		  <p class="sign_in"><%= link_to "Admin Login", new_user_session_path %></p>
       <% end %>
   	</div>
 
@@ -50,6 +49,25 @@
     			</div>
         <% end%>
   		</div>
+
+      <div id="sidebar_right">
+      <div id="logo">
+        <%= link_to root_path do %>
+          
+      <% end %>
+      </div>
+
+      <ul>
+        <li class="category"><%= link_to "Photography", root_path %></li>
+        <li class="category"><%= link_to "Music", root_path %></li>
+        <li class="category"><%= link_to "Permaculture", root_path %></li>
+        <li class="category"><%= link_to "Love", root_path %></li>
+        <li class="category"><%= link_to "Society", root_path %></li>
+    
+      </ul>
+
+      
+    </div>
 
   		<% flash.each do |name, msg| %>
 			<%= content_tag(:div, msg, class: "alert") %>
