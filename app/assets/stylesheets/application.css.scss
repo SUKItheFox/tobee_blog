@@ -36,24 +36,25 @@ a {
 	left: 0;
 	top: 0;
 	height: 100%;
-	background: #459dba;
+	background: #FF9E17;
 	padding: 7em 0 0 0;
 	border-right: 1px solid black;
 	#logo {
-		width: 15px;
+		width: 22px;
+		height: 25px;
 		position: absolute;
-		right: 8em;
+		right: 13em;
 		top: 1em;
 	}
 	ul {
 		list-style: none;
-		text-align: right;
+		text-align: left;
 		padding-right: 3em;
 		.category {
 			font-weight: 700;
 			font-size: 0.7em;
 			text-transform: uppercase;
-			color: #FF9E17;
+			color: #cafffe;
 		}
 		li {
 			padding: .5em 0;
@@ -62,7 +63,7 @@ a {
 				text-decoration: none;
 				transition: all .4s ease;
 				&:hover {
-					color: #FF9E17;
+					color: #cafffe;
 				}
 			}
 		}
@@ -72,13 +73,90 @@ a {
 			}
 		}
 	}
+
+	.buttons {
+			float: left;
+			margin-top: 580px;
+			.button {
+				font-size: .8em;
+				margin-left: 0.5em;
+			}
+	}		
 	.sign_in {
 		position: absolute;
-		right: 3em;
+		left: 3em;
 		top: 80%;
 		font-size: .8em;
 		color: #000000;
 	}
+}
+
+#footer {
+	background: #252525;
+	margin: 0;
+	padding: 36px 0 42px;
+}
+#footer div {
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+	width: 960px;
+}
+#footer div p {
+	color: #fff;
+	float: left;
+	line-height: 44px;
+	margin: 0 0 0 10px;
+	padding: 0;
+}
+#footer div ul {
+	display: block;
+	float: right;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 256px;
+}
+#footer div ul li {
+	display: block;
+	float: left;
+	list-style: none;
+	margin: 0 10px;
+	padding: 0;
+	width: 44px;
+}
+#footer div ul li a {
+	background: url(../images/icons.jpg) no-repeat 0 0;
+	display: block;
+	height: 44px;
+	margin: 0;
+	padding: 0;
+	text-indent: -99999px;
+	width: 44px;
+}
+#footer div ul li #twitter {
+	background-position: 0 0;
+}
+#footer div ul li #twitter:hover {
+	background-position: -44px 0;
+}
+#footer div ul li #facebook {
+	background-position: 0 -44px;
+}
+#footer div ul li #facebook:hover {
+	background-position: -44px -44px;
+}
+#footer div ul li #googleplus {
+	background-position: 0 -88px;
+}
+#footer div ul li #googleplus:hover {
+	background-position: -44px -88px;
+}
+#footer div ul li #pinterest {
+	background-position: 0 -132px;
+}
+#footer div ul li #pinterest:hover {
+	background-position: -44px -132px;
 }
 
 #sidebar_right {
@@ -87,7 +165,7 @@ a {
 	right: 0;
 	top: 0;
 	height: 100%;
-	background: #459dba;
+	background: #FF9E17;
 	padding: 7em 0 0 0;
 	border-left: 1px solid black;
 	#logo {
@@ -104,7 +182,7 @@ a {
 			font-weight: 700;
 			font-size: 0.7em;
 			text-transform: uppercase;
-			color: #FF9E17;
+			color: #cafffe;
 		}
 		li {
 			padding: .5em 0;
@@ -113,7 +191,7 @@ a {
 				text-decoration: none;
 				transition: all .4s ease;
 				&:hover {
-					color: #FF9E17;
+					color: #cafffe;
 				}
 			}
 		}
@@ -159,33 +237,24 @@ a {
 #main_content {
 	margin-left: 250px;
 	margin-right: 250px;
-	#header {
-		padding: 1em 3em;
-		border-bottom: 1px solid black;
-		background: #FF9E17;
-		color: #000000;
-		p {
-			display: inherit;
-			margin-left: 25px;
-			
-		}
-		a {
-			color: #000000;
-			text-decoration: none;
-		}
-		.buttons {
-			float: center;
-			margin-top: -6px;
-			.button {
-				font-size: .8em;
-				margin-left: 0.5em;
-			}
-		}
-	}
+	
 	.post_wrapper {
 		padding: 3em;
 		border-bottom: 1px solid #d6dce0;
 		.title {
+			margin: 0;
+			a {
+				font-weight: 500;
+				text-decoration: none;
+				color: #2a2f35;
+				font-size: 1.5em;
+				&:hover {
+					color: #33acb7;
+				}
+			}
+		}
+
+		.body {
 			margin: 0;
 			a {
 				font-weight: 500;
@@ -318,4 +387,6 @@ a {
 			color: #33acb7;
 		}
 	}
+
 }
+

@@ -1,6 +1,6 @@
 <div id="post_content">
 	<h1 class="title">
-		<%= @post.title %>
+		<%= raw @post.title %>
 	</h1>
 
 	<p class="date">
@@ -12,7 +12,7 @@
 	</p>
 
 	<p class="body">
-		<%= @post.body %>
+		<%= raw @post.body %>
 	</p>
 
 	<div id="comments">
