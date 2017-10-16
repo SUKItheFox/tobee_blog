@@ -8,13 +8,15 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+   
   </head>
 
   <body>
   	<div id="sidebar">
   		<div id="logo">
   			<%= link_to root_path do %>
-  				<%= image_tag "TOBEE logo 280.png"%>
+  				<%= image_tag "TOBEE logo 280.png" %>
 			<% end %>
   		</div>
 
@@ -31,9 +33,11 @@
         <li> <%= link_to "Lifestyle" %></li>
       </ul>
 
+
+
       <% if user_signed_in? %>
           <div class="buttons">
-            <button class="button"><%= link_to "New Post", new_post_path %></button>
+            <button class="button"><%= link_to "Make a Post", new_post_path %></button>
             <button class="button"><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></button>
           </div>
       <% end%>
@@ -45,14 +49,18 @@
   	</div>
 
   	<div id="main_content">
+
+    <div id="header"> 
+    </div>
+        
   		
 
      <div id="sidebar_right">
-      <div id="logo">
-        <%= link_to root_path do %>
-          
-      <% end %>
-      </div>
+
+      <p>&copy; 2017 by SUKItheFox. All rights reserved.</p>
+      
+
+   
 
 
       
@@ -61,6 +69,7 @@
 
       
     </div>
+    
 
   		<% flash.each do |name, msg| %>
 			<%= content_tag(:div, msg, class: "alert") %>

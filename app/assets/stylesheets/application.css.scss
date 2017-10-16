@@ -30,6 +30,8 @@ a {
 	color: inherit;
 }
 
+
+
 #sidebar {
 	width: 250px;
 	position: fixed;
@@ -38,13 +40,17 @@ a {
 	height: 100%;
 	background: #FF9E17;
 	padding: 7em 0 0 0;
-	border-right: 1px solid black;
+	border-right: 1px solid #252525;
+	z-index: 90;
 	#logo {
+		overflow: visible;
 		width: 22px;
 		height: 25px;
-		position: absolute;
-		right: 12.5em;
-		top: -4em;
+		position: relative;
+		right: -2em;
+		top: -12em;
+		z-index: 100;
+
 	}
 	ul {
 		list-style: none;
@@ -59,7 +65,7 @@ a {
 		li {
 			padding: .5em 0;
 			a {
-				color: #000000;
+				color: #252525;
 				text-decoration: none;
 				transition: all .4s ease;
 				&:hover {
@@ -87,90 +93,49 @@ a {
 		left: 3em;
 		top: 80%;
 		font-size: .8em;
-		color: #000000;
+		color: #252525;
 	}
 }
 
-#footer {
-	background: #252525;
-	margin: 0;
-	padding: 36px 0 42px;
-}
-#footer div {
-	margin: 0 auto;
-	overflow: hidden;
-	padding: 0;
-	width: 960px;
-}
-#footer div p {
-	color: #fff;
-	float: left;
-	line-height: 44px;
-	margin: 0 0 0 10px;
-	padding: 0;
-}
-#footer div ul {
-	display: block;
-	float: right;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-	width: 256px;
-}
-#footer div ul li {
-	display: block;
-	float: left;
-	list-style: none;
-	margin: 0 10px;
-	padding: 0;
-	width: 44px;
-}
-#footer div ul li a {
-	background: url(../images/icons.jpg) no-repeat 0 0;
-	display: block;
-	height: 44px;
-	margin: 0;
-	padding: 0;
-	text-indent: -99999px;
-	width: 44px;
-}
-#footer div ul li #twitter {
-	background-position: 0 0;
-}
-#footer div ul li #twitter:hover {
-	background-position: -44px 0;
-}
-#footer div ul li #facebook {
-	background-position: 0 -44px;
-}
-#footer div ul li #facebook:hover {
-	background-position: -44px -44px;
-}
-#footer div ul li #googleplus {
-	background-position: 0 -88px;
-}
-#footer div ul li #googleplus:hover {
-	background-position: -44px -88px;
-}
-#footer div ul li #pinterest {
-	background-position: 0 -132px;
-}
-#footer div ul li #pinterest:hover {
-	background-position: -44px -132px;
-}
+#header {
+	     
+		position: fixed;
+		display: initial;
+		width: 1420px;
+		background: #252525;
+		opacity: 0.95;
+		margin: 0;
+		padding: 46px 0 52px;
+		z-index: 10;
+		
+
+    }
+
 
 #sidebar_right {
 	width: 250px;
 	position: fixed;
+
 	right: 0;
 	top: 0;
 	height: 100%;
 	background: #FF9E17;
 	padding: 7em 0 0 0;
-	border-left: 1px solid black;
+	border-left: 1px solid #252525;
+	z-index: 90;
+
+	p {
+		position: fixed;
+		top: 990px;
+		font-weight: 700;
+			font-size: 0.8em;
+			text-align: center;
+			color: #252525;
+
+	}
 	#logo {
 		width: 40px;
-		position: absolute;
+		position: fixed;
 		right: 3em;
 		top: 3em;
 	}
@@ -237,6 +202,8 @@ a {
 #main_content {
 	margin-left: 250px;
 	margin-right: 250px;
+
+	
 	
 	.post_wrapper {
 		padding: 3em;
@@ -387,6 +354,7 @@ a {
 			color: #33acb7;
 		}
 	}
+	
 
 }
 
