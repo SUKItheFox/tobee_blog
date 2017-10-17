@@ -21,6 +21,11 @@
 		<%= f.label :body %><br>
 		<%= f.cktext_area :body %>
 	</p>	
+
+	<p> 
+		<%= f.select :category, Category.all, :prompt => "Select One" %>
+
+	</p>
 	
 	
 

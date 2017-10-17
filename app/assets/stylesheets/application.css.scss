@@ -43,39 +43,50 @@ a {
 	border-right: 1px solid #252525;
 	z-index: 90;
 	#logo {
-		overflow: visible;
-		width: 22px;
-		height: 25px;
-		position: relative;
-		right: -2em;
-		top: -12em;
-		z-index: 100;
+		
+		width: 3px;
+		height: 3px;
+		position: absolute;
+		right: 13.5em;
+		top: -4em;
+		z-index: 95;
+		
 
 	}
 	ul {
 		list-style: none;
+		position: relative;
 		text-align: left;
 		padding-right: 3em;
+		z-index: 100;
 		.category {
 			font-weight: 700;
 			font-size: 0.7em;
 			text-transform: uppercase;
 			color: #cafffe;
+			z-index: 100;
 		}
 		li {
 			padding: .5em 0;
+			z-index: 100;
+			position: relative;
 			a {
 				color: #252525;
 				text-decoration: none;
 				transition: all .4s ease;
+				z-index: 100;
 				&:hover {
 					color: #cafffe;
+					position:static;
+					z-index: 100;
 				}
 			}
 		}
 		.active {
 			a {
 				color: #33acb7;
+				z-index: 100;
+				position:static;
 			}
 		}
 	}
@@ -83,9 +94,11 @@ a {
 	.buttons {
 			float: left;
 			margin-top: 580px;
+			z-index: 100;
 			.button {
 				font-size: .8em;
 				margin-left: 0.5em;
+				z-index: 100;
 			}
 	}		
 	.sign_in {
@@ -94,13 +107,14 @@ a {
 		top: 80%;
 		font-size: .8em;
 		color: #252525;
+		z-index: 100;
 	}
 }
 
 #header {
 	     
 		position: fixed;
-		display: initial;
+		top: 0;
 		width: 1420px;
 		background: #252525;
 		opacity: 0.95;
@@ -143,6 +157,7 @@ a {
 		list-style: none;
 		text-align: left;
 		padding-right: 3em;
+		z-index: 101;
 		.category {
 			font-weight: 700;
 			font-size: 0.7em;
@@ -151,6 +166,7 @@ a {
 		}
 		li {
 			padding: .5em 0;
+
 			a {
 				color: #000000;
 				text-decoration: none;
@@ -202,6 +218,7 @@ a {
 #main_content {
 	margin-left: 250px;
 	margin-right: 250px;
+	margin-top: 100px;
 
 	
 	
