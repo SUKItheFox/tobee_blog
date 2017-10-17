@@ -47,8 +47,8 @@
 
       <% if user_signed_in? %>
           <div class="buttons">
-            <button class="button"><%= link_to "Make a Post", new_post_path %></button>
-            <button class="button"><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></button>
+            <p class="button"><%= link_to "Make a Post", new_post_path %></p>
+            <p class="button"><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></p>
           </div>
       <% end%>
 
