@@ -1,13 +1,14 @@
 class CategoryController < ApplicationController
 
 	def index
-        @categories = Category.all.order("created_at DESC")
+        @all_categories = Category.find(:all, :order=>"name")
     end
     def new
         @category = Category.new
+        @all.categories = Category.find(:all, :order=> "name")
     end
     def create
-        @category = Workcategory.new(post_params)
+        @category = Category.new(post_params)
         if @category.save
             flash[:notice] = "Category created"
             redirect_to(:action=>'index', :category_id => @category.id)
@@ -18,7 +19,10 @@ class CategoryController < ApplicationController
     end
 
     def edit
+        @category = Category.find(params[:id])
+        @all_categories = Category.find(:all, :order=>"name")
     end
+
 
     def update
     end

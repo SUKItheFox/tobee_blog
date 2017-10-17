@@ -23,8 +23,9 @@
 	</p>	
 
 	<p> 
-		<%= f.select :category, Category.all, :prompt => "Select One" %>
-
+			<%= f.label :categories %> <br> />
+		<%= f.collection_select :category_ids, @all_categories, :id, :long_name, {}, { :multiple => true } %>
+		
 	</p>
 	
 	
