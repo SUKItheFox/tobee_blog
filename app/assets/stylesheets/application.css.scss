@@ -37,6 +37,7 @@ a {
 	position: fixed;
 	left: 0;
 	top: 0;
+	bottom:0;
 	height: 100%;
 	background: #FF9E17;
 	padding: 7em 0 0 0;
@@ -87,15 +88,17 @@ a {
 			a {
 				color: #33acb7;
 				z-index: 100;
-				position:static;
+				position: static;
 			}
 		}
 	}
 
 	.buttons {
+			position: absolute;
 			float: left;
-			margin-top: 580px;
+			bottom: 122px;
 			z-index: 100;
+			
 			.button {
 				font-size: .8em;
 				margin-left: 0.5em;
@@ -103,9 +106,9 @@ a {
 			}
 	}		
 	.sign_in {
-		position: fixed;
+		position: absolute;
 		left: 7.7em;
-		top: 1040px;
+		bottom: 122px;
 		font-size: .8em;
 		color: #252525;
 		z-index: 100;
@@ -137,11 +140,11 @@ a {
 	background: #FF9E17;
 	padding: 7em 0 0 0;
 	border-left: 1px solid #252525;
-	z-index: 90;
+	z-index: 80;
 
 	p {
-		position: fixed;
-		top: 1040px;
+		position: absolute;
+		bottom: 122px;
 		font-weight: 700;
 			font-size: 0.8em;
 			text-align: center;
@@ -185,8 +188,10 @@ a {
 	.post_wrapper {
 		padding: 3em;
 		border-bottom: 1px solid #d6dce0;
+
 		.title {
 			margin: 0;
+
 			a {
 				font-weight: 500;
 				text-decoration: none;

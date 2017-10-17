@@ -2,8 +2,7 @@
 
 <% @posts.each do |post| %>
   <div class="post_wrapper">
-    <p class="title"><%= link_to post.title, post %></p>
-    <p class="body"><%= truncate(post.body, length:300) %></p>
+  	<p class="title"><%= link_to raw(post.title), post %></p>
     <p class="date"><%= time_ago_in_words(post.created_at) %></p>
   </div>
 <% end %>

@@ -25,7 +25,7 @@
 	<p> 
 			<%= f.label :categories %> <br /> 
 			<br/>
-		<%= f.collection_select :category_id, Category.all, :id, :name, { prompt: '?' } %>
+		<%= f.collection_select :category_id, Category.all, :id, :name, { prompt: '?' }, input_html: { class: "dropdown-toggle" } %>
 		
 	</p>
 	
