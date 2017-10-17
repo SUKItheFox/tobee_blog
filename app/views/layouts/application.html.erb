@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -17,8 +18,14 @@
   		<div id="logo">
   			<%= link_to root_path do %>
   			   <%= image_tag "TOBEE logo 280.png" %>
+
+
 			<% end %>
   		</div>
+
+
+      
+      
 
   	 <ul>
   		  <li class="category"></li>
@@ -27,10 +34,13 @@
   	 </ul>
 
       <ul>
-        <li class="category"><%= link_to "Categories", categories_path %></li>
-        <li><%= link_to "Photography", categories_path %></li>
-        <li><%= link_to "Music" %></li>
-        <li> <%= link_to "Lifestyle" %></li>
+        <li class="category"><%= link_to "Categories", posts_path %></li>
+        <li>
+        <br/>
+        <% Category.all.each do |category| %> 
+            <%= link_to category.name, posts_path(category: category.name) %>
+        <% end %>
+        </li>
       </ul>
 
 
@@ -58,17 +68,12 @@
      <div id="sidebar_right">
 
       <p>&copy; 2017 by SUKItheFox. All rights reserved.</p>
-      
-
-   
-
-
-      
-
- 
+       
 
       
     </div>
+      
+
     
 
   		<% flash.each do |name, msg| %>
