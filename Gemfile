@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'jquery', '~> 0.0.1'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'paperclip'

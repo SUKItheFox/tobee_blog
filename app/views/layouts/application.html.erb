@@ -2,30 +2,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <title>To Bee Blog</title>
     <script src="/home/bumblebee/tobee_blog/blog/app/models/ckeditor/ckeditor.js"></script>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    <%= javascript_include_tag 'application', 'logo', 'data-turbolinks-track': 'reload' %>
+    
 
   </head>
 
   <body>
-  	<div id="sidebar">
-      
-    		<div id="logo">
-
-          <img src="tobee_blog/blog/app/assets/images/TOBEE logo 280.png" />
-          
-        </div>
-      
-    		
+  	<div id="sidebar">      
+    	<div id="logo">          
+        <%= link_to root_path do %>
+           <%= image_tag "TOBEE logo 280.png", :class => "style_image"  %>
 
 
-      
+        <% end %>
+      </div>
+           
       
     <nav>
     	 <ul>
@@ -45,8 +42,6 @@
         </ul>
     </nav>    
 
-
-
       <% if user_signed_in? %>
           <div class="buttons">
             <p class="button"><%= link_to "Make a Post", new_post_path %></p>
@@ -63,21 +58,15 @@
   	<div id="main_content">
 
     <div id="header"> 
-    </div>
-        
+    </div>       
   		
 
     <div id="sidebar_right">
 
       <p>&copy; 2017 by SUKItheFox. All rights reserved.</p>
        
-
-      
     </div>
       
-
-    
-
   		<% flash.each do |name, msg| %>
 			<%= content_tag(:div, msg, class: "alert") %>
   		<% end %>
