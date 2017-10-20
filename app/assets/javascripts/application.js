@@ -11,7 +11,15 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
 //= require turbolinks
 //= require ckeditor/init
 //= require_tree .
 
+$(document).on('scroll', function() {
+  if ($(document).scrollTop() >= 10) {
+    $('.logo img').css('width', '50px');
+  } else {
+    $('.logo img').css('width', '');
+  }
+});

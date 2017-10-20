@@ -15,33 +15,35 @@
 
   <body>
   	<div id="sidebar">
-  		<div id="logo">
-  			<%= link_to root_path do %>
-  			   <%= image_tag "TOBEE logo 280.png" %>
+      
+    		<div id="logo">
 
-
-			<% end %>
-  		</div>
+          <img src="tobee_blog/blog/app/assets/images/TOBEE logo 280.png" />
+          
+        </div>
+      
+    		
 
 
       
       
+    <nav>
+    	 <ul>
+    		  <li class="category"></li>
+    		  <li><%= link_to "Home", root_path %></li>
+    		  <li><%= link_to "About Me", about_path %></li>
+    	 </ul>
 
-  	 <ul>
-  		  <li class="category"></li>
-  		  <li><%= link_to "Home", root_path %></li>
-  		  <li><%= link_to "About Me", about_path %></li>
-  	 </ul>
-
-      <ul>
-        <li class="category"><%= link_to "Categories", posts_path %></li>
-        <li>
-        <br/>
-        <% Category.all.each do |category| %> 
-            <%= link_to category.name, posts_path(category: category.name) %>
-        <% end %>
-        </li>
-      </ul>
+        <ul>
+          <li class="category"><%= link_to "Categories", posts_path %></li>
+          <li>
+          <br/>
+          <% Category.all.each do |category| %> 
+              <%= link_to category.name, posts_path(category: category.name) %>
+          <% end %>
+          </li>
+        </ul>
+    </nav>    
 
 
 

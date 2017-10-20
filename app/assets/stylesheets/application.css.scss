@@ -44,16 +44,24 @@ a {
 	border-right: 1px solid #252525;
 	z-index: 90;
 	#logo {
-		
-		width: 3px;
-		height: 3px;
-		position: absolute;
-		right: 13.5em;
-		top: -4em;
-		z-index: 95;
-		
 
-	}
+		width: 20px;
+		height: 20px;
+	
+
+		#img{
+			
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			right: 13.5em;
+			top: -4em;
+			z-index: 95;
+			
+
+		}
+	}	
+
 	ul {
 		list-style: none;
 		position: relative;
@@ -188,7 +196,7 @@ a {
 	
 	
 	.post_wrapper {
-		padding: 3em;
+		
 		border-bottom: 1px solid #d6dce0;
 
 		.title {
@@ -223,7 +231,8 @@ a {
 		}
 	}
 	#post_content {
-		padding: 1em 3em;
+		padding: 8em 3em;
+
 		.title {
 			font-weight: 500;
 			text-decoration: none;
@@ -310,6 +319,7 @@ a {
 	}
 	.links {
 		margin: 2em 0;
+
 	}
 	input[type="text"], input[type="email"], input[type="password"], textarea {
 		width: 90%;
