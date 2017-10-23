@@ -7,6 +7,10 @@ class CategoryController < ApplicationController
         @category = Category.new
         @all.categories = Category.find(:all, :order=> "name")
     end
+
+    
+     
+
     def create
         @category = Category.new(post_params)
         if @category.save

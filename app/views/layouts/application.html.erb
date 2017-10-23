@@ -4,43 +4,44 @@
   <head>
     <title>To Bee Blog</title>
     <script src="/home/bumblebee/tobee_blog/blog/app/models/ckeditor/ckeditor.js"></script>
+    <script src="path/to/vanilla.js"></script>
+    <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
-    <%= javascript_include_tag 'application', 'logo', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'logo', 'navigation', 'categories_popup', 'data-turbolinks-track': 'reload' %>
     
 
   </head>
 
   <body>
-  	<div id="sidebar">      
-    	<div id="logo">          
-        <%= link_to root_path do %>
-           <%= image_tag "TOBEE logo 280.png", :class => "style_image"  %>
+  	<div id="sidebar">   
+        <nav>   
+        	<div id="logo">          
+            <%= link_to root_path do %>
+               <%= image_tag "TOBEE logo 280.png", :class => "style_image"  %>
 
 
-        <% end %>
-      </div>
+            <% end %>
+          </div>
            
       
-    <nav>
-    	 <ul>
-    		  <li class="category"></li>
-    		  <li><%= link_to "Home", root_path %></li>
-    		  <li><%= link_to "About Me", about_path %></li>
-    	 </ul>
-
-        <ul>
-          <li class="category"><%= link_to "Categories", posts_path %></li>
-          <li>
-          <br/>
-          <% Category.all.each do |category| %> 
-              <%= link_to category.name, posts_path(category: category.name) %>
-          <% end %>
-          </li>
-        </ul>
-    </nav>    
+          
+      	 <ul id="navBar">
+      		  <li class="category"></li>
+      		  <li><%= link_to "Home", root_path %></li>
+      		  <li><%= link_to "About Me", about_path %></li>
+          
+            <a href="javascript:void(0)" id="category_menu">categories</a>
+            <li class= "categories_links">
+            <% Category.all.each do |category| %> 
+                <%= link_to category.name, posts_path(category: category.name) %>
+            <% end %>
+            </li>
+          </ul>
+        </nav>
+    
 
       <% if user_signed_in? %>
           <div class="buttons">
@@ -56,22 +57,44 @@
   	</div>
 
   	<div id="main_content">
+    
 
-    <div id="header"> 
-    </div>       
-  		
+      <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert") %>
+      <% end %>
+
+      <%= yield %>
+          
+  	</div>	
 
     <div id="sidebar_right">
 
       <p>&copy; 2017 by SUKItheFox. All rights reserved.</p>
        
-    </div>
+    
       
-  		<% flash.each do |name, msg| %>
-			<%= content_tag(:div, msg, class: "alert") %>
-  		<% end %>
-
-  		<%= yield %>
+  		
   	</div>
+
+    <div id="header"> 
+      <li>
+        <% if @category_id == 1 %>
+        <p> Lifestyle </p>
+
+        <% elsif @category_id == 2 %> 
+        <p>  Photography </p>
+
+        <% elsif @category_id == 3 %>
+        <p> Music </p>
+
+        <% elsif @category_id == 4 %>
+        <p> Literature </p>
+
+        <% else %>
+        <p> </p>
+                
+        <% end %>
+      </li>        
+    </div> 
   </body>
 </html>

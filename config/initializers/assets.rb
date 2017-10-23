@@ -18,3 +18,9 @@ Rails.application.config.assets.precompile += %w( ckeditor/*)
 
 #Line for logo.js
  Rails.application.config.assets.precompile += %w( logo.js )
+
+#Line for navigation.js
+Rails.application.config.assets.precompile += %w( navigation.js )
+
+#Line for categories_popup.js
+Rails.application.config.assets.precompile += %w( categories_popup.js )
