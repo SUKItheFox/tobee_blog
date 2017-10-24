@@ -5,9 +5,10 @@
     <title>To Bee Blog</title>
     <script src="/home/bumblebee/tobee_blog/blog/app/models/ckeditor/ckeditor.js"></script>
     <script src="path/to/vanilla.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
     <%= csrf_meta_tags %>
-
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
     <%= javascript_include_tag 'application', 'logo', 'navigation', 'categories_popup', 'data-turbolinks-track': 'reload' %>
@@ -35,9 +36,13 @@
           
             <a href="javascript:void(0)" id="category_menu">categories</a>
             <li class= "categories_links">
-            <% Category.all.each do |category| %> 
-                <%= link_to category.name, posts_path(category: category.name) %>
-            <% end %>
+              <li id="menu-secondary">
+                <li>
+                  <% Category.all.each do |category| %> 
+                      <%= link_to category.name, posts_path(category: category.name) %>
+                  <% end %>
+                </li>  
+              </li>    
             </li>
           </ul>
         </nav>

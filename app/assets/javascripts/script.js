@@ -1,24 +1,27 @@
 clic = 0;
 
-jQuery('#menu-responsive').click(function(){
+jQuery('#category_menu').click(function(){
 
         if(clic == 0){
-          jQuery('#menu-primary').css({
+          jQuery('#menu-secondary').css({
                 'opacity':1,
                 'margin':'10px 0'
             });
 
-            jQuery('.arrow-up').css('display','block');
+            jQuery('').css('display','block');
             clic = 1;
         }else{
-            jQuery('#menu-primary').css(
+            jQuery('#menu-secondary').css(
                 {
                     'opacity':0,
                     'margin':'-400px 0'
                 }
             );
-            jQuery('.arrow-up').css('display','none')
+            jQuery('').css('display','none')
             clic = 0;
         }
         return false;
     })
+
+
+
