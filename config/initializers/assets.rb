@@ -13,8 +13,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
-# Line needed for ckeditor
-Rails.application.config.assets.precompile += %w( ckeditor/*)
+
 
 #Line for logo.js
  Rails.application.config.assets.precompile += %w( logo.js )
