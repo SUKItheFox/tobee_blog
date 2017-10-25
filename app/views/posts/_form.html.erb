@@ -1,41 +1,43 @@
+
+<script type="text/javascript" src="/assets/tinymce.js">
 <%= tinymce_assets %>
 
 
-	<%= form_for @post do |f| %>
-		<% if @post.errors.any? %>
-			<div id="errors">
-				<h2><%= pluralize(@post.errors.count, "error") %> prevented this post from saving</h2>
-				<ul>
-					<% @post.errors.full_messages.each do |msg| %>
-						<li><%= msg %></li>
-					<% end %>
-				</ul>
-			</div>
-		<% end %>
-		<p>
-			<%= f.label :title %> <br />
-			<%= f.text_area :title, class: "tinymce" %>
-			
-		</p>
+<%= form_for @post do |f| %>
+	<% if @post.errors.any? %>
+		<div id="errors">
+			<h2><%= pluralize(@post.errors.count, "error") %> prevented this post from saving</h2>
+			<ul>
+				<% @post.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<p>
+		<%= f.label :title %> <br />
+		<%= f.text_area :title, class: "tinymce" %>
+		
+	</p>
 
-		<p>
-			<%= f.label :body %><br />
-			<%= f.text_area :body, class: "tinymce", :rows => 40, :cols => 120 %>
-			
-		</p>	
+	<p>
+		<%= f.label :body %><br />
+		<%= f.text_area :body, class: "tinymce" %>
+	</p>	
 
-		<p> 
-				<%= f.label :categories %> <br /> 
-				<br/>
-			<%= f.collection_select :category_id, Category.all, :id, :name, { prompt: '?' }, input_html: { class: "dropdown-toggle" } %>
+	<p> 
+			<%= f.label :categories %> <br /> 
+			<br/>
+		<%= f.collection_select :category_id, Category.all, :id, :name, { prompt: '?' }, input_html: { class: "dropdown-toggle" } %>
 			
-		</p>
+	</p>
 		
 		
 
-		<p>
-			<%= f.submit %>
-		</p>
-	<% end %>	
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>	
 
 <%= tinymce :alternate %>
+</script>

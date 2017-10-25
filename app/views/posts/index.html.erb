@@ -1,8 +1,8 @@
 
+<script type="text/javascript" src="/assets/tinymce.js"></script>
 
 <% @posts.each do |post| %>
   <div class="post_wrapper">
-  	<p class="title"><%= link_to raw(post.title), post %></p>
-    <p class="date"><%= time_ago_in_words(post.created_at) %></p>
+  	<p class="title"><%= link_to raw(post.title), post %></p>    
   </div>
 <% end %>
