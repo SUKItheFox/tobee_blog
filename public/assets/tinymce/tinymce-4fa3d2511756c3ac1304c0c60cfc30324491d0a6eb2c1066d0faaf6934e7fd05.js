@@ -43972,3 +43972,7 @@ define(
 
 dem('tinymce.core.api.Main')();
 })();
+
+beforeClose: function() {
+            tinyMCE.remove();
+ }
