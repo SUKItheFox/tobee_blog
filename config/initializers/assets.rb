@@ -20,5 +20,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 #Line for navigation.js
 Rails.application.config.assets.precompile += %w( navigation.js )
 
-#Line for categories_popup.js
-Rails.application.config.assets.precompile += %w( categories_popup.js )
+
