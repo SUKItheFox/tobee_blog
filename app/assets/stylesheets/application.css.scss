@@ -44,7 +44,7 @@ a {
 	
 	.post_wrapper {		
 		
-		margin-top: 3em;
+		margin-top: 8em;
 		self-align: center;
 		
 
@@ -194,9 +194,9 @@ a {
 		background: transparent;
 		border: 1px solid #d6dce0;
 		padding: .5em 1.5em;
-		font-size: 1.1em;
+		font-size: 1em;
 		border-radius: 1.5em;
-		margin-left: .5em;
+		margin-left: 0em;
 		&:hover {
 			border: 1px solid #33acb7;
 			color: #33acb7;
@@ -264,59 +264,51 @@ a {
 			}
 
 
-			
-			.categories_links {
-			    position: fixed;
-				left: 50%;
-				-webkit-transform: translate(-50%);
-				-moz-transform: translate(-50%);
-				-ms-transform: translate(-50%);
-				-o-transform: translate(-50%);
-				transform: translate(-50%);
-				width: 40%;
-				top:20%;
-				z-index: 999;
-			}
-
-			#category_menu {
-				margin-left: 30px;
-				position: fixed;
-				color: #cafffe;
-				transform: translate(-50%,-10%);
-				z-index: 111;					
-			}
-
-			#menu-secondary {
-				padding: 0em 8em;
+			.category_style {
+				display: inline-block;
+				padding: 0em 2em;
 				list-style: none;
-				margin: 20px 0;
 				-ms-transform:rotate(90deg);
 				-moz-transform:rotate(90deg);
 				-webkit-transform:rotate(90deg);
 				-o-transform:rotate(90deg);
-				z-index: 109;
-				border-radius: 10px; 
-				opacity: 0;
-			}	
 
-			#menu-secondary li {
-			  border-bottom: 1px solid #cccccc;
 			}
-			#menu-secondary li:first-child {
-			  border-top-left-radius: 10px;
-			  border-top-right-radius: 10px;
+			.onclick-menu {
+			    position: relative;
+			    display: inline;
+			    cursor: pointer;
+
+			    li {
+			    	top: 0.1em;
+			    	font-size: 1.2em;
+			    	word-spacing: 14px;
+			    }
 			}
-			#menu-secondary li:last-child {
-			  border-bottom-left-radius: 10px;
-			  border-bottom-right-radius: 10px;
-			  border-bottom: 0;
+			.onclick-menu:before {
+			    content: "categories";
+			    margin-left: 1.8em;
 			}
-			
-			#menu-secondary li:hover {
-			  background: #770E77;
+			.onclick-menu:focus {
+			    /* clicking on label should toggle the menu */
+			    pointer-events: none;
 			}
-			#menu-secondary li:hover a {
-			  color: #ffffff;
+			.onclick-menu:focus .onclick-menu-content {
+			    /*  opacity is 1 in opened state (see below) */
+			    opacity: 1;
+			    visibility: visible;
+
+			    /* don't let pointer-events affect descendant elements */
+			    pointer-events: auto;
+			}
+			.onclick-menu-content {
+			    position: absolute;
+			    z-index: 1;
+
+			    /* use opacity to fake immediate toggle */
+			    opacity: 0;
+			    visibility: hidden;
+			    transition: visibility 1s;
 			}
 			
 			  
@@ -413,7 +405,7 @@ a {
 
 	p {
 		position: absolute;
-		bottom: 122px;
+		bottom: 1px;
 		font-weight: 700;
 			font-size: 0.8em;
 			text-align: center;

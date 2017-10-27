@@ -3,14 +3,14 @@
 <html>
   <head>
     <title>To Bee Blog</title>
-    <script type="text/javascript" src="/assets/tinymce.js"></script>
+    <script type="text/javascript" src="/assets/tinymce/js/tinymce/tinymce.js"></script>
     <script src="path/to/vanilla.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
     <%= csrf_meta_tags %>    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
-    <%= javascript_include_tag 'application', 'logo', 'navigation', 'categories_popup', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'logo', 'navigation', 'data-turbolinks-track': 'reload' %>
     
 
   </head>
@@ -33,16 +33,15 @@
       		  <li><%= link_to "Home", root_path %></li>
       		  <li><%= link_to "About Me", about_path %></li>
           
-            <a href="javascript:void(0)" id="category_menu">categories</a>
-            <li class= "categories_links">
-              <li id="menu-secondary">
+            <div tabindex="0" class="onclick-menu">
+              <ul class= "onclick-menu-content">                
                 <li>
                   <% Category.all.each do |category| %> 
-                      <%= link_to category.name, posts_path(category: category.name) %>
+                    <li class="category_style"> <%= link_to category.name, posts_path(category: category.name) %></li>
                   <% end %>
-                </li>  
-              </li>    
-            </li>
+                </li>                    
+              </ul>
+            </div>
           </ul>
         </nav>
     

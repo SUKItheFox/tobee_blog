@@ -1,4 +1,4 @@
-clic = 0;
+/*clic = 0;
 
 jQuery('#category_menu').click(function(){
 
