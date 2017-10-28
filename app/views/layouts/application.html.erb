@@ -7,17 +7,39 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link href='https://fonts.googleapis.com/css?family=Autour One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cutive Mono' rel='stylesheet'>
     <%= csrf_meta_tags %>    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> true  %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
     <%= javascript_include_tag 'application', 'logo', 'navigation', 'scroll_top_arrow' ,'data-turbolinks-track'=> true  %>
+
+    <style>
+    body #sidebar {
+        font-family: 'Autour One'; 
+    }
+
+    body #main_content {
+      font-family: 'Cutive Mono';
+    }
+    body #sidebar_right {
+        font-family: 'Autour One';
+    }
+    body #header {
+        font-family: 'Autour One';
+    }
+
+    </style>
+
+
     
 
   </head>
 
   <body>
   	<div id="sidebar">   
-        <nav>  
+
+        
         <!--  <div tabindex="0" class="logo_click"> -->  
            <!-- <ul class= "logoclick-content">-->
             	<div id="logo">          
@@ -25,7 +47,7 @@
               </div>
            <!--  </ul> -->
         <!--  </div>  -->  
-             
+        <nav>     
       
           
       	 <ul id="navBar">
@@ -75,7 +97,7 @@
 
     <div id="sidebar_right">
 
-      <p>&copy; 2017 by SUKItheFox. All rights reserved.</p>
+      <p>  &copy;2017 by SUKItheFox. All rights reserved.</p>
        
     
       
