@@ -6,26 +6,26 @@
     <script src="path/to/vanilla.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <%= csrf_meta_tags %>    
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> true  %> %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> true  %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
-    <%= javascript_include_tag "scroll_top_arrow", "data-turbolinks-track" => true  %>
-    <%= javascript_include_tag 'application', 'logo', 'navigation', 'data-turbolinks-track'=> true  %> %>
+    <%= javascript_include_tag 'application', 'logo', 'navigation', 'scroll_top_arrow' ,'data-turbolinks-track'=> true  %>
     
 
   </head>
 
   <body>
   	<div id="sidebar">   
-        <nav>   
-        	<div id="logo">          
-            <%= link_to root_path do %>
-               <%= image_tag "TOBEE logo 280.png", :class => "style_image"  %>
-
-
-            <% end %>
-          </div>
-           
+        <nav>  
+          <div tabindex="0" class="logo_click"> 
+            <ul class= "logoclick-content">
+            	<div id="logo">          
+                  <%= image_tag "TOBEE logo 280.png", :class => "style_image"  %>              
+              </div>
+            </ul> 
+          </div>  
+             
       
           
       	 <ul id="navBar">
