@@ -6,7 +6,7 @@
     <script src="path/to/vanilla.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <%= csrf_meta_tags %>    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> true  %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
@@ -18,13 +18,13 @@
   <body>
   	<div id="sidebar">   
         <nav>  
-          <div tabindex="0" class="logo_click"> 
-            <ul class= "logoclick-content">
+        <!--  <div tabindex="0" class="logo_click"> -->  
+           <!-- <ul class= "logoclick-content">-->
             	<div id="logo">          
                   <%= image_tag "TOBEE logo 280.png", :class => "style_image"  %>              
               </div>
-            </ul> 
-          </div>  
+           <!--  </ul> -->
+        <!--  </div>  -->  
              
       
           
@@ -35,11 +35,11 @@
           
             <div tabindex="0" class="onclick-menu">
               <ul class= "onclick-menu-content">                
-                <li>
-                  <% Category.all.each do |category| %> 
-                    <li class="category_style"> <%= link_to category.name, posts_path(category: category.name) %></li>
-                  <% end %>
-                </li>                    
+                
+                 <% Category.all.each do |category| %> 
+                   <li class="category_style"> <%= link_to category.name, posts_path(category: category.name) %></li>
+                 <% end %>
+                                   
               </ul>
             </div>
           </ul>
