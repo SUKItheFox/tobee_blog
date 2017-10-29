@@ -263,7 +263,10 @@ a {
 		}
 		
 	}	
-	nav {	
+	nav {	transition: all 3s ease;
+			-moz-transition: all 3s ease; /* Firefox 4 */
+			-webkit-transition: all 3s ease; /* Safari and Chrome */
+			-o-transition: all 3s ease; /* Opera */
 		
 		ul {
 			top: 125px;

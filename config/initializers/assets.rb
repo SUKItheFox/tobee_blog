@@ -23,6 +23,10 @@ Rails.application.config.assets.precompile += %w( navigation.js )
 #Line for scroll_top_arrow.js
 Rails.application.config.assets.precompile += %w( scroll_top_arrow.js )
 
+#line for navBar_fadein.js
+Rails.application.config.assets.precompile += %w( navBar_fadein.js )
+
+
 
 
 
