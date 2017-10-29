@@ -12,6 +12,8 @@
 //
 
 //= require rails-ujs
+//= require bootstrap
+//= require sprockets
 //= require jquery
 //= require jquery_ujs
 //= require vanilla-ujs
