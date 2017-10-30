@@ -32,6 +32,12 @@ module Blog
 
     #Line for navBar_dropdown.js
     config.assets.precompile += %w( navBar_dropdown.js )
+
+    config.assets.precompile += %w( page up.png )
+    config.assets.precompile += %w( favicon-32x32.png )
+    config.assets.precompile += %w( left sidebar.png )
+    config.assets.precompile += %w( right sidebar.png )
+    
     
 
     # Settings in config/environments/* take precedence over those specified here.
