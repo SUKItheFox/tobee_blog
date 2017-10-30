@@ -239,7 +239,7 @@ a {
 	left:0;
 	top: 0;
 	height: 100%;
-	background-image: url('<%= asset_path("left sidebar.png") %> ');
+	background-image: url("left sidebar.png");
 	float:left;
 	padding: 7em 0 0 0;
 	z-index: 90;
@@ -299,7 +299,7 @@ a {
 
 
 		.category_style {
-			display: inline-block;
+			display: inline;
 			padding: 0em 0em;
 			list-style: none;
 			letter-spacing: -1px;
@@ -380,7 +380,7 @@ a {
 	.buttons {
 			position: absolute;
 			float: left;
-			bottom: 122px;
+			bottom: 2px;
 			z-index: 100;
 			
 			.button {
@@ -394,7 +394,7 @@ a {
 	.sign_in {
 		position: absolute;
 		left: 7.7em;
-		bottom: 122px;
+		bottom: 2px;
 		font-size: .8em;
 		color: #252525;
 		z-index: 100;
