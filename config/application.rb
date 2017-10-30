@@ -15,22 +15,22 @@ module Blog
 
     config.load_defaults 5.1
 
-    config.assets.precompile += %w( tinymce )
-    config.assets.precompile += %w( scroll_top_arrow )
+    config.assets.precompile += %w( tinymce.js )
+    config.assets.precompile += %w( scroll_top_arrow.js )
     #Line for logo.js
-    config.assets.precompile += %w( logo )
+    config.assets.precompile += %w( logo.js )
 
     #Line for navigation.js
-    config.assets.precompile += %w( navigation )
+    config.assets.precompile += %w( navigation.js )
 
     #Line for scroll_top_arrow.js
-    config.assets.precompile += %w( scroll_top_arrow )
+    config.assets.precompile += %w( scroll_top_arrow.js )
 
     #line for navBar_fadein.js
-    config.assets.precompile += %w( navBar_fadein )
+    config.assets.precompile += %w( navBar_fadein.js )
 
     #Line for navBar_dropdown.js
-    config.assets.precompile += %w( navBar_dropdown )
+    config.assets.precompile += %w( navBar_dropdown.js )
     
 
     # Settings in config/environments/* take precedence over those specified here.

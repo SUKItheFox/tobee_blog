@@ -14,20 +14,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
  
-#Line for logo.js
-Rails.application.config.assets.precompile += %w( logo )
 
-#Line for navigation.js
-Rails.application.config.assets.precompile += %w( navigation )
-
-#Line for scroll_top_arrow.js
-Rails.application.config.assets.precompile += %w( scroll_top_arrow )
-
-#line for navBar_fadein.js
-Rails.application.config.assets.precompile += %w( navBar_fadein )
-
-#Line for navBar_dropdown.js
-Rails.application.config.assets.precompile += %w( navBar_dropdown )
 
 
 
