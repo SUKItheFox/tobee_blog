@@ -26,6 +26,9 @@ Rails.application.config.assets.precompile += %w( scroll_top_arrow.js )
 #line for navBar_fadein.js
 Rails.application.config.assets.precompile += %w( navBar_fadein.js )
 
+#Line for navBar_dropdown.js
+Rails.application.config.assets.precompile += %w( navBar_dropdown.js )
+
 
 
 

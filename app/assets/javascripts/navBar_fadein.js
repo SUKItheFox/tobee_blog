@@ -1,9 +1,11 @@
 
 $(document).on('scroll', function() {
 	if ($(document).scrollTop() >= 130) {
-    	$('nav').fadeOut();
+    	$('#navBar').fadeOut();
+    		
     } else {
-    	$('nav').fadeIn();
+    	$('#navBar').fadeIn();
     }
         
 });
+

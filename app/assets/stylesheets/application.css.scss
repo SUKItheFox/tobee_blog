@@ -17,6 +17,7 @@
 
 @import "normalize";
 @import "bourbon";
+@import "bootstrap";
 
 
 html, body {
@@ -242,14 +243,15 @@ a {
 	float:left;
 	padding: 7em 0 0 0;
 	z-index: 90;
-	
 
-	
-	
+		
 	#logo {
 		
 		z-index: 95;
-
+		
+	    
+	
+		
 		.style_image {
 			position: absolute;
 			width: 130%;
@@ -260,118 +262,121 @@ a {
 			-moz-transition: all 3s ease; /* Firefox 4 */
 			-webkit-transition: all 3s ease; /* Safari and Chrome */
 			-o-transition: all 3s ease; /* Opera */
+			
+
 		}
-		
+	
 	}	
-	nav {	transition: all 3s ease;
-			-moz-transition: all 3s ease; /* Firefox 4 */
-			-webkit-transition: all 3s ease; /* Safari and Chrome */
-			-o-transition: all 3s ease; /* Opera */
+
+	#logo #navBar {
+		display: none;
+	}
+
+	
 		
-		ul {
-			top: 125px;
-			list-style: none;
-			position: absolute;
-			text-align: left;
-			padding-right: 3em;
-			z-index: 100;
-			width: 100%;
-			transition: all 3s ease;
-			-moz-transition: all 3s ease; /* Firefox 4 */
-			-webkit-transition: all 3s ease; /* Safari and Chrome */
-			-o-transition: all 3s ease; /* Opera */
+	#navBar {
+		top: 125px;
+		list-style: none;
+		position: absolute;
+		text-align: left;
+		padding-right: 3em;
+		z-index: 100;
+		width: 100%;
+		transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease; /* Firefox 4 */
+		-webkit-transition: all 0.5s ease; /* Safari and Chrome */
+		-o-transition: all 0.5s ease; /* Opera */
 
 			 
-			.category {
-				font-weight: 700;
-				margin-left: 32px;
-				font-size: 0.8em;
-				text-transform: uppercase;
-				color: #cafffe;				
-				z-index: 100;
+		.category {
+			font-weight: 700;
+			margin-left: 32px;
+			font-size: 0.8em;
+			text-transform: uppercase;
+			color: #cafffe;				
+			z-index: 100;
+		}
+
+
+		.category_style {
+			display: inline-block;
+			padding: 0em 0em;
+			list-style: none;
+			letter-spacing: -1px;
+			
 			}
+		.onclick-menu {
+		    position: relative;
+		    display: inline;
+		    cursor: pointer;
 
-
-			.category_style {
-				display: inline-block;
-				padding: 0em 0em;
-				list-style: none;
-				letter-spacing: -1px;
-				
-
-			}
-			.onclick-menu {
-			    position: relative;
-			    display: inline;
-			    cursor: pointer;
-
-			    li {
-			    	font-size: 1em;
+		    li {
+		    	font-size: 1em;
 			    	
-			    }
-			}
-			.onclick-menu:before {
-			    content: "Categories";
-			    margin-left: 1.9em;
-			    color: #252525;
-			}
-			.onclick-menu:focus {
-			    /* clicking on label should toggle the menu */
-			    pointer-events: none;
-			}
-			.onclick-menu:focus .onclick-menu-content {
-			    /*  opacity is 1 in opened state (see below) */
-			    opacity: 1;
-			    visibility: visible;
+		    }
+		}
+		.onclick-menu:before {
+		    content: "Categories";
+		    margin-left: 1.9em;
+		    color: #252525;
+		}
+		.onclick-menu:focus {
+		    /* clicking on label should toggle the menu */
+		    pointer-events: none;
+		}
+		.onclick-menu:focus .onclick-menu-content {
+		    /*  opacity is 1 in opened state (see below) */
+		    opacity: 1;
+		    visibility: visible;
 			    
 
-			    /* don't let pointer-events affect descendant elements */
-			    pointer-events: auto;
-			}
-			.onclick-menu-content {
-			    position: absolute;
-			    word-spacing: 5em;
-			    z-index: 1;
-			    top: 2em;
-			    margin-left: 0em;
+		    /* don't let pointer-events affect descendant elements */
+		    pointer-events: auto;
+		}
+		.onclick-menu-content {
+		    position: absolute;
+		    word-spacing: 5em;
+		    z-index: 1;
+		    top: 2em;
+		    margin-left: 0em;
 
-
-			    /* use opacity to fake immediate toggle */
-			    opacity: 0;
-			    visibility: hidden;
-			    transition: visibility 1s;
-			}
+		    /* use opacity to fake immediate toggle */
+		    opacity: 0;
+		    visibility: hidden;
+		    transition: visibility 1s;
+		}
 			
 			  
-			li {
-				top: 125px;
-				padding: 0.3em 2em;
-				z-index: 100;
-				text-align: left;
+		li {
+			top: 125px;
+			padding: 0.3em 2em;
+			z-index: 100;
+			text-align: left;
 
-				a {
-					color: #252525;
-					text-decoration: none;
-					transition: all 0.4s ease;
-					z-index: 100;
-					&:hover {
-						color: #cafffe;
-						position: static;
-						z-index: 100;
-					}
-				}
-				
-			}
-			.active {
-				a {
-					color: #33acb7;
-					z-index: 100;
+			a {
+				color: #252525;
+				text-decoration: none;
+				transition: all 0.4s ease;
+				z-index: 100;
+				&:hover {
+					color: #cafffe;
 					position: static;
+					z-index: 100;
 				}
 			}
-			
+				
 		}
+		.active {
+			a {
+				color: #33acb7;
+				z-index: 100;
+				position: static;
+			}
+		}
+			
 	}
+
+
 	.buttons {
 			position: absolute;
 			float: left;

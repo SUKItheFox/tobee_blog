@@ -12,7 +12,7 @@
     <%= csrf_meta_tags %>    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> true  %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
-    <%= javascript_include_tag 'application', 'logo', 'navigation', 'scroll_top_arrow', 'navBar_fadein' ,'data-turbolinks-track'=> true  %>
+    <%= javascript_include_tag 'application', 'logo', 'navigation', 'scroll_top_arrow', 'navBar_fadein', 'navBar_dropdown' ,'data-turbolinks-track'=> true  %>
 
     <style>
     body #sidebar {
@@ -37,20 +37,18 @@
   </head>
 
   <body>
-  	<div id="sidebar">   
+  	<div id="sidebar"> 
+                
+        <a id="logo">          
+          <img><%= image_tag "TOBEE logo 280.png", :class => "style_image"  %></img>              
+         
+        </a>   
+           
 
-        
-        <!--  <div tabindex="0" class="logo_click"> -->  
-           <!-- <ul class= "logoclick-content">-->
-            	<div id="logo">          
-                  <%= image_tag "TOBEE logo 280.png", :class => "style_image"  %>              
-              </div>
-           <!--  </ul> -->
-        <!--  </div>  -->  
-        <nav>     
+            
       
           
-      	 <ul id="navBar">
+      	  <div id="navBar">
       		  <li class="category"></li>
       		  <li><%= link_to "Home", root_path %></li>
       		  <li><%= link_to "About Me", about_path %></li>
@@ -64,8 +62,9 @@
                                    
               </ul>
             </div>
-          </ul>
-        </nav>
+          </div>
+        
+      
     
 
       <% if user_signed_in? %>
