@@ -34,8 +34,8 @@ Rails.application.config.assets.precompile += %w( navBar_dropdown.js )
 
 Rails.application.config.assets.precompile += %w( page up.png )
 Rails.application.config.assets.precompile += %w( favicon-32x32.png )
-Rails.application.config.assets.precompile += %w( left%20sidebar.png )
-Rails.application.config.assets.precompile += %w( right%20sidebar.png )
+Rails.application.config.assets.precompile += %w( left sidebar.png )
+Rails.application.config.assets.precompile += %w( right sidebar.png )
 
 
 

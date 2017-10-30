@@ -35,7 +35,7 @@ module Blog
 
     config.assets.precompile += %w( page up.png )
     config.assets.precompile += %w( favicon-32x32.png )
-    config.assets.precompile += %w( left%20sidebar.png )
+    config.assets.precompile += %w( left sidebar.png )
     config.assets.precompile += %w( right sidebar.png )
     
     
