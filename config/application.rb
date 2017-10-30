@@ -13,8 +13,8 @@ module Blog
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
-    config.assets.precompile += %w( tinymce.js )
-    config.assets.precompile += %w( scroll_top_arrow.js )
+    config.assets.precompile += %w( tinymce )
+    config.assets.precompile += %w( scroll_top_arrow )
     config.assets.serve_static_files = true
 
     # Settings in config/environments/* take precedence over those specified here.
