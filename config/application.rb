@@ -25,6 +25,7 @@ module Blog
 
     #Line for scroll_top_arrow.js
     config.assets.precompile += %w( scroll_top_arrow.js )
+    config.assets.precompile += %w( page up.png )
 
     #line for navBar_fadein.js
     config.assets.precompile += %w( navBar_fadein.js )
