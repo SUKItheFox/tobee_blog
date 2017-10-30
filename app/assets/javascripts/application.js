@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= depend_on_asset "bootstrap.js"
 
 //= require rails-ujs
 //= require bootstrap
