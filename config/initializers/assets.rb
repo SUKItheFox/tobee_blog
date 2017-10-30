@@ -15,7 +15,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
  
 #Line for logo.js
- Rails.application.config.assets.precompile += %w( logo )
+Rails.application.config.assets.precompile += %w( logo )
 
 #Line for navigation.js
 Rails.application.config.assets.precompile += %w( navigation )
