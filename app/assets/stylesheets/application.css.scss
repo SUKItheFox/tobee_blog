@@ -239,7 +239,7 @@ a {
 	left:0;
 	top: 0;
 	height: 100%;
-	background-image: url('<%= asset_path("left sidebar.png") %> ');
+	background-image: url('<%= asset_path("left%20sidebar.png") %> ');
 	float:left;
 	padding: 7em 0 0 0;
 	z-index: 90;
