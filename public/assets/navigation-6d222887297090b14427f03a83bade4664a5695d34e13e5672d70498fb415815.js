@@ -1,0 +1,1 @@
+function scrollFunction(){document.body.scrollTop>20||document.documentElement.scrollTop>20?document.getElementById("navBar").style.top="-450px":document.getElementById("navBar").style.top=""}window.onscroll=function(){scrollFunction()};

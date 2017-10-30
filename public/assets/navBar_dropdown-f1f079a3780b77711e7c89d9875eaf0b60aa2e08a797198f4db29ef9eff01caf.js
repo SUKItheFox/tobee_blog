@@ -1,0 +1,1 @@
+$("#logo img").css({cursor:"pointer"}).on("click",function(){var t=($(this).text(),"img");$(this).text(t),$(this).next("#navBar").toggle()});
