@@ -17,6 +17,20 @@ module Blog
 
     config.assets.precompile += %w( tinymce )
     config.assets.precompile += %w( scroll_top_arrow )
+    #Line for logo.js
+    config.assets.precompile += %w( logo )
+
+    #Line for navigation.js
+    config.assets.precompile += %w( navigation )
+
+    #Line for scroll_top_arrow.js
+    config.assets.precompile += %w( scroll_top_arrow )
+
+    #line for navBar_fadein.js
+    config.assets.precompile += %w( navBar_fadein )
+
+    #Line for navBar_dropdown.js
+    config.assets.precompile += %w( navBar_dropdown )
     
 
     # Settings in config/environments/* take precedence over those specified here.
