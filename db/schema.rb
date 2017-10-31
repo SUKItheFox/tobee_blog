@@ -49,11 +49,12 @@ ActiveRecord::Schema.define(version: 20171031192559) do
   end
 
   create_table "posts", force: :cascade do |t|
+    t.integer "category_id"
     t.string "title"
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "category_id"
+    
   end
 
   create_table "users", force: :cascade do |t|
