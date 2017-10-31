@@ -1,3 +1,6 @@
+tinyMCE.baseURL = "/PATH/TO/tinymce/directory/";
+
+
 skins:
   - lightgray
 
