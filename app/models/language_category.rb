@@ -1,0 +1,2 @@
+class LanguageCategory < ApplicationRecord
+end
