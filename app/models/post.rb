@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
 	has_many :comments, dependent: :destroy
-	belongs_to :category, :language_category, presence: true
+	belongs_to :category
+	belongs_to :language_category
 	validates :title, presence: true, length: { minimum: 5 }
 	validates :body, presence: true
 	

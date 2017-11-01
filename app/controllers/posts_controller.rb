@@ -8,6 +8,13 @@ class PostsController < ApplicationController
 			@category_id = Category.find_by(name: params[:category]).id
 			@posts = Post.where(category_id: @category_id).order("created_at DESC")
 		end	
+
+		if params[:language_category].blank?
+			@posts = Post.all.order('created_at DESC')
+		else
+			@category_id = LanguageCategory.find_by(name: params[:language_category]).id
+			@posts = Post.where(category_id: @category_id).order("created_at DESC")
+		end	
 	end
 	
 	def new
@@ -56,6 +63,7 @@ class PostsController < ApplicationController
 
 	private
 		def post_params
-			params.require(:post).permit(:title, :body, :category_id)
+			params.require(:post).permit(:title, :body, :category_id, :category_id)
+
 		end	
 end
