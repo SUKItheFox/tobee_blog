@@ -32,8 +32,7 @@ Rails.application.config.assets.precompile += %w( navBar_fadein.js )
     #Line for navBar_dropdown.js
 Rails.application.config.assets.precompile += %w( navBar_dropdown.js )
 
-
-
+	
 
 Rails.application.config.assets.precompile += %w( page up.png )
 Rails.application.config.assets.precompile += %w( favicon-32x32.png )

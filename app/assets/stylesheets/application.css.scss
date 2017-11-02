@@ -438,6 +438,52 @@ a {
 	padding:  0 0 0;
 	z-index: 90;
 
+	
+	li {
+	  border-radius: 10px;
+	  
+	  margin-left: 6em;
+	  margin-top: 5px;
+	  background-color: #ffe066;
+	  opacity: 30%;
+	  list-style: none;
+	  border: 1px solid black;
+	  color: #000000;
+	  text-align: center;
+	  font-size: 14px;
+	  padding: 1px;
+	  width: 100px;
+	  transition: all 0.5s;
+	  cursor: pointer;
+	  
+	}
+
+	li span {
+	  cursor: pointer;
+	  display: inline-block;
+	  position: relative;
+	  transition: 0.5s;
+	}
+
+	li span:after {
+	  content: '\00bb';
+	  position: absolute;
+	  opacity: 0;
+	  top: 0;
+	  right: -20px;
+	  transition: 0.5s;
+	}
+	li:hover span {
+	  padding-right: 5px;
+	}
+
+	li:hover span:after {
+	  opacity: 1;
+	  right: 0;
+	}
+	
+
+
 	p {
 		position: absolute;
 		bottom: 1px;
