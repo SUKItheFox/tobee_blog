@@ -9,12 +9,7 @@ class PostsController < ApplicationController
 			@posts = Post.where(category_id: @category_id).order("created_at DESC")
 		end	
 
-		if params[:language_category].blank?
-			@posts = Post.all.order('created_at DESC')
-		else
-			@category_id = LanguageCategory.find_by(name: params[:language_category]).id
-			@posts = Post.where(category_id: @category_id).order("created_at DESC")
-		end	
+	
 	end
 	
 	def new
@@ -45,7 +40,7 @@ class PostsController < ApplicationController
 	def update
 		@post = Post.find(params[:id])
 
-		if @post.update(params[:post].permit(:title, :body, :category_id))
+		if @post.update(params[:post].permit(:title, :body, :id, :category_id, :language_category_id))
 			redirect_to @post
 		else	
 			render 'edit'
@@ -63,7 +58,6 @@ class PostsController < ApplicationController
 
 	private
 		def post_params
-			params.require(:post).permit(:title, :body, :category_id, :category_id)
-
+			params.require(:post).permit(:title, :body, :id, :category_id, :language_category_id)
 		end	
 end

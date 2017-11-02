@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20171031192756) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "category_id"
+    t.integer "language_category_id"
   end
 
   create_table "users", force: :cascade do |t|
