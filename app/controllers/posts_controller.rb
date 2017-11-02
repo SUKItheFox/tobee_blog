@@ -9,6 +9,13 @@ class PostsController < ApplicationController
 			@posts = Post.where(category_id: @category_id).order("created_at DESC")
 		end	
 
+		if params[:language_category].blank?
+			@posts = Post.all.order('created_at DESC')
+		else
+			@language_category_id = LanguageCategory.find_by(name: params[:language_category]).id
+			@posts = Post.where(language_category_id: @language_category_id).order("created_at DESC")
+		end	
+
 	
 	end
 	

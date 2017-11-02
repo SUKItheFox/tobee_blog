@@ -72,6 +72,8 @@
             </div>
           </div>
         
+
+       
       
     
 
@@ -104,10 +106,24 @@
 
     <div id="sidebar_right">
 
-      <ul>
-        
+
+      <ul>  
+        <% LanguageCategory.all.each do |language_category| %> 
+          <li class="language_category_style"> <%= link_to language_category.name, posts_path(language_category: language_category.name) %></li>
+        <% end %>       
                    
       </ul>
+
+      <div id="box">
+        <input class="Switcher__checkbox sr-only" id="io" type="checkbox" checked="checked"/>
+        <label class="Switcher" for="io">
+          <div class="Switcher__trigger" data-value="English"></div>
+          <div class="Switcher__trigger" data-value="NL"></div>
+        </label>
+      </div>
+      
+          
+      
 
       <p>  &copy;2017 by SUKItheFox. All rights reserved.</p>
        
