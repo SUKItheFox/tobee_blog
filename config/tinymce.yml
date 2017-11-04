@@ -7,13 +7,18 @@ schema: "html5-strict"
 element_format: "html"
 resize: true
 
+menubar: false
+paste_merge_formats: true
+paste_retain_style_properties: all
+
 toolbar:
+  - formatselect | fontselect | fontsizeselect | bold | italic | underline | strikethrough | alignleft | aligncenter | alignjustify | alignright
+  - bullist | numlist | outdent | indent | blockquote | forecolor | backcolor | undo | redo | link | unlink | preview | hr | searchreplace
   - cut copy paste pastetext pasteword | search replace | undo redo | link unlink anchor image cleanup help code | insertdate inserttime preview
   - bold italic underline strikethrough | justifyleft justifycenter justifyright justifyfull | sub sup | bullist numlist | outdent indent blockquote"
-  - styleselect formatselect fontselect fontsizeselect | forecolor backcolor
-  - tablecontrols | hr removeformat visualaid
-  - fullscreen | charmap media | visualchars blockquote
+  
 plugins:
+  - wordcount
   - image
   - code
   - contextmenu
@@ -28,14 +33,12 @@ plugins:
   - save
   - spellchecker
   - visualblocks
-  - preview
   - importcss
   - visualchars
   - media
   - textpattern
   - table
   - insertdatetime
-  - preview
   - media
   - searchreplace
   - contextmenu
