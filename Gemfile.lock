@@ -88,6 +88,7 @@ GEM
     erubi (1.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
+    get_process_mem (0.2.1)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.6)
@@ -132,6 +133,9 @@ GEM
     popper_js (1.12.5)
     public_suffix (3.0.0)
     puma (3.10.0)
+    puma_worker_killer (0.1.0)
+      get_process_mem (~> 0.2)
+      puma (>= 2.7, < 4)
     rack (2.0.3)
     rack-test (0.7.0)
       rack (>= 1.0, < 3)
@@ -245,6 +249,7 @@ DEPENDENCIES
   paperclip
   pg (~> 0.21.0)
   puma (~> 3.7)
+  puma_worker_killer
   rails (~> 5.1.4)
   rails_12factor
   sass-rails (~> 5.0)

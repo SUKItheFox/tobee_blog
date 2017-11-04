@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
+gem "puma_worker_killer"
 gem 'tinymce-rails'
 gem 'bourbon', '~> 4.3', '>= 4.3.4'
 gem 'jquery', '~> 0.0.1'
