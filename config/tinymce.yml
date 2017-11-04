@@ -1,15 +1,22 @@
 
 
+theme: "modern"
+skins: "lightgray"
 
-skins:
-  - lightgray
+schema: "html5-strict"
+element_format: "html"
+resize: true
 
 toolbar:
-  - styleselect | bold italic | undo redo
-  - image | link
-  - formats
+  - cut copy paste pastetext pasteword | search replace | undo redo | link unlink anchor image cleanup help code | insertdate inserttime preview
+  - bold italic underline strikethrough | justifyleft justifycenter justifyright justifyfull | sub sup | bullist numlist | outdent indent blockquote"
+  - styleselect formatselect fontselect fontsizeselect | forecolor backcolor
+  - tablecontrols | hr removeformat visualaid
+  - fullscreen | charmap media | visualchars blockquote
 plugins:
   - image
+  - code
+  - contextmenu
   - link
   - code
   - fullpage
@@ -25,5 +32,19 @@ plugins:
   - importcss
   - visualchars
   - media
+  - textpattern
+  - table
+  - insertdatetime
+  - preview
+  - media
+  - searchreplace
+  - contextmenu
+  - paste
+  - directionality
+  - fullscreen
+  - noneditable
+  - visualchars
+  - nonbreaking
+  - template
 
 branding: false
