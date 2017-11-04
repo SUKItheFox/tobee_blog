@@ -303,7 +303,7 @@ a {
 			padding: 0em 0em;
 			list-style: none;
 			letter-spacing: -1px;
-			
+			z-index: 100;
 			}
 		.onclick-menu {
 		    position: relative;
@@ -336,7 +336,7 @@ a {
 		.onclick-menu-content {
 		    position: absolute;
 		    word-spacing: 5em;
-		    z-index: 1;
+		    z-index: 101;
 		    top: 2em;
 		    margin-left: 0em;
 

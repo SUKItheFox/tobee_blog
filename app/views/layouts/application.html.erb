@@ -65,7 +65,7 @@
               <ul class= "onclick-menu-content">                
                 
                 <% Category.all.each do |category| %> 
-                  <li class="category_style"> <%= link_to category.name, posts_path(category: category.name) %></li>
+                  <li class="category_style"> <span><%= link_to category.name, posts_path(category: category.name) %></span></li>
                 <% end %>
                                    
               </ul>
@@ -107,10 +107,12 @@
     <div id="sidebar_right">
 
 
-                   
-         <% LanguageCategory.all.each do |language_category| %> 
+               
+          <% LanguageCategory.all.each do |language_category| %> 
             <li class="button"> <span><%= link_to language_category.name, posts_path(language_category: language_category.name) %></span></li>
-          <% end %>        
+          <% end %>    
+
+             
       
         
           
