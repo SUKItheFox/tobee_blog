@@ -3,8 +3,9 @@
 <html>
   <head>
     <title>To Bee Blog</title>
-
     
+
+    <script type="text/javascript" src="TypingText.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script language="javascript" type="text/javascript" src="assets/js/tinymce/tinymce.js"></script>
     <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
@@ -14,7 +15,7 @@
     <%= csrf_meta_tags %>    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> "reload" %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
-    <%= javascript_include_tag 'application', 'logo', 'navigation', 'scroll_top_arrow', 'navBar_fadein', 'navBar_dropdown', 'tinymce.js' ,'data-turbolinks-track'=> "reload" %>
+    <%= javascript_include_tag 'application', 'navigation', 'scroll_top_arrow', 'navBar_fadein', 'navBar_dropdown', 'tinymce.js', 'TypingText.js','data-turbolinks-track'=> "reload" %>
 
 
 
@@ -44,11 +45,23 @@
 
   </head>
 
-  <body>
+  <body>   
+
+
+
   	<div id="sidebar"> 
+
+      <div class="bee">
+        <img><%= image_tag "TOBEE logo 280.png", :class =>"bee-body"%></img>
+        <img><%= image_tag "TOBEE logo 280.png", :class =>"bee-wing-left"%></img>
+        <img><%= image_tag "TOBEE logo 280.png", :class =>"bee-wing-right"%></img>
+      </div>
+
+
+    
                 
         <a id="logo">          
-          <img><%= image_tag "TOBEE logo 280.png", :class => "style_image"  %></img>              
+          <img><%= image_tag "clipart-beehive-61e0.svg", :class => "style_image"  %></img>              
          
         </a>   
            

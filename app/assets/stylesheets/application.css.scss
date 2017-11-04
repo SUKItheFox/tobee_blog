@@ -32,6 +32,12 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+	
+	
+
+
+
+
 
 
 
@@ -47,7 +53,7 @@ a {
 		display: none; /* Hidden by default */
 	    position: fixed; /* Fixed/sticky position */
 	    bottom: 20px; /* Place the button at the bottom of the page */
-	    right: 260px; /* Place the button px from the right */
+	    left: 260px; /* Place the button px from the right */
 	    z-index: 20; /* Make sure it does not overlap */
 	    border: none; /* Remove borders */
 	    color: none;
@@ -70,7 +76,7 @@ a {
 	
 	.post_wrapper {		
 		
-		margin-top: 8em;
+		margin-top: 1em;
 		self-align: center;
 		
 
@@ -233,6 +239,8 @@ a {
 }
 
 
+
+
 #sidebar {
 	width: 250px;
 	position: fixed;
@@ -243,6 +251,57 @@ a {
 	float:left;
 	padding: 7em 0 0 0;
 	z-index: 90;
+
+
+	body{
+			width:100%;
+			overflow:hidden;
+	}
+
+	.bee{
+		margin-top:100px;
+		position:relative;
+		animation: ani-bee 10s ease infinite;
+		transform-origin: 0% 0%;
+	}
+
+	.bee-wing-left,.bee-wing-right,.bee-body{
+		position:absolute;
+	}
+
+	.bee-wing-left{
+		top:20px;
+		left:-5px;
+		transform-origin: 50% 0%;
+		animation: ani-left-wing 1s ease infinite;
+	}
+
+	.bee-wing-right{
+		top:20px;
+		left:15px;
+		transform-origin: 50% 0%;
+		animation: ani-right-wing 1s ease infinite;
+	}
+
+	@keyframes ani-left-wing {
+	 0% {transform: rotate(10deg);}
+	 90% {transform: rotate(0deg);}
+	 100% {transform: rotate(10deg);}
+	}
+
+	@keyframes ani-right-wing {
+	 0% {transform: rotate(-10deg);}
+	 90% {transform: rotate(0deg);}
+	 100% {transform: rotate(-10deg);}
+	}
+
+	@keyframes ani-bee {
+		0%{ left:50px;transform: rotate(30deg);}
+		50% {left:300px;transform: rotate(-360deg);}
+		100% {left:50px;transform: rotate(30deg);}
+	}	
+
+
 
 		
 	#logo {
@@ -255,7 +314,7 @@ a {
 		.style_image {
 			position: absolute;
 			width: 130%;
-			margin-top: -150px;
+			margin-top: -300px;
 			left: 69px;
 			z-index: 95;
 			transition: all 3s ease;
