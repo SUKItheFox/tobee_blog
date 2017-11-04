@@ -18,6 +18,10 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( scroll_top_arrow.js )
 
 
+	#Line for logo.js
+Rails.application.config.assets.precompile += %w( logo.js )
+
+
     #Line for navigation.js
 Rails.application.config.assets.precompile += %w( navigation.js )
 

@@ -15,7 +15,7 @@
     <%= csrf_meta_tags %>    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> "reload" %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
-    <%= javascript_include_tag 'application', 'navigation', 'scroll_top_arrow', 'navBar_fadein', 'navBar_dropdown', 'tinymce.js', 'TypingText.js','data-turbolinks-track'=> "reload" %>
+    <%= javascript_include_tag 'application', 'navigation', 'scroll_top_arrow', 'navBar_fadein', 'navBar_dropdown', 'tinymce.js', 'TypingText.js', 'logo.js', 'data-turbolinks-track'=> "reload" %>
 
 
 
@@ -51,24 +51,17 @@
 
   	<div id="sidebar"> 
 
+      <a id="logo">          
+          <img><%= image_tag "TOBEE logo 280.png", :class => "style_image"  %></img>              
+         
+      </a> 
+
       <div class="bee">
-        <img><%= image_tag "TOBEE logo 280.png", :class =>"bee-body"%></img>
-        <img><%= image_tag "TOBEE logo 280.png", :class =>"bee-wing-left"%></img>
-        <img><%= image_tag "TOBEE logo 280.png", :class =>"bee-wing-right"%></img>
+        <img><%= image_tag "flying bee body.png", :class =>"bee-body"%></img>
+        <img><%= image_tag "flying bee left wing.png", :class =>"bee-wing-left"%></img>
+        <img><%= image_tag "flying bee right wing.png", :class =>"bee-wing-right"%></img>
       </div>
 
-
-    
-                
-        <a id="logo">          
-          <img><%= image_tag "clipart-beehive-61e0.svg", :class => "style_image"  %></img>              
-         
-        </a>   
-           
-
-            
-      
-          
       	  <div id="navBar">
       		  <li class="category"></li>
       		  <li><%= link_to "Home", root_path %></li>
@@ -104,7 +97,7 @@
   	</div>
 
   	<div id="main_content">
-    
+
 
       <% flash.each do |name, msg| %>
       <%= content_tag(:div, msg, class: "alert") %>

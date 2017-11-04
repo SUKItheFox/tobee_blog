@@ -14,7 +14,7 @@ class PostsController < ApplicationController
 
 		else	
 			params[:category].blank? and params[:language_category].blank?
-			@posts = Post.all.order('created_at DESC')			
+			@posts = Post.where(:language_category_id => "3").order('created_at DESC')			
 			
 		end		
 	end

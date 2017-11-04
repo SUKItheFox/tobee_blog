@@ -34,19 +34,15 @@ a {
 }
 	
 	
-
-
-
-
-
-
+	
 
 #main_content {
 	margin-left: 250px;
 	margin-right: 250px;
 	margin-top: 100px;
 	z-index: 10;
-	
+
+		
 	#myBtn {
 		background-color: none; /* Add a background */
 	    opacity: 0.75;
@@ -253,55 +249,7 @@ a {
 	z-index: 90;
 
 
-	body{
-			width:100%;
-			overflow:hidden;
-	}
-
-	.bee{
-		margin-top:100px;
-		position:relative;
-		animation: ani-bee 10s ease infinite;
-		transform-origin: 0% 0%;
-	}
-
-	.bee-wing-left,.bee-wing-right,.bee-body{
-		position:absolute;
-	}
-
-	.bee-wing-left{
-		top:20px;
-		left:-5px;
-		transform-origin: 50% 0%;
-		animation: ani-left-wing 1s ease infinite;
-	}
-
-	.bee-wing-right{
-		top:20px;
-		left:15px;
-		transform-origin: 50% 0%;
-		animation: ani-right-wing 1s ease infinite;
-	}
-
-	@keyframes ani-left-wing {
-	 0% {transform: rotate(10deg);}
-	 90% {transform: rotate(0deg);}
-	 100% {transform: rotate(10deg);}
-	}
-
-	@keyframes ani-right-wing {
-	 0% {transform: rotate(-10deg);}
-	 90% {transform: rotate(0deg);}
-	 100% {transform: rotate(-10deg);}
-	}
-
-	@keyframes ani-bee {
-		0%{ left:50px;transform: rotate(30deg);}
-		50% {left:300px;transform: rotate(-360deg);}
-		100% {left:50px;transform: rotate(30deg);}
-	}	
-
-
+	
 
 		
 	#logo {
@@ -314,18 +262,17 @@ a {
 		.style_image {
 			position: absolute;
 			width: 130%;
-			margin-top: -300px;
+			margin-top: -150px;
 			left: 69px;
 			z-index: 95;
 			transition: all 3s ease;
 			-moz-transition: all 3s ease; /* Firefox 4 */
 			-webkit-transition: all 3s ease; /* Safari and Chrome */
 			-o-transition: all 3s ease; /* Opera */
+		}	
 			
 
-		}
-	
-	}	
+	}
 
 	#logo #navBar {
 		display: none;
@@ -458,6 +405,58 @@ a {
 		color: #252525;
 		z-index: 100;
 	}
+
+
+
+	body{
+		width:100%;
+		overflow:hidden;
+	}
+
+	.bee{
+		margin-top:700px;
+
+		position:relative;
+		animation: ani-bee 10s ease infinite;
+		transform-origin: 0% 0%;
+	}
+
+	.bee-wing-left,.bee-wing-right,.bee-body{
+		position:absolute;
+	}
+
+	.bee-wing-left{
+		top: 0px;
+		left: 0px;
+		transform-origin: 50% 0%;
+		animation: ani-left-wing 0.5s ease infinite;
+	}
+
+	.bee-wing-right{
+		top: 0px;
+		left: 0px;
+		transform-origin: 50% 0%;
+		animation: ani-right-wing 0.5s ease infinite;
+	}
+
+	@keyframes ani-left-wing {
+	 0% {transform: rotate(-10deg);}
+	 90% {transform: rotate(0deg);}
+	 100% {transform: rotate(-20deg);}
+	}
+
+	@keyframes ani-right-wing {
+	 0% {transform: rotate(10deg);}
+	 90% {transform: rotate(0deg);}
+	 100% {transform: rotate(20deg);}
+	}
+
+	@keyframes ani-bee {
+		0%{ left:50px;transform: rotate(30deg);}
+		50% {left:800px;transform: rotate(-440deg);}
+		100% {left:50px;transform: rotate(-30deg);}
+	}	
+	
 }
 #header {	     
 		position: fixed;
