@@ -12,12 +12,11 @@ paste_merge_formats: true
 paste_retain_style_properties: all
 
 toolbar:
-  - formatselect | fontselect | fontsizeselect | bold | italic | underline | strikethrough | alignleft | aligncenter | alignjustify | alignright
-  - bullist | numlist | outdent | indent | blockquote | forecolor | backcolor | undo | redo | link | unlink | preview | hr | searchreplace
-  - cut copy paste pastetext pasteword | search replace | undo redo | link unlink anchor image cleanup help code | insertdate inserttime preview
-  - bold italic underline strikethrough | justifyleft justifycenter justifyright justifyfull | sub sup | bullist numlist | outdent indent blockquote"
+  - formatselect | fontselect | fontsizeselect | alignleft | aligncenter | alignjustify | alignright | lineheightselect
+  - cut copy paste pastetext pasteword | search replace | undo redo | link unlink anchor image cleanup help code | insertdate inserttime preview | bullist | numlist |  blockquote | forecolor | backcolor | preview | hr | searchreplace | bold italic underline strikethrough | justifyleft justifycenter justifyright justifyfull | sub sup | bullist numlist | outdent indent blockquote"
   
 plugins:
+  - lineheight
   - wordcount
   - image
   - code
