@@ -38,6 +38,9 @@ Rails.application.config.assets.precompile += %w( navBar_dropdown.js )
 	#Line for TypingText.js
 Rails.application.config.assets.precompile += %w( TypingText.js )
 
+#Line for mobile vesrion of the website
+Rails.application.config.assets.precompile += %w( mobile.js )
+
 	
 
 Rails.application.config.assets.precompile += %w( page up.png )
