@@ -264,9 +264,7 @@ a {
 		
 	#logo {
 		
-		z-index: 95;
-		
-	    
+		z-index: 95; 
 	
 		
 		.style_image {
@@ -291,17 +289,12 @@ a {
 	
 		
 	#navBar {
-		top: 125px;
 		list-style: none;
 		position: absolute;
 		text-align: left;
 		padding-right: 3em;
 		z-index: 100;
 		width: 100%;
-		transition: all 0.5s ease;
-		-moz-transition: all 0.5s ease; /* Firefox 4 */
-		-webkit-transition: all 0.5s ease; /* Safari and Chrome */
-		-o-transition: all 0.5s ease; /* Opera */
 
 			 
 		.category {
@@ -311,60 +304,11 @@ a {
 			text-transform: uppercase;
 			color: #cafffe;				
 			z-index: 100;
-		}
-
-
-		.category_style {
-			display: inline;
-			padding: 0em 0em;
-			list-style: none;
-			letter-spacing: -1px;
-			z-index: 100;
-			}
-		.onclick-menu {
-		    position: relative;
-		    display: inline;
-		    cursor: pointer;
-
-		    li {
-		    	font-size: 1em;
-			    	
-		    }
-		}
-		.onclick-menu:before {
-		    content: "Categories";
-		    margin-left: 1.9em;
-		    color: #252525;
-		}
-		.onclick-menu:focus {
-		    /* clicking on label should toggle the menu */
-		    pointer-events: none;
-		}
-		.onclick-menu:focus .onclick-menu-content {
-		    /*  opacity is 1 in opened state (see below) */
-		    opacity: 1;
-		    visibility: visible;
-			    
-
-		    /* don't let pointer-events affect descendant elements */
-		    pointer-events: auto;
-		}
-		.onclick-menu-content {
-		    position: absolute;
-		    word-spacing: 5em;
-		    z-index: 101;
-		    top: 2em;
-		    margin-left: 0em;
-
-		    /* use opacity to fake immediate toggle */
-		    opacity: 0;
-		    visibility: hidden;
-		    transition: visibility 1s;
-		}
+		}	
 			
 			  
 		li {
-			top: 125px;
+			
 			padding: 0.3em 2em;
 			z-index: 100;
 			text-align: left;
@@ -382,6 +326,8 @@ a {
 			}
 				
 		}
+
+		
 		.active {
 			a {
 				color: #33acb7;
@@ -390,6 +336,51 @@ a {
 			}
 		}
 			
+	}
+
+	#category_slides_in {
+			top: 125px;
+			list-style: none;
+			position: absolute;
+			text-align: left;
+			padding-right: 3em;
+			z-index: 100;
+			width: 100%;
+			transition: all 0.5s ease;
+			-moz-transition: all 0.5s ease; /* Firefox 4 */
+			-webkit-transition: all 0.5s ease; /* Safari and Chrome */
+			-o-transition: all 0.5s ease; /* Opera */
+
+		.category_style {
+				top: 125px;
+				display: inline;
+				padding: 0em 0em;
+				list-style: none;
+				letter-spacing: -1px;
+				z-index: 100;
+
+	   		li {
+				
+				padding: 0.3em 2em;
+				z-index: 100;
+				text-align: left;
+
+				a {
+					color: #252525;
+					text-decoration: none;
+					transition: all 0.4s ease;
+					z-index: 100;
+					&:hover {
+						color: #cafffe;
+						position: static;
+						z-index: 100;
+					}	
+				}
+			}
+				
+		}
+
+
 	}
 
 
@@ -469,6 +460,7 @@ a {
 }
 #header {	     
 		position: fixed;
+		border-bottom: 2.5px solid black;
 		top: 0;
 		width: 100%;
 		height:100px;
@@ -489,7 +481,16 @@ a {
 			float: right;
 			margin-right: 200px;
 			/*outline-style: dashed;*/
-		}		
+		}	
+
+		p {
+			list-style: none;
+			font-weight: 200;
+			color: #ffffff;
+			font-size: 3em;
+			margin-left: 290px;
+			z-index: 100;
+		}	
 		
 
     }

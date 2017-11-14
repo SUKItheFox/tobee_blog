@@ -67,11 +67,13 @@
 
 
     	<div id="sidebar"> 
-
-        <a id="logo">          
-            <img><%= image_tag "TOBEE logo 280.png", :class => "style_image"  %></img>              
+        <%= link_to root_path do %>
+          <div id="logo">          
+            <img><%= image_tag "TOBEE logo 280.png", :class => "style_image" %></img>   
+          </div>   
+        <% end %>               
            
-        </a> 
+        
         <% if current_page?(root_path) %>
           <%= link_to new_user_session_path do %>
             <div class="bee">
@@ -83,26 +85,23 @@
         <% end %>  
 
 
-        	  <div id="navBar">
-        		  <li class="category"></li>
-        		  <li><%= link_to "Home", root_path %></li>
-              <% if current_page?(root_path) %>
-        		    <li><%= link_to "About Me", about_path %></li>
-              <% end %>  
-            
-              <div tabindex="0" class="onclick-menu">
-                <ul class= "onclick-menu-content">                
-                  
-                  <% Category.all.each do |category| %> 
-                    <li class="category_style"> <span><%= link_to category.name, posts_path(category: category.name) %></span></li>
-                  <% end %>
-                                     
-                </ul>
-              </div>
-            </div>
-          
+        <div id="navBar">
+          <li class="category"></li>
+          <% if current_page?(root_path) %>
+            <li><%= link_to "About Me", about_path %></li>
+          <% end %>  
+        </div>      
 
-         
+
+        <li>Categories</li>
+
+        <div id="category_slides_in">  
+          <% Category.all.each do |category| %> 
+            <li class="category_style"> 
+              <span><%= link_to category.name, posts_path(category: category.name) %></span>
+            </li>
+          <% end %>
+        </div>                 
         
       
 
@@ -147,6 +146,10 @@
       <% end %>  
 
       <div id="header"> 
+
+        <% if current_page?(root_path) %>
+         <p>To Bee</p>
+        <% end %>
         <li>
           <% if @category_id == 5 %>
           <p> Beehive </p>

@@ -4,8 +4,8 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navBar").style.top = "-450px";
+    document.getElementById("category_slides_in").style.top = "-400";
   } else {
-    document.getElementById("navBar").style.top = "";
+    document.getElementById("category_slides_in").style.top = "";
   }
 } 
