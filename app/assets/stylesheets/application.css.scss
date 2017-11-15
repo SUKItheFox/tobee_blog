@@ -419,7 +419,7 @@ a {
 
 		position:relative;
 		animation: ani-bee 10s ease infinite;
-		transform-origin: 0% 0%;
+		transform-origin: 10% 10%;
 	}
 
 	.bee-wing-left,.bee-wing-right,.bee-body{
@@ -453,9 +453,9 @@ a {
 	}
 
 	@keyframes ani-bee {
-		0%{ left:50px;transform: rotate(30deg);}
-		50% {left:800px;transform: rotate(-440deg);}
-		100% {left:50px;transform: rotate(-30deg);}
+		0%{ left:50px;transform: rotate(300deg);}
+		50% {left:1500px;transform: rotate(-440deg);}
+		100% {left:50px;transform: rotate(-400deg);}
 	}	
 }
 #header {	     
