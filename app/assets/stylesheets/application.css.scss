@@ -289,17 +289,16 @@ a {
 	
 		
 	#navBar {
+		top: 155px;
 		list-style: none;
 		position: absolute;
 		text-align: left;
-		padding-right: 3em;
 		z-index: 100;
 		width: 100%;
 
 			 
 		.category {
-			font-weight: 700;
-			margin-left: 32px;
+			font-weight: 700;			
 			font-size: 0.8em;
 			text-transform: uppercase;
 			color: #cafffe;				
@@ -338,50 +337,59 @@ a {
 			
 	}
 
-	#category_slides_in {
-			top: 125px;
-			list-style: none;
-			position: absolute;
-			text-align: left;
-			padding-right: 3em;
-			z-index: 100;
-			width: 100%;
-			transition: all 0.5s ease;
-			-moz-transition: all 0.5s ease; /* Firefox 4 */
-			-webkit-transition: all 0.5s ease; /* Safari and Chrome */
-			-o-transition: all 0.5s ease; /* Opera */
-
-		.category_style {
-				top: 125px;
-				display: inline;
-				padding: 0em 0em;
-				list-style: none;
-				letter-spacing: -1px;
-				z-index: 100;
-
-	   		li {
-				
-				padding: 0.3em 2em;
-				z-index: 100;
-				text-align: left;
-
-				a {
-					color: #252525;
-					text-decoration: none;
-					transition: all 0.4s ease;
-					z-index: 100;
-					&:hover {
-						color: #cafffe;
-						position: static;
-						z-index: 100;
-					}	
-				}
-			}
-				
-		}
-
-
+	#categories_stable {
+		top: 195px;
+		padding: 0.3em 2em;
+		list-style: none;
+		position: absolute;
 	}
+
+	#category_slides_in {
+		top: 230px;
+		list-style: none;
+		position: absolute;
+		text-align: left;
+		word-spacing: 10em;
+		padding: 0.3em 2em;
+		padding-right: 3em;
+		width: 100%;
+		transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease; /* Firefox 4 */
+		-webkit-transition: all 0.5s ease; /* Safari and Chrome */
+		-o-transition: all 0.5s ease; /* Opera */
+		z-index: 100;
+	}		
+
+	.category_style {
+		display: inline;
+		padding: 0em 0em;
+		list-style: none;
+		letter-spacing: -1px;
+		z-index: 100;
+
+		li {
+				
+		padding: 0.3em 2em;
+		z-index: 100;
+		text-align: left;
+
+			a {
+			color: #252525;
+			text-decoration: none;
+			transition: all 0.4s ease;
+			z-index: 100;
+			&:hover {
+				color: #cafffe;
+				position: static;
+				z-index: 100;
+				}	
+			}
+		}
+			
+	}
+
+
+	
 
 
 	.buttons {

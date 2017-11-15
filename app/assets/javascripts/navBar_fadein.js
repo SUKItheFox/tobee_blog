@@ -1,10 +1,10 @@
 
 $(document).on('scroll', function() {
 	if ($(document).scrollTop() >= 130) {
-    	$('#navBar').fadeOut();
+    	$('#category_slides_in').fadeOut();
     		
     } else {
-    	$('#navBar').fadeIn();
+    	$('#category_slides_in').fadeIn();
     }
         
 });
