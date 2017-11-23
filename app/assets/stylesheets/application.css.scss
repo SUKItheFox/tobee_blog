@@ -253,7 +253,7 @@ a {
 	left:0;
 	top: 0;
 	height: 100%;
-	background-image: url("left sidebar.png");
+	background-image: url("left sidebar 2");
 	float:left;
 	padding: 7em 0 0 0;
 	z-index: 90;
@@ -265,6 +265,7 @@ a {
 	#logo {
 		
 		z-index: 95; 
+
 	
 		
 		.style_image {
@@ -273,13 +274,27 @@ a {
 			margin-top: -150px;
 			left: 69px;
 			z-index: 95;
+			img-shadow: 10px 10px 5px white;
 			transition: all 3s ease;
 			-moz-transition: all 3s ease; /* Firefox 4 */
 			-webkit-transition: all 3s ease; /* Safari and Chrome */
 			-o-transition: all 3s ease; /* Opera */
+			-webkit-filter: drop-shadow(2px 1px 1px rgba(255,255,255,.7) );
+          	filter: drop-shadow(3px 3px 2px rgba(255,255,255,.7) );
 		}	
 			
 
+	}
+	#logo_pages {
+		z-index: 95;
+
+		.style_image_pages {
+			position: absolute;
+			width: 80%;
+			margin-top: -130px;
+			left: 17px;
+			z-index: 95;
+		}
 	}
 
 	#logo #navBar {
@@ -289,7 +304,7 @@ a {
 	
 		
 	#navBar {
-		top: 155px;
+		top: 115px;
 		list-style: none;
 		position: absolute;
 		text-align: left;
@@ -298,8 +313,8 @@ a {
 
 			 
 		.category {
-			font-weight: 700;			
-			font-size: 0.8em;
+			font-weight: bold;			
+			font-size: 1.2em;
 			text-transform: uppercase;
 			color: #cafffe;				
 			z-index: 100;
@@ -307,16 +322,19 @@ a {
 			
 			  
 		li {
-			
 			padding: 0.3em 2em;
 			z-index: 100;
 			text-align: left;
+			font-weight: bold;
+			text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+			font-size: 1.2em;
 
 			a {
-				color: #252525;
+				color: #ffffff;
 				text-decoration: none;
 				transition: all 0.4s ease;
 				z-index: 100;
+				font-weight: bold;
 				&:hover {
 					color: #cafffe;
 					position: static;
@@ -338,15 +356,20 @@ a {
 	}
 
 	#categories_stable {
-		top: 195px;
-		padding: 0.3em 2em;
+		top: 155px;
+		padding: 0.3em 1em;
 		list-style: none;
+		color: #ffffff;
+		font-weight: bold;
+		text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+		font-size: 1.2em;
 		position: absolute;
 	}
 
 	#category_slides_in {
-		top: 230px;
+		top: 190px;
 		list-style: none;
+		font-weight: bold;
 		position: absolute;
 		text-align: left;
 		word-spacing: 10em;
@@ -365,6 +388,7 @@ a {
 		padding: 0em 0em;
 		list-style: none;
 		letter-spacing: -1px;
+		font-weight: bold;
 		z-index: 100;
 
 		span {
@@ -372,6 +396,9 @@ a {
 		
 		z-index: 100;
 		text-align: left;
+		font-weight: bold;
+		font-size: 1.2em;
+		text-shadow: 1px 1px white;
 
 			a {
 			color: #252525;
@@ -432,6 +459,7 @@ a {
 
 	.bee-wing-left,.bee-wing-right,.bee-body{
 		position:absolute;
+
 	}
 
 	.bee-wing-left{
@@ -439,6 +467,8 @@ a {
 		left: 0px;
 		transform-origin: 50% 0%;
 		animation: ani-left-wing 0.5s ease infinite;
+		-webkit-filter: drop-shadow(2px 1px 1px rgba(255,255,255,.7) );
+          	filter: drop-shadow(3px 3px 2px rgba(255,255,255,.7) );
 	}
 
 	.bee-wing-right{
@@ -446,6 +476,8 @@ a {
 		left: 0px;
 		transform-origin: 50% 0%;
 		animation: ani-right-wing 0.5s ease infinite;
+		-webkit-filter: drop-shadow(2px 1px 1px rgba(255,255,255,.7) );
+          	filter: drop-shadow(3px 3px 2px rgba(255,255,255,.7) );
 	}
 
 	@keyframes ani-left-wing {
@@ -471,7 +503,7 @@ a {
 		top: 0;
 		width: 100%;
 		height:100px;
-		opacity: 0.95;
+		opacity: 100;
 		margin: 0 auto;
 		z-index: 10;
 
@@ -483,7 +515,6 @@ a {
 		top: 0;
 		width: 100%;
 		height:100%;
-		opacity: 100;
 		margin: 0 auto;
 		p {
 			list-style: none;
@@ -510,6 +541,7 @@ a {
 		position: inline;
 		self-align: center;
 		top: 0;
+		margin-left: 245px;
 		width: 100%;
 		height:100px;
 		z-index: 20;
@@ -526,11 +558,48 @@ a {
 	top: 0;
 	bottom: 0;
 	height: 100%;
-	background-image: url("right sidebar.png");
+	background-image: url("right sidebar 2");
 	padding:  0 0 0;
 	z-index: 90;
 
-	
+	.beehive_style {
+		position: absolute;
+		margin-left: 4em;
+		width: 60%;
+		margin-top: 37px;
+		z-index: 90;
+	}
+	.what_is_beehive_style {
+		position: absolute;
+		margin-left: 5.5em;
+		width: 50%;
+		margin-top: 217px;
+		z-index: 90;
+	}
+	p {
+		position: absolute;
+		text-shadow: 1px 1px white;
+		font-size: 1.5em;
+		font-family: 'Cutive Mono';
+		font-weight: bold;
+		margin-left: 4.1em;
+		margin-top: 365px;
+		z-index: 90;
+
+	}
+
+	#sidebar_beehive_slide_in {
+		position: absolute;
+		word-spacing: 10em;
+		width: 100%;
+		transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease; /* Firefox 4 */
+		-webkit-transition: all 0.5s ease; /* Safari and Chrome */
+		-o-transition: all 0.5s ease; /* Opera */
+		z-index: 100;
+	}		
+
+
 	li {
 	  border-radius: 10px;
 	  
@@ -584,11 +653,16 @@ a {
 		bottom: 0;
 		z-index: 100;
 		 }
+	#popup img {
+		-webkit-filter: drop-shadow(2px 1px 1px rgba(209, 166, 73,.7) );
+          	filter: drop-shadow(3px 3px 2px rgba(209, 166, 73,.7) );
+	}	 
 
 	#popup a, #popup a:visited {
 		position: relative;
 		display: inline;
 		text-align: center;
+		font-weight: bold;
 		padding: 50px 200px;
 		bottom: 45px;
 		
@@ -598,8 +672,8 @@ a {
 		display: none;
 		position: absolute;
 		bottom: 1px;
-		font-weight: 200;
-			font-size: 0.7em;
+		font-weight: bold;
+			font-size: 1em;
 			text-align: center;
 			color: #252525;
 	}
@@ -617,9 +691,10 @@ a {
 		display: inline;
 		position: absolute;
 		position: absolute;
+		left: 20px;
 		bottom: 1px;
-		font-weight: 200;
-			font-size: 0.7em;
+		font-weight: bold;
+			font-size: .85em;
 			text-align: center;
 			color: #252525;
 		

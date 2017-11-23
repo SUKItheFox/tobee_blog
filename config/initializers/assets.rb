@@ -44,14 +44,21 @@ Rails.application.config.assets.precompile += %w( mobile.js )
 
 	#Line for homepage_header_text.js
 Rails.application.config.assets.precompile += %w( homepage_header_text.js )
+	#Line for  sidebar_beehive_slide_in.js
+Rails.application.config.assets.precompile += %w( sidebar_beehive_slide_in.js )
 	
 
 Rails.application.config.assets.precompile += %w( page up.png )
 Rails.application.config.assets.precompile += %w( favicon-32x32.png )
-Rails.application.config.assets.precompile += %w( left sidebar.png )
-Rails.application.config.assets.precompile += %w( right sidebar.png )
+Rails.application.config.assets.precompile += %w( left sidebar 2 )
+Rails.application.config.assets.precompile += %w( right sidebar 2 )
 Rails.application.config.assets.precompile += %w( header )
-
+Rails.application.config.assets.precompile += %w( header Beehive.png )
+Rails.application.config.assets.precompile += %w( header Life.png )
+Rails.application.config.assets.precompile += %w( header Photography.png )
+Rails.application.config.assets.precompile += %w( header Music.png )
+Rails.application.config.assets.precompile += %w( beehive 1.png )
+Rails.application.config.assets.precompile += %w( what is beehive.png )
 
 
 

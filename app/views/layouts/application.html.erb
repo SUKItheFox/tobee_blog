@@ -35,14 +35,14 @@
     }
 
     body #sidebar {
-        font-family: 'Autour One'; 
+        font-family: 'Cutive Mono'; 
     }
 
     body #main_content {
       font-family: 'Cutive Mono';
     }
     body #sidebar_right {
-        font-family: 'Autour One';
+        font-family: 'Cutive Mono';
     }
     body #header {
         font-family: 'Cutive Mono';
@@ -87,13 +87,21 @@
           <% end %>
         </div>          
 
+        <% if current_page?(root_path) %>
+          <%= link_to root_path do %>
+            <div id="logo">          
+              <img><%= image_tag "TOBEE logo 280.png", :class => "style_image" %></img>   
+            </div>   
+          <% end %> 
+        <% else  %>
+          <%= link_to root_path do %>
+              <div id="logo_pages">          
+                <img><%= image_tag "TOBEE logo 280.png", :class => "style_image_pages" %></img>   
+              </div>   
+            <% end %>             
+        <% end %> 
 
-        <%= link_to root_path do %>
-          <div id="logo">          
-            <img><%= image_tag "TOBEE logo 280.png", :class => "style_image" %></img>   
-          </div>   
-        <% end %>               
-           
+
         
         <% if current_page?(root_path) %>
           <%= link_to new_user_session_path do %>
@@ -109,8 +117,14 @@
 
         <% if user_signed_in? %>
             <div class="buttons">
-              <button class="w3-button w3-circle w3-teal"><%= link_to "+", new_post_path %></button>
-              <button class="w3-button w3-circle w3-teal"><%= link_to "Q", destroy_user_session_path, :method => :delete %></button>
+              <%= link_to new_post_path do %>                       
+                  <img><%= image_tag "new post.png"%></img>   
+              <% end %>
+              
+              <%= link_to destroy_user_session_path do %>                       
+                  <img><%= image_tag "log out.png"%></img>   
+              <% end %>
+              
             </div>
         <% end%>
 
@@ -133,15 +147,26 @@
         <button onclick="topFunction()" id="myBtn"><%= image_tag "page up.png", :class => "style_arrow"  %></button> 
             
     	</div>	
+
+
+
       <% if current_page?(root_path) %>
         <div id="sidebar_right">
+
+          <img><%= image_tag "beehive 1.png", :class => "beehive_style" %></img>
+          <img><%= image_tag "what is beehive.png", :class => "what_is_beehive_style" %></img>
+          <div id="sidebar_beehive_slide_in">
+            <p>Beehive of artists in service of </br> our world</p>
+          </div>
+          
                  
-            <% LanguageCategory.all.each do |language_category| %> 
-              <li class="button"> <span><%= link_to language_category.name, posts_path(language_category: language_category.name) %></span></li>
-            <% end %>             
+            <!-- <% LanguageCategory.all.each do |language_category| %> 
+              <li class="button"> <span><%= link_to language_category.name, posts_path(language_category: language_category.name) %></span></li> 
+            <% end %>   
+            -->          
                    
           <div id="popup">
-            <a href="https://github.com/SUKItheFox"><img><%= image_tag "SUKItheFox-400x400.png", :style=>"width: 35px;", :alt=>"beetle" %></img> <span> &copy;2017 by SUKItheFox. All rights reserved. </span></a>
+            <a href="https://github.com/SUKItheFox"><img><%= image_tag "SUKItheFox9.png", :style=>"width: 35px;", :alt=>"beetle" %></img> <span> &copy;2017 by SUKItheFox.</br> All rights reserved. </span></a>
           </div> 
     		
     	  </div>
@@ -158,22 +183,17 @@
         <% end %>
         <li>
           <% if @category_id == 5 %>
-          <%= image_tag "headerexample.jpg", :class => "category_header_style"  %>
+          <%= image_tag "header Beehive.png", :class => "category_header_style"  %>
 
           <% elsif @category_id == 6 %> 
-          <p>  Life </p>
+          <%= image_tag "header Life.png", :class => "category_header_style"  %>
 
           <% elsif @category_id == 7 %>
-          <p> Music </p>
+          <%= image_tag "header Music.png", :class => "category_header_style"  %>
 
           <% elsif @category_id == 8 %>
-          <p> Photography </p>
+          <%= image_tag "header Photography.png", :class => "category_header_style"  %>
 
-           <% elsif @category_id == 9 %>
-          <p> Drawing </p>
-
-          <% elsif @category_id == 10 %>
-          <p> World </p>
 
           <% else %>
           <p> </p>
