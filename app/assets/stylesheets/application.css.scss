@@ -367,9 +367,9 @@ a {
 		letter-spacing: -1px;
 		z-index: 100;
 
-		li {
+		span {
 				
-		padding: 0.3em 2em;
+		
 		z-index: 100;
 		text-align: left;
 
@@ -468,40 +468,55 @@ a {
 }
 #header {	     
 		position: fixed;
-		border-bottom: 2.5px solid black;
 		top: 0;
 		width: 100%;
 		height:100px;
-		background:  #950000;
 		opacity: 0.95;
 		margin: 0 auto;
-		padding: 10px 0 10px;
 		z-index: 10;
 
-		li {
-			list-style: none;
-			font-weight: 200;
-			font-size: 2em;
-			text-transform: uppercase;
-			color: #cafffe;
-			padding: 0.1em 2em;
-			z-index: 100;			
-			float: right;
-			margin-right: 200px;
-			/*outline-style: dashed;*/
-		}	
 
+
+	.homepage_header_style {
+		border-bottom: 3.3px solid black;
+		background-image: url("header");
+		top: 0;
+		width: 100%;
+		height:100%;
+		opacity: 100;
+		margin: 0 auto;
 		p {
 			list-style: none;
-			font-weight: 200;
 			color: #ffffff;
-			font-size: 3em;
-			margin-left: 290px;
+			font-size: 5em;
+			margin-left: 400px;
 			z-index: 100;
 		}	
+		h1 {
+		    margin-left: 710px;
+		    margin-top: 17px;
+		    color: #66d9ff;
+		    height: 30px;
+		    line-height: 90px;
+		    font-size: 3em;
+		    position: fixed;
+		    width: 100%;
+		    top: 0px;
+		    display: none;
+		}
 		
+	}
+	.category_header_style {
+		position: inline;
+		self-align: center;
+		top: 0;
+		width: 100%;
+		height:100px;
+		z-index: 20;
 
-    }
+	}	
+
+}
 
 
 #sidebar_right {

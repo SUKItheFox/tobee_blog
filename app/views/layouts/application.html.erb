@@ -16,7 +16,7 @@
     <%= csrf_meta_tags %>    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> "reload" %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700', 'mobile' if mobile_device? %>
-    <%= javascript_include_tag 'application',  'scroll_top_arrow', 'navBar_fadein', 'navBar_dropdown', 'tinymce.js', 'TypingText.js', 'logo.js', 'mobile.js', 'data-turbolinks-track'=> "reload" %>
+    <%= javascript_include_tag 'application', 'homepage_header_text.js', 'scroll_top_arrow', 'navBar_fadein', 'navBar_dropdown', 'tinymce.js', 'TypingText.js', 'logo.js', 'mobile.js', 'data-turbolinks-track'=> "reload" %>
 
 
 
@@ -45,7 +45,7 @@
         font-family: 'Autour One';
     }
     body #header {
-        font-family: 'Autour One';
+        font-family: 'Cutive Mono';
     }
 
     </style>
@@ -150,11 +150,15 @@
       <div id="header"> 
 
         <% if current_page?(root_path) %>
-         <p>To Bee</p>
+          <div class="homepage_header_style">
+            <p>To Bee</p>
+            <h1>inspired</h1>
+          </div>
+
         <% end %>
         <li>
           <% if @category_id == 5 %>
-          <p> Beehive </p>
+          <%= image_tag "headerexample.jpg", :class => "category_header_style"  %>
 
           <% elsif @category_id == 6 %> 
           <p>  Life </p>

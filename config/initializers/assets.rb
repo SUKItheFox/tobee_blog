@@ -27,9 +27,10 @@ Rails.application.config.assets.precompile += %w( navigation.js )
 
     #Line for scroll_top_arrow.js
 Rails.application.config.assets.precompile += %w( scroll_top_arrow.js )
+	 #Line for page up.png
 Rails.application.config.assets.precompile += %w( page up.png )
 
-    #line for navBar_fadein.js
+    #Line for navBar_fadein.js
 Rails.application.config.assets.precompile += %w( navBar_fadein.js )
 
     #Line for navBar_dropdown.js
@@ -38,15 +39,18 @@ Rails.application.config.assets.precompile += %w( navBar_dropdown.js )
 	#Line for TypingText.js
 Rails.application.config.assets.precompile += %w( TypingText.js )
 
-#Line for mobile vesrion of the website
+	#Line for mobile vesrion of the website
 Rails.application.config.assets.precompile += %w( mobile.js )
 
+	#Line for homepage_header_text.js
+Rails.application.config.assets.precompile += %w( homepage_header_text.js )
 	
 
 Rails.application.config.assets.precompile += %w( page up.png )
 Rails.application.config.assets.precompile += %w( favicon-32x32.png )
 Rails.application.config.assets.precompile += %w( left sidebar.png )
 Rails.application.config.assets.precompile += %w( right sidebar.png )
+Rails.application.config.assets.precompile += %w( header )
 
 
 
