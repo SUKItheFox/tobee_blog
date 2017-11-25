@@ -45,7 +45,7 @@ Rails.application.config.assets.precompile += %w( mobile.js )
 	#Line for homepage_header_text.js
 Rails.application.config.assets.precompile += %w( homepage_header_text.js )
 	#Line for  sidebar_beehive_slide_in.js
-Rails.application.config.assets.precompile += %w( sidebar_beehive_slide_in.js )
+Rails.application.config.assets.precompile += %w( sidebar_beehive_fade_in.js )
 	
 
 Rails.application.config.assets.precompile += %w( page up.png )
