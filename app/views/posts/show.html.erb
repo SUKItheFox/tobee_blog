@@ -3,7 +3,7 @@
 
 	<p class="date">
 		Submitted <%= time_ago_in_words(@post.created_at) %> Ago
-		<% if user_signed_in? %>
+		<%if user_signed_in? %>
 			| <%= link_to 'Edit', edit_post_path(@post) %>
 			| <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Would you give your left earnib for it?' } %>
 		<% end %>
@@ -14,8 +14,9 @@
 	</p>
 
 	<div id="comments">
-		<h2><%= @post.comments.count %> Opinions </h2>
+		<h2><%= @post.comments.count %> Responses </h2>
 		<%= render @post.comments %>
+
 
 		<h3>Add a comment:</h3>
 		<%= render "comments/form" %>

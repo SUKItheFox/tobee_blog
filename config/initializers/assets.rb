@@ -46,6 +46,14 @@ Rails.application.config.assets.precompile += %w( mobile.js )
 Rails.application.config.assets.precompile += %w( homepage_header_text.js )
 	#Line for  sidebar_beehive_slide_in.js
 Rails.application.config.assets.precompile += %w( sidebar_beehive_fade_in.js )
+
+#Mobile page
+
+Rails.application.config.assets.precompile += %w( /jqtouch/jquery.1.3.2.min.js )
+Rails.application.config.assets.precompile += %w( /jqtouch/jqtouch.min.js )
+Rails.application.config.assets.precompile += %w( mobile )
+
+
 	
 
 Rails.application.config.assets.precompile += %w( page up.png )
@@ -60,6 +68,9 @@ Rails.application.config.assets.precompile += %w( header Music.png )
 Rails.application.config.assets.precompile += %w( beehive 1.png )
 Rails.application.config.assets.precompile += %w( what is beehive.png )
 
+
+#Css for user show.html.erb
+Rails.application.config.assets.precompile += %w( user_show.css )
 
 
 
