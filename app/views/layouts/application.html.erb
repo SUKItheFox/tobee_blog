@@ -58,85 +58,87 @@
   </head>
 
   <body> 
-    <div id="container">  
+
+     
       <p>
         <% if mobile_device? %>
           <%= link_to "Full Site", :mobile => 0 %>
         <% else %>
-          <%= link_to "Mobile Site", :mobile => 1 %>
+          <%= link_to "", :mobile => 1 %>
         <% end %>
       </p>
 
 
+      <% if current_page?(root_path) || current_page?(about_path) %>
+      	<div id="sidebar"> 
 
-    	<div id="sidebar"> 
+          <div id="navBar">
+            <li class="category"></li>
+            <% if current_page?(root_path) %>
+              <li><%= link_to "About Me", about_path %></li>
+            <% end %>  
+          </div>      
 
-        <div id="navBar">
-          <li class="category"></li>
+
+          <li id="categories_stable">Categories</li>
+
+          <div id="category_slides_in">  
+            <% Category.all.each do |category| %> 
+              <li class="category_style"> 
+                <span><%= link_to category.name, posts_path(category: category.name) %></span>
+              </li>
+            <% end %>
+          </div>          
+
           <% if current_page?(root_path) %>
-            <li><%= link_to "About Me", about_path %></li>
-          <% end %>  
-        </div>      
-
-
-        <li id="categories_stable">Categories</li>
-
-        <div id="category_slides_in">  
-          <% Category.all.each do |category| %> 
-            <li class="category_style"> 
-              <span><%= link_to category.name, posts_path(category: category.name) %></span>
-            </li>
-          <% end %>
-        </div>          
-
-        <% if current_page?(root_path) %>
-          <%= link_to root_path do %>
-            <div id="logo">          
-              <img><%= image_tag "TOBEE logo 280.png", :class => "style_image" %></img>   
-            </div>   
-          <% end %> 
-        <% else  %>
-          <%= link_to root_path do %>
-              <div id="logo_pages">          
-                <img><%= image_tag "TOBEE logo 280.png", :class => "style_image_pages" %></img>   
+            <%= link_to root_path do %>
+              <div id="logo">          
+                <img><%= image_tag "TOBEE logo 280.png", :class => "style_image" %></img>   
               </div>   
-            <% end %>             
-        <% end %> 
+            <% end %> 
+          <% else  %>
+            <%= link_to root_path do %>
+                <div id="logo_pages">          
+                  <img><%= image_tag "TOBEE logo 280.png", :class => "style_image_pages" %></img>   
+                </div>   
+              <% end %>             
+          <% end %> 
 
 
+          
+          <% if current_page?(root_path) %>
+            <%= link_to new_user_session_path do %>
+              <div class="bee">
+                <img><%= image_tag "flying bee body.png", :class =>"bee-body"%></img>
+                <img><%= image_tag "flying bee left wing.png", :class =>"bee-wing-left"%></img>
+                <img><%= image_tag "flying bee right wing.png", :class =>"bee-wing-right"%></img>
+              </div>
+            <% end %>
+          <% end %>            
+          
         
-        <% if current_page?(root_path) %>
-          <%= link_to new_user_session_path do %>
-            <div class="bee">
-              <img><%= image_tag "flying bee body.png", :class =>"bee-body"%></img>
-              <img><%= image_tag "flying bee left wing.png", :class =>"bee-wing-left"%></img>
-              <img><%= image_tag "flying bee right wing.png", :class =>"bee-wing-right"%></img>
-            </div>
-          <% end %>
-        <% end %>            
-        
-      
 
-        <% if user_signed_in? %>
-            <div class="buttons">
-              <% if current_user.has_role? :admin %>
-                <%= link_to new_post_path do %>                       
-                    <img><%= image_tag "new post.png"%></img>   
+          <% if user_signed_in? %>
+              <div class="buttons">
+                <% if current_user.has_role? :admin %>
+                  <%= link_to new_post_path do %>                       
+                      <img><%= image_tag "new post.png"%></img>   
+                  <% end %>
                 <% end %>
-              <% end %>
-              
-              <%= link_to destroy_user_session_path do %>                       
-                  <img><%= image_tag "log out.png"%></img>   
-              <% end %>
-              
-            </div>
-        <% end%>
+                
+                <%= link_to destroy_user_session_path do %>                       
+                    <img><%= image_tag "log out.png"%></img>   
+                <% end %>
+                
+              </div>
+          <% end%>
 
-    		
-        <% if current_user.present? %>
-    		  <p class="sign_in"><%= link_to "", new_user_session_path %></p>
-        <% end %>
-    	</div>
+      		
+          <% if current_user.present? %>
+      		  <p class="sign_in"><%= link_to "", new_user_session_path %></p>
+          <% end %>
+      	</div>
+      <% end %>
 
     	<div id="main_content">
 
@@ -205,6 +207,6 @@
           <% end %>
         </li>        
       </div> 
-    </div>  
+    
   </body>
 </html>

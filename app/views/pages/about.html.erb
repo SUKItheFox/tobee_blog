@@ -1,5 +1,6 @@
 <html>
 <head>
+  <%= stylesheet_link_tag    'about', media: 'all', 'data-turbolinks-track'=> "reload" %>
 <script type="text/javascript" src="TypingText.js">
 /****************************************************
 * Typing Text script- By Twey @ Dynamic Drive Forums
@@ -9,34 +10,35 @@
 </script>
 </head>
 <body>
-<div id="page_wrapper">
-  <div id="profile_image">
-  	<%= image_tag "Levien.jpg" %>
-  </div>
 
-  <div id="content">
-  	<h1>Heya!</h1>
+  <div id="about_container">
+    <div id="profile_image">
+    	<%= image_tag "Levien.jpg" %>
+    </div>
 
-  		<p id="example2">Welcome to my blog, where you will find art and my thoughts about the world, to the world.. <br /></p>
+    <div id="content">
+    	<h1>Heya!</h1>
 
-		<div id="example1">If you'd like to follow along and see how I am currently diving in to different experiences or have questions I can answer to, send me an email <a href="mailto:leviendeleeuw@protonmail.com">HERE</a></div>
+    		<p id="example2">Welcome to my blog, where you will find art and my thoughts about the world, to the world.. <br /></p>
 
-		
+  		<div id="example1">If you'd like to follow along and see how I am currently diving in to different experiences or have questions I can answer to, send me an email <a href="mailto:leviendeleeuw@protonmail.com">HERE</a></div>
 
-  	
-  </div>
-</div>  
+  		
 
-<script type="text/javascript">
-//Define first typing example:
-new TypingText(document.getElementById("example1"));
+    	
+    </div>
+  </div>  
 
-//Define second typing example (use "slashing" cursor at the end):
-new TypingText(document.getElementById("example2"), 100, function(i){ var ar = new Array("\\", "|", "/", "-"); return " " + ar[i.length % ar.length]; });
+  <script type="text/javascript">
+  //Define first typing example:
+  new TypingText(document.getElementById("example1"));
 
-//Type out examples:
-TypingText.runAll();
-</script>
+  //Define second typing example (use "slashing" cursor at the end):
+  new TypingText(document.getElementById("example2"), 100, function(i){ var ar = new Array("\\", "|", "/", "-"); return " " + ar[i.length % ar.length]; });
+
+  //Type out examples:
+  TypingText.runAll();
+  </script>
 </body>
 </html>
 
