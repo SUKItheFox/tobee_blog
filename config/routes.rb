@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   	resources :comments
   	resources :about
     resources :users
-  	
+      	
   end
   	
   root "posts#index"

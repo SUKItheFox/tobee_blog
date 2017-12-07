@@ -1,11 +1,32 @@
 <html>
 <head>
-<title>Welcome back to To Bee Blog!</title>
+<title>Upload to your personal page</title>
+<%= stylesheet_link_tag    'personal_page', media: 'all', 'data-turbolinks-track'=> "reload" %>
 <script>
 
 </script>
+<style>
+     #sidebar
+     {
+     display: none;
+     }
+     </style>
 </head>
-<body>
+<body class= "user_container">
+  <div class="vertical-menu">
+      <a> <%= link_to "Personal", current_user %></a>
+      <a> <%= link_to "Chat", personal_page_path %></a>
+      <a> <%= link_to "Forum", personal_page_path %></a>
+      <a> <%= link_to "Shop", personal_page_path %></a>
+      <a> <%= link_to "Upload", personal_page_path, :class=>"active" %></a>
+  </div> 
+
+  <%= link_to root_path do %>
+      <div id="home_logo">          
+          <img><%= image_tag "TOBEE logo 280.png" %></img>   
+      </div>   
+  <% end %> 
+
   <div class="ui form">
     <div class="fields">
       <div class="six wide field">

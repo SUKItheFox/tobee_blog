@@ -6,6 +6,53 @@
   background-size: cover;
 }
 
+.vertical-menu {
+    width: 200px; 
+    margin-left: 15px;
+    margin-top: 2px;
+    z-index: 95;
+    
+}
+
+.vertical-menu a {
+    color: black; 
+    padding: 3px;
+    text-decoration: none; 
+    font-weight: 500;
+    font-size: 2.6em;
+    line-height: 95px;
+    
+}
+
+.vertical-menu a:hover {
+    color: #ffffff; 
+}
+
+.vertical-menu a.active {
+    color: #ffffff; 
+    
+}
+
+#home_logo {
+  position: absolute;
+
+  
+  img {
+  
+  position: absolute;
+  left: 950px;
+  z-index: 95;
+  img-shadow: 10px 10px 5px white;
+  -webkit-filter: drop-shadow(2px 1px 1px rgba(255,255,255,.7) );
+  filter: drop-shadow(3px 3px 2px rgba(255,255,255,.7) );
+  }
+}
+
+#background_container{
+  display: block;
+  margin-left: 280px;
+}
+
 
 
 

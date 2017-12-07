@@ -70,9 +70,11 @@ Rails.application.config.assets.precompile += %w( what is beehive.png )
 
 
 #Css for user show.html.erb
-Rails.application.config.assets.precompile += %w( user_show.css )
+Rails.application.config.assets.precompile += %w( user_show.css.scss )
 #Css for about.html.erb
 Rails.application.config.assets.precompile += %w( about.css )
+#Css for personal_page.html.erb
+Rails.application.config.assets.precompile += %w( personal_page.css.scss )
 
 
 

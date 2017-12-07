@@ -1,0 +1,36 @@
+.user_container { 
+  background: url('personal page sketch 1.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.vertical-menu {
+    width: 200px; 
+    margin-left: -105px;
+    margin-top: -120px;
+    
+}
+
+.vertical-menu a {
+    color: black; 
+    padding: 30px;
+    text-decoration: none; 
+    font-weight: 500;
+    font-size: 2.6em;
+    line-height: 95px;
+    
+}
+
+.vertical-menu a:hover {
+    color: #ffffff; 
+}
+
+.vertical-menu a.active {
+    color: #ffffff; 
+    
+}
+#background_container{
+  display: block;
+  margin-left: 280px;
+}

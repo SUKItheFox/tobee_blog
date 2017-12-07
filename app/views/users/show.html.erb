@@ -3,14 +3,40 @@
   <head>
   	<title>To Bee Blog</title>
 	
-	<%= stylesheet_link_tag    'user_show', media: 'all', 'data-turbolinks-track'=> "reload" %>
+	   <%= stylesheet_link_tag    'user_show', media: 'all', 'data-turbolinks-track'=> "reload" %>
 
+
+
+     <style>
+     #sidebar
+     {
+     display: none;
+     }
+     #sidebar_right
+     {
+     display: none;
+     }
+     
+     </style>
    </head>	
   <body class= "user_container">
+    <div class="vertical-menu">
+      <a> <%= link_to "Personal", current_user, :class=>"active"%></a>
+      <a> <%= link_to "Chat", personal_page_path %></a>
+      <a> <%= link_to "Forum", personal_page_path %></a>
+      <a> <%= link_to "Shop", personal_page_path %></a>
+      <a> <%= link_to "Upload", personal_page_path %></a>
+    </div> 
+
+    <%= link_to root_path do %>
+      <div id="home_logo">          
+          <img><%= image_tag "TOBEE logo 280.png" %></img>   
+      </div>   
+    <% end %> 
 
     <div id="background_container">
       <div class="user_content">
-      <img src="https://i.pinimg.com/736x/28/9d/b6/289db605e43ca385bdf026576fb435bb--human-sketch-man-face-sketch.jpg">
+      <img src="">
         <p><h3>Welcome back, <%= @user.username %>!</h3>
         Your introducing: Lorem ipsum dolor sit amet, consectetur adipisicing       elit. Ea, repellat dolore nisi, id omnis, necessitatibus     mollitia distinctio delectus soluta eveniet accusantium       quas veritatis aliquam! Ea architecto beatae inventore       qui quisquam?</p>
       <small>wwwco</small>

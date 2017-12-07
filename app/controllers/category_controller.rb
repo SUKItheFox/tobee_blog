@@ -8,8 +8,10 @@ class CategoryController < ApplicationController
         @all.categories = Category.find(:all, :order=> "name")
     end
 
-    
-     
+    def show
+        @category = Category.find(params[:id])
+        @posts    = @category.posts
+    end    
 
     def create
         @category = Category.new(post_params)
