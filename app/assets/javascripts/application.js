@@ -12,14 +12,23 @@
 //
 //= depend_on_asset "bootstrap.js"
 
+//= require private_pub
 //= require rails-ujs
 //= require bootstrap
 //= require bootstrap-sprockets
 //= require jquery
-//= require jquery_ujs
 //= require vanilla-ujs
+//= require chat
 //= require turbolinks
 //= require_tree .
 //= require tinymce
+//= require jquery_ujs
 
 
+
+$(document).ready(function(){
+    //Sign in animation
+    $('.message a').click(function(){
+       $('.special').animate({height: "toggle", opacity: "toggle"}, "slow");
+    });
+});

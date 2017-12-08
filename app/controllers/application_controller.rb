@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     helper :all
-    protect_from_forgery with: :exception
+    #protect_from_forgery with: :exception
 	before_action :prepare_for_mobile
 	before_action :configure_permitted_parameters, if: :devise_controller?
 		protected

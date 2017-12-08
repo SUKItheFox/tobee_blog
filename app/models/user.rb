@@ -1,7 +1,5 @@
 class User < ApplicationRecord
 
-  
-
   rolify :before_add => :before_add_method
 
 
@@ -14,6 +12,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  has_many :conversations, :foreign_key => :sender_id       
  
   after_create :assign_default_role
 
@@ -31,11 +31,7 @@ class User < ApplicationRecord
   end  
   attr_accessor :login
 
-  after_create :create_profile
-
-  def create_profile
-	self.profile.create
-  end
+  
 
 
   has_many :comments

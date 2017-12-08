@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
+		<%= stylesheet_link_tag    'user_index', media: 'all', 'data-turbolinks-track'=> "reload" %>
+	</head>	
+	<style>
+	     #sidebar
+	     {
+	     display: none;
+	     }
+	     #sidebar_right
+	     {
+	     display: none;
+	     }
+	     
+	</style>
+    <body class= "user_container">
+    	
+
+
+	    <% @users.each.with_index do |user, index| %>
+		    <tr>
+		      <td><%= index +=1 %></td>
+		      <td><%= user.username %></td>
+		      <td>
+		        <%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation",
+		                    "data-sid" => current_user.id, "data-rip" => user.id %>
+		      </td>
+		    </tr>
+		<% end %> 
+   
+    </body>
+</html>  

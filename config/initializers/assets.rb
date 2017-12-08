@@ -13,6 +13,14 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
+#Line for create.js.erb
+Rails.application.config.assets.precompile += %w( create.js.erb )
+
+#Line for chat.js
+Rails.application.config.assets.precompile += %w( chat.js )
+#Line for users.js
+Rails.application.config.assets.precompile += %w( users.js )
+
  
 
 Rails.application.config.assets.precompile += %w( scroll_top_arrow.js )
@@ -68,13 +76,16 @@ Rails.application.config.assets.precompile += %w( header Music.png )
 Rails.application.config.assets.precompile += %w( beehive 1.png )
 Rails.application.config.assets.precompile += %w( what is beehive.png )
 
-
+#Css for users index.html.erb
+Rails.application.config.assets.precompile += %w( user_index.css.scss )
 #Css for user show.html.erb
 Rails.application.config.assets.precompile += %w( user_show.css.scss )
 #Css for about.html.erb
 Rails.application.config.assets.precompile += %w( about.css )
 #Css for personal_page.html.erb
 Rails.application.config.assets.precompile += %w( personal_page.css.scss )
+#Css for chat.html.erb
+Rails.application.config.assets.precompile += %w( chat.css )
 
 
 

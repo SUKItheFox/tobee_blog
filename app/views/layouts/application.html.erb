@@ -8,6 +8,7 @@
     <script type="text/javascript" src="TypingText.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script language="javascript" type="text/javascript" src="assets/js/tinymce/tinymce.js"></script>
+    <meta content='<%= user_signed_in? ? current_user.id : "" %>' username='user-id'/>
     <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <link href='https://fonts.googleapis.com/css?family=Autour One' rel='stylesheet'>
@@ -16,7 +17,8 @@
     <%= csrf_meta_tags %>    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> "reload" %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700', 'mobile' if mobile_device? %>
-    <%= javascript_include_tag 'application', 'homepage_header_text.js', 'scroll_top_arrow', 'navBar_fadein', 'navBar_dropdown', 'tinymce.js', 'TypingText.js' ,'sidebar_beehive_fade_in.js', 'logo.js', 'mobile.js', 'data-turbolinks-track'=> "reload" %>
+    <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
+    <%= javascript_include_tag 'application', 'users.js', 'chat.js', 'homepage_header_text.js', 'scroll_top_arrow', 'navBar_fadein', 'navBar_dropdown', 'tinymce.js', 'TypingText.js' ,'sidebar_beehive_fade_in.js', 'logo.js', 'mobile.js', 'data-turbolinks-track'=> "reload" %>
     <%= stylesheet_link_tag "/jqtouch/jqtouch.min.css", "/jqtouch/themes/apple/theme.min.css" %>
     <%= javascript_include_tag "/jqtouch/jquery.1.3.2.min.js", "/jqtouch/jqtouch.min.js", "mobile" %>
 
@@ -125,7 +127,7 @@
                       <img><%= image_tag "new post.png"%></img>   
                   <% end %>
                 <% end %>
-                
+                <%= link_to "Welcome #{current_user.username}", edit_user_registration_path %> 
                 <%= link_to destroy_user_session_path do %>                       
                     <img><%= image_tag "log out.png"%></img>   
                 <% end %>

@@ -1,10 +1,24 @@
 Rails.application.routes.draw do
+
+  get 'chat' => 'conversations#show'
   
   
-  
-  
-  devise_for :admins
   devise_for :users
+
+  authenticated :user do
+    get 'users/:id/chat' => 'users#index'
+  end
+
+  unauthenticated :user do
+    devise_scope :user do
+      get "/" => "devise/sessions#new"
+    end
+  end
+
+  resources :conversations do
+    resources :messages
+  end
+
   get 'users/:id' => 'users#show', as: :user
   resources :posts do
   	resources :comments
