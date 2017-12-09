@@ -4,12 +4,14 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
 }
+
 
 .vertical-menu {
     width: 200px; 
-    margin-left: 5px;
-    margin-top: -90px;
+    margin-left: 250px;
+    margin-top: 32px;
     z-index: 95;
     
 }
@@ -35,10 +37,11 @@
     
 }
 
+
 #home_logo {
   position: absolute;
-  margin-top: -550px;
-  margin-left: 300px;
+  margin-top: -520px;
+  margin-left: 550px;
 
   
   img {
@@ -53,13 +56,18 @@
 
 #background_container{
   display: block;
-  margin-left: 280px;
+  margin-left: 605px;
+  margin-top: -350px;
+  height: 530px;
+  width: 930px;
 }
 
 .btn-oldschool {
+    margin-left: 455px;
+    margin-top: -50px;
     color: black;
-    width: 120px;
-    height: 30px;
+    width: 3em;
+    height: 75px;
     border: 2px outset white;
     background: transparent;
     padding: 2px;
@@ -67,6 +75,7 @@
 }
 .btn-oldschool:hover {
     color: #00008B;
+    text-decoration: none;
 }
 .btn-oldschool:active {
     border-style: inset;

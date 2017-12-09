@@ -17,8 +17,8 @@
 	</style>
     <body class= "user_container">
 	  <div class="vertical-menu">
-	      <a> <%= link_to "Personal", current_user, :class=>"active"%></a>
-	      <a> <%= link_to "Chat", {:controller=>"users", :action=>"index"} %></a>
+	      <a> <%= link_to "Personal", current_user %></a>
+	      <a> <%= link_to "Chat", {:controller=>"users", :action=>"index"} ,:class=>"active" %></a>
 	      <a> <%= link_to "Forum", personal_page_path %></a>
 	      <a> <%= link_to "Shop", personal_page_path %></a>
 	      <a> <%= link_to "Upload", personal_page_path %></a>

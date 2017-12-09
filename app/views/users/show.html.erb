@@ -21,9 +21,16 @@
      {
      display: none;
      }
+     #main_content {  
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        z-index: 0;
+      }
      </style>
    </head>	
   <body class= "user_container">
+
 
     <div class="vertical-menu">
       <a> <%= link_to "Personal", current_user, :class=>"active"%></a>
@@ -47,8 +54,9 @@
       <small>wwwco</small>
       </div>
      
-      <%= link_to "Edit profile ", edit_user_registration_path , :class=>"btn-oldschool" , :type=>"button"%> 
+       
     </div>
+    <%= link_to "Edit profile ", edit_user_registration_path , :class=> "btn-oldschool" , :type=>"button"%>
 
 
   </body>
