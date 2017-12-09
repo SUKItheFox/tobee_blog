@@ -77,7 +77,8 @@
           <div id="navBar">
             <li class="category"></li>
             <% if current_page?(root_path) %>
-              <li><%= link_to "About Me", about_path %></li>
+              <li><%= link_to "About Me", about_path %></li> 
+              <li><%= link_to "My Account", current_user %></li>
             <% end %>  
           </div>      
 
@@ -127,7 +128,6 @@
                       <img><%= image_tag "new post.png"%></img>   
                   <% end %>
                 <% end %>
-                <%= link_to "Welcome #{current_user.username}", edit_user_registration_path %> 
                 <%= link_to destroy_user_session_path do %>                       
                     <img><%= image_tag "log out.png"%></img>   
                 <% end %>
@@ -151,7 +151,7 @@
         <%= yield %>
 
 
-        <button onclick="topFunction()" id="myBtn"><%= image_tag "page up.png", :class => "style_arrow"  %></button> 
+        <button onclick="topFunction()" id="myBtn"><%= image_tag "up arrow 1.png", :class => "style_arrow"  %></button> 
             
     	</div>	
 
@@ -159,11 +159,12 @@
 
       <% if current_page?(root_path) %>
         <div id="sidebar_right">
-
-          <img><%= image_tag "beehive 1.png", :class => "beehive_style" %></img>
-          <img><%= image_tag "what is beehive.png", :class => "what_is_beehive_style" %></img>
+          <a class="what_is_beehive_style">
+            <%= image_tag "what is to bee 2.png", :class => "default", :type =>"image" %>
+            <%= image_tag "what is to bee 1.png", :class => "hover", :type =>"image" %>
+          </a>
           <div id="sidebar_beehive_slide_in">
-            <p>Beehive of artists in service of </br> our world</p>
+            <p>Beehive of artists in service of </br> the world</p>
           </div>
           
                  

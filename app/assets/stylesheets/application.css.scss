@@ -304,7 +304,7 @@ a {
 	
 		
 	#navBar {
-		top: 115px;
+		top: 105px;
 		list-style: none;
 		position: absolute;
 		text-align: left;
@@ -322,7 +322,7 @@ a {
 			
 			  
 		li {
-			padding: 0.3em 2em;
+			padding: 0em 1.4em;
 			z-index: 100;
 			text-align: left;
 			font-weight: bold;
@@ -559,35 +559,44 @@ a {
 	padding:  0 0 0;
 	z-index: 90;
 
-	.beehive_style {
-		position: absolute;
-		margin-left: 4em;
-		width: 60%;
-		margin-top: 37px;
-		z-index: 90;
-	}
+	
 	.what_is_beehive_style {
 		position: absolute;
-		margin-left: 5.5em;
+		margin-left: 2em;
 		width: 50%;
-		margin-top: 217px;
+		margin-top: 57px;
+		border: 2px solid black;
 		z-index: 90;
 	}
+	a img.hover {
+    	display: none;
+	}
+	a img.default {
+	    display: inherit;
+	}
+	a:hover img.hover {
+	    display: inherit;
+	}
+	a:hover img.default {
+	    display: none;
+	}
+
 	p {
 		position: absolute;
 		text-shadow: 1px 1px white;
-		font-size: 1.5em;
+		font-size: 1.7em;
 		font-family: 'Cutive Mono';
 		font-weight: bold;
-		margin-left: 4.1em;
-		margin-top: 365px;
+		left: 2em;
+		line-spacing: .5em;
+		margin-top: 265px;
 		z-index: 90;
 
 	}
 
 	#sidebar_beehive_slide_in {
 		position: absolute;
-		word-spacing: 10em;
+		word-spacing: 0em;
 		width: 100%;
 		transition: all 0.5s ease;
 		-moz-transition: all 0.5s ease; /* Firefox 4 */

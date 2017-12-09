@@ -1,5 +1,5 @@
 .user_container { 
-  background: url('personal page sketch 1.png') no-repeat center center fixed; 
+  background: url('personal page.png') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -8,8 +8,8 @@
 
 .vertical-menu {
     width: 200px; 
-    margin-left: 15px;
-    margin-top: 2px;
+    margin-left: 5px;
+    margin-top: -90px;
     z-index: 95;
     
 }
@@ -22,10 +22,12 @@
     font-size: 2.6em;
     line-height: 95px;
     
+    
 }
 
 .vertical-menu a:hover {
     color: #ffffff; 
+
 }
 
 .vertical-menu a.active {
@@ -35,12 +37,13 @@
 
 #home_logo {
   position: absolute;
+  margin-top: -550px;
+  margin-left: 300px;
 
   
   img {
   
   position: absolute;
-  left: 950px;
   z-index: 95;
   img-shadow: 10px 10px 5px white;
   -webkit-filter: drop-shadow(2px 1px 1px rgba(255,255,255,.7) );
@@ -53,7 +56,21 @@
   margin-left: 280px;
 }
 
-
+.btn-oldschool {
+    color: black;
+    width: 120px;
+    height: 30px;
+    border: 2px outset white;
+    background: transparent;
+    padding: 2px;
+    text-decoration: none;
+}
+.btn-oldschool:hover {
+    color: #00008B;
+}
+.btn-oldschool:active {
+    border-style: inset;
+}
 
 
   
