@@ -101,7 +101,7 @@ var ready = function () {
                 $("#chatbox_" + conversation_id + " .chatboxcontent").scrollTop($("#chatbox_" + conversation_id + " .chatboxcontent")[0].scrollHeight);
             }, "html");
 
-            $("#chatbox_" + conversation_id).css('bottom', '0px');
+            $("#chatbox_" + conversation_id).css('bottom', '158px');
 
             chatBoxeslength = 0;
 
@@ -114,7 +114,7 @@ var ready = function () {
             if (chatBoxeslength == 0) {
                 $("#chatbox_" + conversation_id).css('right', '20px');
             } else {
-                width = (chatBoxeslength) * (280 + 7) + 20;
+                width = (chatBoxeslength) * (400 + 7) + 20;
                 $("#chatbox_" + conversation_id).css('right', width + 'px');
             }
 

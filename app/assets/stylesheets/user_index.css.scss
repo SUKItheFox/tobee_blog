@@ -47,3 +47,30 @@
   filter: drop-shadow(3px 3px 2px rgba(255,255,255,.7) );
   }
 }
+
+.message_buttons {
+	top: 220px;
+	right: 590px;
+	position: absolute;
+	
+}
+
+td { 
+	word-spacing: 100em;
+	font-weight: bold;
+	}
+.btn {
+    color: black;
+    border: 2px outset white;
+    background: transparent;
+    text-decoration: none;
+}
+.btn:hover {
+    color: #00008B;
+    background:  #C8ECF9;
+    text-decoration: none;
+}
+.btn:active {
+    border-style: inset;
+    background:  #C8ECF9;
+}
