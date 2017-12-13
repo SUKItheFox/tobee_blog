@@ -33,10 +33,10 @@
 
 
     <div class="vertical-menu">
-      <a> <%= link_to "Personal", current_user, :class=>"active"%></a>
-      <a> <%= link_to "Chat", {:controller=>"users", :action=>"index"} %></a>
+      <a> <%= link_to "Personal", current_user%></a>
+      <a> <%= link_to "Chat", "" %></a>
       <a> <%= link_to "Forum", personal_page_path %></a>
-      <a> <%= link_to "Shop", personal_page_path %></a>
+      <a> <%= link_to "Shop", shop_path, :class=>"active" %></a>
       <a> <%= link_to "Upload", personal_page_path %></a>
     </div> 
 
@@ -47,7 +47,7 @@
     <% end %> 
 	
 
-	<div class="user_container">
+	<div class="store_container">
 		<div class="product">
 			<h1>To-Bee Collar Shirts</h1>
 			<div class="shirt">
@@ -55,24 +55,10 @@
 			</div>
 		</div>
 
-		<%= form_tag charges_path do %>
-		  <article>
-		    <% if flash[:error].present? %>
-		      <div id="error_explanation">
-		        <p><%= flash[:error] %></p>
-		      </div>
-		    <% end %>
-		    <label class="amount">
-		      <span>Amount: €25.00</span>
-		    </label>
-		  </article>
-
-		  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-		          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-		          data-description="Collar Shirt"
-		          data-amount="500"
-		          data-locale="auto"></script>
-		<% end %>
+		<%= cart_form(@product) %>
+		<%= cart_link %>
+		<!--%= orders_link("Order History") %-->
+		<%= piggybak_track_order("To Bee Shop") %>
 	</div>
 
     

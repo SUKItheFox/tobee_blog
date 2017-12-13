@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   
 
-  get 'store/index'
+  get '/shop', to: 'store#index'
   resources :charges
 
   get 'chat' => 'conversations#show'

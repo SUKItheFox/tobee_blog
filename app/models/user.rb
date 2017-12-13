@@ -32,7 +32,7 @@ class User < ApplicationRecord
   attr_accessor :login
 
   
-
+  acts_as_orderer
 
   has_many :comments
 
