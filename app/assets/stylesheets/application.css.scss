@@ -51,8 +51,8 @@ a {
 
 		
 	#myBtn {
-		background-color: none; /* Add a background */
-	    opacity: 0.75;
+		background-color: transparent; /* Add a background */
+	    opacity: 1;
 		display: none; /* Hidden by default */
 	    position: fixed; /* Fixed/sticky position */
 	    bottom: 20px; /* Place the button at the bottom of the page */
@@ -65,17 +65,17 @@ a {
 	    border-radius: 10px; /* Rounded corners */
 	}
 
-	.style_arrow {
-		height: 60px; 
-	    width: 30px;
-	}
-
 	#myBtn:hover {
-	    background-color: none; /* Add a background on hover */
+	    background-color: #7F1824; /* Add a background on hover */
+	    
 	    
 	}
 
-	
+	.style_arrow {
+		
+	}
+
+
 	
 	.post_wrapper {		
 		
@@ -304,7 +304,7 @@ a {
 	
 		
 	#navBar {
-		top: 105px;
+		top: 125px;
 		list-style: none;
 		position: absolute;
 		text-align: left;
@@ -452,6 +452,7 @@ a {
 		position:relative;
 		animation: ani-bee 10s ease infinite;
 		transform-origin: 10% 10%;
+		z-index: 100;
 	}
 
 	.bee-wing-left,.bee-wing-right,.bee-body{
@@ -494,6 +495,14 @@ a {
 		50% {left:1500px;transform: rotate(-440deg);}
 		100% {left:50px;transform: rotate(-400deg);}
 	}	
+
+	#personal_icon {
+		position: absolute;
+		width: 10px;  
+		bottom: 63px;
+		left: 55px;
+		z-index: 90;
+	}
 }
 #header {	     
 		position: fixed;

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  
+  
+
+  get 'store/index'
+  resources :charges
 
   get 'chat' => 'conversations#show'
   

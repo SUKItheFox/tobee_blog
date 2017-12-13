@@ -78,7 +78,6 @@
             <li class="category"></li>
             <% if current_page?(root_path) %>
               <li><%= link_to "About Me", about_path %></li> 
-              <li><%= link_to "My Account", current_user %></li>
             <% end %>  
           </div>      
 
@@ -117,8 +116,8 @@
                 <img><%= image_tag "flying bee right wing.png", :class =>"bee-wing-right"%></img>
               </div>
             <% end %>
-          <% end %>            
-          
+          <% end %>   
+
         
 
           <% if user_signed_in? %>
@@ -130,6 +129,11 @@
                 <% end %>
                 <%= link_to destroy_user_session_path do %>                       
                     <img><%= image_tag "log out.png"%></img>   
+                <% end %>
+                <%= link_to current_user do %>
+                  <div id="personal_icon">          
+                      <img><%= image_tag "personal icon 1.png" %></img>   
+                  </div>   
                 <% end %>
                 
               </div>

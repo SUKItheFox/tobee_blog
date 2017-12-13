@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  	<title>To Bee Blog</title>
+	
+	   <%= stylesheet_link_tag    'store_index', media: 'all', 'data-turbolinks-track'=> "reload" %>
+
+
+
+     <style>
+     #sidebar
+     {
+     display: none;
+     }
+     #sidebar_right
+     {
+     display: none;
+     }
+     #header
+     {
+     display: none;
+     }
+     #main_content {  
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        z-index: 0;
+      }
+     </style>
+   </head>	
+  <body class= "user_container">
+
+
+    <div class="vertical-menu">
+      <a> <%= link_to "Personal", current_user, :class=>"active"%></a>
+      <a> <%= link_to "Chat", {:controller=>"users", :action=>"index"} %></a>
+      <a> <%= link_to "Forum", personal_page_path %></a>
+      <a> <%= link_to "Shop", personal_page_path %></a>
+      <a> <%= link_to "Upload", personal_page_path %></a>
+    </div> 
+
+    <%= link_to root_path do %>
+      <div id="home_logo">          
+          <img><%= image_tag "TOBEE logo 280.png" %></img>   
+      </div>   
+    <% end %> 
+	
+
+	<div class="user_container">
+		<div class="product">
+			<h1>To-Bee Collar Shirts</h1>
+			<div class="shirt">
+				<%= image_tag("personal icon 2.png", alt: "COLLAR SHIRT") %>
+			</div>
+		</div>
+
+		<%= form_tag charges_path do %>
+		  <article>
+		    <% if flash[:error].present? %>
+		      <div id="error_explanation">
+		        <p><%= flash[:error] %></p>
+		      </div>
+		    <% end %>
+		    <label class="amount">
+		      <span>Amount: €25.00</span>
+		    </label>
+		  </article>
+
+		  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+		          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+		          data-description="Collar Shirt"
+		          data-amount="500"
+		          data-locale="auto"></script>
+		<% end %>
+	</div>
+
+    
+
+
+  </body>
+</html>  
