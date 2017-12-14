@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem "cancan"
+gem 'rails_admin', '~> 1.2'
 gem "piggybak"
 gem "rolify"
 gem "puma_worker_killer"

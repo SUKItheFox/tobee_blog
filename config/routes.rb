@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
   
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get '/shop', to: 'store#index'
   resources :charges
 
@@ -14,11 +15,7 @@ Rails.application.routes.draw do
     get 'users/:id/chat' => 'users#index'
   end
 
-  unauthenticated :user do
-    devise_scope :user do
-      get "/" => "devise/sessions#new"
-    end
-  end
+  
 
   resources :conversations do
     resources :messages

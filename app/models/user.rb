@@ -29,12 +29,11 @@ class User < ApplicationRecord
       where(conditions).first
     end
   end  
-  attr_accessor :login
-
-  
-  acts_as_orderer
+  attr_accessor :login  
 
   has_many :comments
+
+  acts_as_orderer
 
   
 end

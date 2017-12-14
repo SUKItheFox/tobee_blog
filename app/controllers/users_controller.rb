@@ -19,5 +19,10 @@ class UsersController < ApplicationController
   def edit
     @profile = current_user.profile
   end
+  def can?
+  end
+
+  def cannot?
+  end 
 
 end

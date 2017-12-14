@@ -55,7 +55,9 @@
 			</div>
 		</div>
 
-		<%= cart_form(@product) %>
+		<div id="cart_form">
+      <%= cart_form(@product) %>
+    </div> 
 		<%= cart_link %>
 		<!--%= orders_link("Order History") %-->
 		<%= piggybak_track_order("To Bee Shop") %>
