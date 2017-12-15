@@ -7,7 +7,13 @@ end
 
 gem "cancan"
 gem 'rails_admin', '~> 1.2'
+gem 'kaminari'
 gem "piggybak"
+gem "piggybak_taxonomy", "0.2.1"
+gem "piggybak_variants", "0.1.3"
+gem "piggybak_coupons", "0.1.2"
+gem "piggybak_bundle_discounts", "0.1.1"
+gem "piggybak_giftcerts", "0.1.0"
 gem "rolify"
 gem "puma_worker_killer"
 gem 'tinymce-rails'

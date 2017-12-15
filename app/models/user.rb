@@ -8,6 +8,13 @@ class User < ApplicationRecord
     # do something before it gets added
   end
 
+  belongs_to :role
+
+  def admin?
+    role_id == 2 # If you have id == 0 for admin
+  end
+
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

@@ -1,0 +1,6 @@
+<%= @product.name %>
+<% @product.options.each do |option| %>
+    <%= option.size %>
+    <%= option.price %>
+    <%= option.colour %>
+<% end %>

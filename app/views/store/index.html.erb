@@ -51,16 +51,18 @@
 		<div class="product">
 			<h1>To-Bee Collar Shirts</h1>
 			<div class="shirt">
-				<%= image_tag("personal icon 2.png", alt: "COLLAR SHIRT") %>
+				<%= image_tag("personal icon 2.png", alt: "COLLAR SHIRT") %>  
+        <div id="cart_form">
+          <%= cart_form(@product) %>
+        </div> 
+        <%= cart_link %>
+        <!--%= orders_link("Order History") %-->
+        <%= piggybak_track_order("To Bee Shop") %>
+
 			</div>
 		</div>
 
-		<div id="cart_form">
-      <%= cart_form(@product) %>
-    </div> 
-		<%= cart_link %>
-		<!--%= orders_link("Order History") %-->
-		<%= piggybak_track_order("To Bee Shop") %>
+		
 	</div>
 
     

@@ -31,7 +31,7 @@ class Ability
     if user && user.roles.include?(Role.find_by_name("admin"))
       can :dashboard
       can :access, :rails_admin
-      can [:read, :edit], Frame
+      can [:read, :edit]
       can :manage, :all
       can :manage, Piggybak.config.manage_classes.map(&:constantize)
       Piggybak.config.extra_abilities.each do |extra_ability|
