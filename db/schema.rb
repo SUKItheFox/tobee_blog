@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171215224306) do
+ActiveRecord::Schema.define(version: 20171216220223) do
 
   create_table "adjustments", force: :cascade do |t|
     t.string "source_type"
@@ -61,6 +61,13 @@ ActiveRecord::Schema.define(version: 20171215224306) do
     t.datetime "updated_at", null: false
     t.index ["recipient_id"], name: "index_conversations_on_recipient_id"
     t.index ["sender_id"], name: "index_conversations_on_sender_id"
+  end
+
+  create_table "forumposts", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "language_categories", force: :cascade do |t|

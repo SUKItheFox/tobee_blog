@@ -48,5 +48,6 @@ Rails.application.routes.draw do
   get '/personal_page', to: 'pages#personal_page'
 
   resources :products, only: :show
-  
+  resources :forumposts
+  get '/forum', to: 'forumposts#index'
 end
