@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'simple_form', '~> 3.5'
+gem 'haml', '~> 5.0', '>= 5.0.4'
 gem "cancan"
 gem 'rails_admin', '~> 1.2'
 gem 'kaminari'
