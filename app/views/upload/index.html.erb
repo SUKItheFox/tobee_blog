@@ -1,0 +1,12 @@
+<h1>Upload a file</h1>
+<%= form_for :upload, url: upload_uploadFile_path do |f| %>
+	<%= f.file_field :file %><br/>
+	<%= f.submit :UPLOAD! %>
+<% end %>
+
+<h1>Download a file</h1>
+<%= form_for :download, url: upload_admin_downloadFile_path do |f| %>
+	<%= f.text_field :fileName %><br/>
+	<%= f.submit :DoWNLOAD! %>
+<% end %>	
+

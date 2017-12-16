@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  
+
   mount RailsAdmin::Engine => '/admin', as: :rails_admin
   mount Piggybak::Engine => '/shop/checkout', as: :piggybak
   mount PiggybakTaxonomy::Engine => '/shop', :as => 'piggybak_taxonomy'
@@ -38,6 +40,10 @@ Rails.application.routes.draw do
   	
   root "posts#index"
 
+  get '/upload', to: 'upload#index'
+  get '/upload/admin', to: 'upload#show'
+  post 'upload/uploadFile'  => 'upload#uploadFile' 
+  post 'upload/admin/downloadFile'  => 'upload#downloadFile'  
   get '/about', to: 'pages#about' 
   get '/personal_page', to: 'pages#personal_page'
 
