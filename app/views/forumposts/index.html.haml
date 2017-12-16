@@ -1,34 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>    
-<title>To Bee Blog</title>
-<%= stylesheet_link_tag    'store_index', media: 'all', 'data-turbolinks-track'=> "reload" %>
-<style>
-#sidebar
-{
-display: none;
-}
-#sidebar_right
-{
-display: none;
-}
-#header
-{
-display: none;
-}
-#main_content {  
-margin-left: 0px;
-margin-right: 0px;
-margin-top: 0px;
-z-index: 0;
-}
-</style>
-</head>  
-<body class= "user_container">
-<h1> FORUM</h1>
+- @forumposts.each do |forumpost|
+    %h2= forumpost.title
+    %p
+        Published at
+        = time_ago_in_words(forumpost.created_at) 
+        ago
 
-
-</body>
-</html>  
+= link_to "New Post", new_forumpost_path
 
 

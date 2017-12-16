@@ -3,6 +3,7 @@ class ForumpostsController < ApplicationController
 
 
 	def index
+		@forumposts = Forumpost.all.order("created_at DESC") 
 	end	
 
 	def show
