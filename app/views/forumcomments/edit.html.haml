@@ -1,0 +1,5 @@
+%h1 Edit Reply
+
+= simple_form_for([@forumpost, @forumcomment]) do |f|
+	= f.input :forumcomment
+	= f.submit

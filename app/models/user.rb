@@ -40,6 +40,7 @@ class User < ApplicationRecord
 
   has_many :comments
   has_many :forumposts
+  has_many :forumcomments
 
   acts_as_orderer
 

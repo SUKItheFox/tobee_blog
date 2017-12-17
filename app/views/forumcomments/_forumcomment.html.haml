@@ -1,0 +1,6 @@
+.forumcomment
+	%p= forumcomment.forumcomment
+	%p= forumcomment.user.username
+.buttons
+	= link_to "Edit", edit_forumpost_forumcomment_path(forumcomment.forumpost, forumcomment)
+	= link_to "Delete", [forumcomment.forumpost, forumcomment], method: :delete, data: { confirm: "Are you sure?" }	

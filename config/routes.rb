@@ -46,8 +46,12 @@ Rails.application.routes.draw do
   post 'upload/admin/downloadFile'  => 'upload#downloadFile'  
   get '/about', to: 'pages#about' 
   get '/personal_page', to: 'pages#personal_page'
+  get '/forum', to: 'forumposts#index'
 
   resources :products, only: :show
-  resources :forumposts
-  get '/forum', to: 'forumposts#index'
+  resources :forumposts do
+    resources :forumcomments
+  end  
+
+  
 end

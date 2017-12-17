@@ -1,5 +1,15 @@
-%h1= @forumpost.title
-%p= @forumpost.content
+#forumpost_content	
+  %h1= @forumpost.title
+  %p= @forumpost.content
+
+  #forumcomments
+    %h2= @forumpost.forumcomments.count 
+    %p REPLIES
+    = render @forumpost.forumcomments
+
+    %h3 Reply to thread
+    = render "forumcomments/form"
+
 
 = link_to "Edit", edit_forumpost_path(@forumpost)
 = link_to "Delete", forumpost_path(@forumpost), method: :delete, data: { confirm: "Are you sure about the 'delete'?"}
