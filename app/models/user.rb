@@ -39,6 +39,7 @@ class User < ApplicationRecord
   attr_accessor :login  
 
   has_many :comments
+  has_many :forumposts
 
   acts_as_orderer
 

@@ -1,9 +1,11 @@
 - @forumposts.each do |forumpost|
-    %h2= forumpost.title
+    %h2= link_to forumpost.title, forumpost
     %p
         Published at
         = time_ago_in_words(forumpost.created_at) 
         ago
+        by
+        = forumpost.user.username
 
 = link_to "New Post", new_forumpost_path
 

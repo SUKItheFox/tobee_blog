@@ -11,11 +11,11 @@ class ForumpostsController < ApplicationController
 	end
 
 	def new
-		@forumpost = Forumpost.new
+		@forumpost = current_user.forumposts.build
 	end	 
 
 	def create
-		@forumpost = Forumpost.new(forumpost_params)
+		@forumpost = current_user.forumposts.build(forumpost_params)
 
 		if @forumpost.save
 			redirect_to @forumpost
