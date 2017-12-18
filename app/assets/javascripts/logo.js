@@ -1,8 +1,8 @@
 $(document).on('scroll', function() {
   if ($(document).scrollTop() >= 30) {
     
-    $('.style_image').css('margin-top', '-130px');
-     $('.style_image').css('left', '17px');
+    $('.style_image').css('margin-top', '-110px');
+     $('.style_image').css('left', '9px');
      $('.style_image').css('width', '80%');
 
   } else {

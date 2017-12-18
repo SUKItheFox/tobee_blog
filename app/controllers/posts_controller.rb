@@ -11,7 +11,7 @@ class PostsController < ApplicationController
 
 		else	
 			params[:category].blank? 
-			@posts = Post.where(category_id: @category_id).order('created_at DESC')			
+			@posts = Post.all			
 			
 		end		
 	end

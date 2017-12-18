@@ -17,12 +17,9 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> "reload" %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700', 'mobile' if mobile_device? %>
     <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
-    <%= javascript_include_tag 'application', 'users.js', 'chat.js', 'homepage_header_text.js', 'scroll_top_arrow', 'navBar_fadein', 'navBar_dropdown', 'tinymce.js', 'TypingText.js' ,'sidebar_beehive_fade_in.js', 'logo.js', 'mobile.js', 'data-turbolinks-track'=> "reload" %>
+    <%= javascript_include_tag 'application', 'users.js', 'chat.js',  'scroll_top_arrow', 'navBar_fadein', 'navBar_dropdown', 'tinymce.js', 'TypingText.js' ,'sidebar_beehive_fade_in.js', 'logo.js', 'mobile.js', 'data-turbolinks-track'=> "reload" %>
     <%= stylesheet_link_tag "/jqtouch/jqtouch.min.css", "/jqtouch/themes/apple/theme.min.css" %>
     <%= javascript_include_tag "/jqtouch/jquery.1.3.2.min.js", "/jqtouch/jqtouch.min.js", "mobile" %>
-
-
-
     
     
 
@@ -105,39 +102,14 @@
                   <img><%= image_tag "TOBEE logo 280.png", :class => "style_image_pages" %></img>   
                 </div>   
               <% end %>             
-          <% end %> 
-
-
-          
-          <% if current_page?(root_path) %>
-            <%= link_to new_user_session_path do %>
-              <div class="bee">
-                <img><%= image_tag "flying bee body.png", :class =>"bee-body"%></img>
-                <img><%= image_tag "flying bee left wing.png", :class =>"bee-wing-left"%></img>
-                <img><%= image_tag "flying bee right wing.png", :class =>"bee-wing-right"%></img>
-              </div>
-            <% end %>
-          <% end %>   
-
-        
+          <% end %>         
 
           <% if user_signed_in? %>
-              <div class="buttons">
-                <% if current_user.has_role? :admin %>
-                  <%= link_to new_post_path do %>                       
-                      <img><%= image_tag "new post.png"%></img>   
-                  <% end %>
-                <% end %>
-                <%= link_to destroy_user_session_path do %>                       
-                    <img><%= image_tag "log out.png"%></img>   
-                <% end %>
                 <%= link_to current_user do %>
                   <div id="personal_icon">          
                       <img><%= image_tag "personal icon 1.png" %></img>   
                   </div>   
-                <% end %>
-                
-              </div>
+                <% end %>              
           <% end%>
 
       		
@@ -171,6 +143,29 @@
           <div id="sidebar_beehive_slide_in">
             <p>Beehive of artists in service of </br> the world</p>
           </div>
+
+          <% if current_page?(root_path) %>
+            <%= link_to new_user_session_path do %>
+              <div class="bee">
+                <img><%= image_tag "flying bee body.png", :class =>"bee-body"%></img>
+                <img><%= image_tag "flying bee left wing.png", :class =>"bee-wing-left"%></img>
+                <img><%= image_tag "flying bee right wing.png", :class =>"bee-wing-right"%></img>
+              </div>
+            <% end %>
+          <% end %> 
+
+            <% if user_signed_in? %>
+              <div class="buttons">
+                <% if current_user.has_role? :admin %>
+                  <%= link_to new_post_path do %>                       
+                      <img class="button"><%= image_tag "new post.png"%></img>   
+                  <% end %>
+                <% end %>
+                <%= link_to destroy_user_session_path do %>                       
+                    <img class="button"><%= image_tag "log out.png"%></img>   
+                <% end %>
+              </div>  
+            <% end %>  
           
                  
             <!-- <% LanguageCategory.all.each do |language_category| %> 
@@ -179,41 +174,79 @@
             -->          
                    
           <div id="popup">
-            <a href="https://github.com/SUKItheFox"><img><%= image_tag "SUKItheFox9.png", :style=>"width: 35px;", :alt=>"beetle" %></img> <span> &copy;2017 by SUKItheFox.</br> All rights reserved. </span></a>
+            <a href="https://github.com/SUKItheFox"><img><%= image_tag "SUKItheFox9.png", :style=>"width: 65px;", :alt=>"beetle" %></img> <span> &copy;2017 </br> by SUKItheFox.</br> All rights reserved. </span></a>
           </div> 
     		
     	  </div>
-      <% end %>  
-
-      <div id="header"> 
-
-        <% if current_page?(root_path) %>
-          <div class="homepage_header_style">
-            <p>To Bee</p>
-            <h1>inspired</h1>
-          </div>
-
-        <% end %>
-        <li>
-          <% if @category_id == 5 %>
-          <%= image_tag "header Beehive.png", :class => "category_header_style"  %>
-
-          <% elsif @category_id == 6 %> 
-          <%= image_tag "header Life.png", :class => "category_header_style"  %>
-
-          <% elsif @category_id == 7 %>
-          <%= image_tag "header Music.png", :class => "category_header_style"  %>
-
-          <% elsif @category_id == 8 %>
-          <%= image_tag "header Photography.png", :class => "category_header_style"  %>
+      <% end %> 
 
 
-          <% else %>
-          <p> </p>
-                  
+      <% unless current_page?(current_user) || current_page?(forum_path) || current_page?(forumposts_path)%>
+        <div id="header"> 
+
+          <% if current_page?(root_path) %>
+            <div class="homepage_header_style">
+              <p>To Bee</p>
+              <h1>inspired</h1>
+            </div>
+
           <% end %>
-        </li>        
-      </div> 
+          <li>
+            <% if @category_id == 5 %>
+            <%= image_tag "header Beehive.png", :class => "category_header_style"  %>
+
+            <% elsif @category_id == 6 %> 
+            <%= image_tag "header Life.png", :class => "category_header_style"  %>
+
+            <% elsif @category_id == 7 %>
+            <%= image_tag "header Music.png", :class => "category_header_style"  %>
+
+            <% elsif @category_id == 8 %>
+            <%= image_tag "header Photography.png", :class => "category_header_style"  %>
+
+
+            <% else %>
+            <p> </p>
+                    
+            <% end %>
+          </li> 
+          <% if current_page?(root_path) %>
+            <script>
+              var titles = [
+                  'in harmony',
+                  'healthy',
+                  'present',
+                  'curious',
+                  'inspired'
+              ];
+
+              $(window).scroll(function(){
+                  var pos = $(this).scrollTop();
+                  
+                  if(pos < 100) {
+                      $('h1').slideUp().text(titles[0]);
+                  }
+                  if(pos > 100) {
+                      $('h1').slideDown();
+                  }
+                  if(pos > 200) {
+                      $('h1').text(titles[1]);
+                  }
+                  if(pos > 300) {
+                      $('h1').text(titles[2]);
+                  }
+                  if(pos > 400) {
+                      $('h1').text(titles[3]);
+                  }
+                  if(pos > 500) {
+                      $('h1').text(titles[4]);
+                  }
+              });
+
+            </script>    
+          <% end %>       
+        </div> 
+      <% end %>  
     
   </body>
 </html>

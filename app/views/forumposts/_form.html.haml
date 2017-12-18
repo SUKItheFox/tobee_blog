@@ -1,8 +1,22 @@
+!!!
+%html
+%head
+	%title To Bee Forum
+	= stylesheet_link_tag    'forum', media: 'all', 'data-turbolinks-track' => true
+	%link{ rel: "stylesheet", href: "http://fonts.googleapis.com/css?family=Lato:300,400,700", type: "text/css"}
+	%link{:rel => "stylesheet", :href => "http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"}/
+	= javascript_include_tag 'application', 'data-turbolinks-track' => true
+	= csrf_meta_tags
+%body.forum_form  
+	#sidebar{ style: 'display: none;' }  
 
+	= simple_form_for @forumpost do |f|
+		= f.input :title
+		= f.input :content
+		= f.submit
 
-= simple_form_for @forumpost do |f|
-	= f.input :title
-	= f.input :content
-	= f.submit
-
-
+	.wrapper
+		%p.notice= notice
+		%p.alert= alert
+	.wrapper
+		= yield 

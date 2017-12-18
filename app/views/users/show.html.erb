@@ -46,6 +46,32 @@
       </div>   
     <% end %> 
 
+      <% if user_signed_in? %>
+              <div class="buttons">
+                <% if current_user.has_role? :admin %>
+                  <%= link_to new_post_path do %>                       
+                      <img><%= image_tag "new post.png"%></img>   
+                  <% end %>
+                <% end %>
+                <%= link_to destroy_user_session_path do %>                       
+                    <img><%= image_tag "log out.png"%></img>   
+                <% end %>
+                <%= link_to current_user do %>
+                  <div id="personal_icon">          
+                      <img><%= image_tag "personal icon 1.png" %></img>   
+                  </div>   
+                <% end %>
+                
+              </div>
+          <% end%>
+
+          
+          <% if current_user.present? %>
+            <p class="sign_in"><%= link_to "", new_user_session_path %></p>
+          <% end %>
+        </div>
+      
+
     <div id="background_container">
       <div class="user_content">
       <img src="">

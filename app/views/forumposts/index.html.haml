@@ -1,12 +1,47 @@
-- @forumposts.each do |forumpost|
-    %h2= link_to forumpost.title, forumpost
-    %p
-        Published at
-        = time_ago_in_words(forumpost.created_at) 
-        ago
-        by
-        = forumpost.user.username
+!!!
+%html
+%head
+    %title To Bee Forum
+    = stylesheet_link_tag    'forum', media: 'all', 'data-turbolinks-track' => true
+    %link{ rel: "stylesheet", href: "http://fonts.googleapis.com/css?family=Lato:300,400,700", type: "text/css"}
+    %link{:rel => "stylesheet", :href => "http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"}/
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    
 
-= link_to "New Post", new_forumpost_path
+
+%body.user_container
+
+    .vertical-menu
+        %a= link_to "Personal", current_user 
+        %a= link_to "Chat", chat_path
+        %a= link_to "Forum", forum_path, :class=>"active" 
+        %a= link_to "Shop", shop_path 
+        %a= link_to "Upload", upload_path 
+      
+    
+    .wrapper 
+
+
+        #forumposts
+
+            - @forumposts.each do |forumpost|
+
+                .forumpost
+                    %h2= link_to forumpost.title, forumpost
+                    %p
+                        Published at
+                        = time_ago_in_words(forumpost.created_at) 
+                        ago
+                        by
+                        = forumpost.user.username
+
+                = link_to "New Post", new_forumpost_path
+
+    .wrapper
+        %p.notice= notice
+        %p.alert= alert
+    .wrapper
+        = yield    
 
 

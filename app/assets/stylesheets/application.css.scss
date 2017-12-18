@@ -272,15 +272,15 @@ a {
 			position: absolute;
 			width: 130%;
 			margin-top: -150px;
-			left: 69px;
+			left: 62px;
 			z-index: 95;
-			img-shadow: 10px 10px 5px white;
+			/*img-shadow: 10px 10px 5px white;*/
 			transition: all 3s ease;
 			-moz-transition: all 3s ease; /* Firefox 4 */
 			-webkit-transition: all 3s ease; /* Safari and Chrome */
 			-o-transition: all 3s ease; /* Opera */
-			-webkit-filter: drop-shadow(2px 1px 1px rgba(255,255,255,.7) );
-          	filter: drop-shadow(3px 3px 2px rgba(255,255,255,.7) );
+			/*-webkit-filter: drop-shadow(2px 1px 1px rgba(255,255,255,.7) );*/
+          	/*filter: drop-shadow(3px 3px 2px rgba(255,255,255,.7) );*/
 		}	
 			
 
@@ -304,8 +304,9 @@ a {
 	
 		
 	#navBar {
-		top: 125px;
+		top: 185px;
 		list-style: none;
+		color: #000000;
 		position: absolute;
 		text-align: left;
 		z-index: 100;
@@ -326,11 +327,11 @@ a {
 			z-index: 100;
 			text-align: left;
 			font-weight: bold;
-			text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+			
 			font-size: 1.2em;
 
 			a {
-				color: #ffffff;
+				color: #000000;
 				text-decoration: none;
 				transition: all 0.4s ease;
 				z-index: 100;
@@ -356,25 +357,25 @@ a {
 	}
 
 	#categories_stable {
-		top: 155px;
-		padding: 0.3em 1em;
+		top: 205px;
+		padding: 0.3em 1.4em;
 		list-style: none;
-		color: #ffffff;
+		color: #000000;
 		font-weight: bold;
-		text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+		
 		font-size: 1.2em;
 		position: absolute;
 	}
 
 	#category_slides_in {
-		top: 190px;
+		top: 230px;
 		list-style: none;
 		font-weight: bold;
 		position: absolute;
 		text-align: left;
-		word-spacing: 10em;
 		padding: 0.3em 2em;
-		padding-right: 3em;
+		padding-right: 6.5em;
+		padding-left: 2.5em;
 		width: 100%;
 		transition: all 0.5s ease;
 		-moz-transition: all 0.5s ease; /* Firefox 4 */
@@ -398,10 +399,10 @@ a {
 		text-align: left;
 		font-weight: bold;
 		font-size: 1.2em;
-		text-shadow: 1px 1px white;
+		
 
 			a {
-			color: #252525;
+			color: #000000;
 			text-decoration: none;
 			transition: all 0.4s ease;
 			z-index: 100;
@@ -417,22 +418,6 @@ a {
 
 
 	
-
-
-	.buttons {
-			position: absolute;
-			float: left;
-			bottom: 2px;
-			z-index: 100;
-			
-			.button {
-				font-size: .8em;
-				margin-left: 0.5em;
-				color: #252525;
-				z-index: 100;
-
-			}
-	}		
 	.sign_in {
 		position: absolute;
 		left: 7.7em;
@@ -443,64 +428,14 @@ a {
 	}
 
 
-
 	
-
-	.bee{
-		margin-top:700px;
-
-		position:relative;
-		animation: ani-bee 10s ease infinite;
-		transform-origin: 10% 10%;
-		z-index: 100;
-	}
-
-	.bee-wing-left,.bee-wing-right,.bee-body{
-		position:absolute;
-
-	}
-
-	.bee-wing-left{
-		top: 0px;
-		left: 0px;
-		transform-origin: 50% 0%;
-		animation: ani-left-wing 0.5s ease infinite;
-		-webkit-filter: drop-shadow(2px 1px 1px rgba(255,255,255,.7) );
-          	filter: drop-shadow(3px 3px 2px rgba(255,255,255,.7) );
-	}
-
-	.bee-wing-right{
-		top: 0px;
-		left: 0px;
-		transform-origin: 50% 0%;
-		animation: ani-right-wing 0.5s ease infinite;
-		-webkit-filter: drop-shadow(2px 1px 1px rgba(255,255,255,.7) );
-          	filter: drop-shadow(3px 3px 2px rgba(255,255,255,.7) );
-	}
-
-	@keyframes ani-left-wing {
-	 0% {transform: rotate(-10deg);}
-	 90% {transform: rotate(0deg);}
-	 100% {transform: rotate(-20deg);}
-	}
-
-	@keyframes ani-right-wing {
-	 0% {transform: rotate(10deg);}
-	 90% {transform: rotate(0deg);}
-	 100% {transform: rotate(20deg);}
-	}
-
-	@keyframes ani-bee {
-		0%{ left:50px;transform: rotate(300deg);}
-		50% {left:1500px;transform: rotate(-440deg);}
-		100% {left:50px;transform: rotate(-400deg);}
-	}	
+	
 
 	#personal_icon {
 		position: absolute;
 		width: 10px;  
-		bottom: 63px;
-		left: 55px;
+		bottom: 15px;
+		left: 35px;
 		z-index: 90;
 	}
 }
@@ -568,37 +503,104 @@ a {
 	padding:  0 0 0;
 	z-index: 90;
 
+
+	.bee{
+		margin-top: 150px;
+
+		position:relative;
+		animation: ani-bee 10s ease infinite;
+		transform-origin: 10% 10%;
+		z-index: 100;
+	}
+
+	.bee-wing-left,.bee-wing-right,.bee-body{
+		position:absolute;
+
+	}
+
+	.bee-wing-left{
+		top: 0px;
+		left: 0px;
+		transform-origin: 50% 0%;
+		animation: ani-left-wing 0.5s ease infinite;
+		-webkit-filter: drop-shadow(2px 1px 1px rgba(255,255,255,.7) );
+          	filter: drop-shadow(3px 3px 2px rgba(255,255,255,.7) );
+	}
+
+	.bee-wing-right{
+		top: 0px;
+		left: 0px;
+		transform-origin: 50% 0%;
+		animation: ani-right-wing 0.5s ease infinite;
+		-webkit-filter: drop-shadow(2px 1px 1px rgba(255,255,255,.7) );
+          	filter: drop-shadow(3px 3px 2px rgba(255,255,255,.7) );
+	}
+
+	@keyframes ani-left-wing {
+	 0% {transform: rotate(-10deg);}
+	 90% {transform: rotate(0deg);}
+	 100% {transform: rotate(-20deg);}
+	}
+
+	@keyframes ani-right-wing {
+	 0% {transform: rotate(10deg);}
+	 90% {transform: rotate(0deg);}
+	 100% {transform: rotate(20deg);}
+	}
+
+	@keyframes ani-bee {
+		0%{ right:20px;transform: rotate(300deg);}
+		50% {right:950px;transform: rotate(40deg);}
+		100% {right:20px;transform: rotate(-400deg);}
+	}	
+
+
 	
 	.what_is_beehive_style {
 		position: absolute;
 		margin-left: 2em;
 		width: 50%;
-		margin-top: 57px;
-		border: 2px solid black;
+		margin-top: 15px;
 		z-index: 90;
 	}
 	a img.hover {
     	display: none;
+    	border-bottom: 4px solid black;
+		border-left: 4px solid black;
+		border-right: 4px solid black;
+		border-top: 4px solid black;
 	}
 	a img.default {
 	    display: inherit;
+	    border-bottom: 4px solid black;
+		border-left: 4px solid black;
+		border-right: 4px solid black;
+		border-top: 4px solid black;
 	}
 	a:hover img.hover {
 	    display: inherit;
+	    border-bottom: 4px solid black;
+		border-left: 4px solid black;
+		border-right: 4px solid black;
+		border-top: 4px solid black;
 	}
 	a:hover img.default {
 	    display: none;
+	    border-bottom: 4px solid black;
+		border-left: 4px solid black;
+		border-right: 4px solid black;
+		border-top: 4px solid black;
 	}
 
 	p {
 		position: absolute;
-		text-shadow: 1px 1px white;
+		
 		font-size: 1.7em;
 		font-family: 'Cutive Mono';
 		font-weight: bold;
 		left: 2em;
 		line-spacing: .5em;
-		margin-top: 265px;
+		margin-top: 235px;
 		z-index: 90;
 
 	}
@@ -664,8 +666,8 @@ a {
 
 	#popup { 
 		position: fixed;
-		margin-right: 0px;
-		bottom: 0;
+		margin-left: 172px;
+		bottom: 6px;
 		z-index: 100;
 		 }
 	#popup img {
@@ -678,8 +680,8 @@ a {
 		display: inline;
 		text-align: center;
 		font-weight: bold;
-		padding: 50px 200px;
-		bottom: 45px;
+		padding: 1px 2px;
+		bottom: 1px;
 		
 	}
 
@@ -695,6 +697,8 @@ a {
 
 	#popup a:hover { 
 		background-color: none; 
+		
+
 	}
 
 	/* the IE correction rule */
@@ -705,9 +709,8 @@ a {
 	#popup a:hover span {
 		display: inline;
 		position: absolute;
-		position: absolute;
-		left: 20px;
-		bottom: 1px;
+		bottom: -16px;
+		left: -12.5em;
 		font-weight: bold;
 			font-size: .85em;
 			text-align: center;
@@ -719,7 +722,7 @@ a {
 }
 
 
-.button {
+.what_button {
 	outline: none;
 	background: transparent;
 	border: 1px solid #d6dce0;
@@ -741,4 +744,24 @@ a {
    height: 0;
    clear: both;
 }
+
+.buttons {
+			position: absolute;
+			float: right;
+			margin-left: 12.2em;
+			bottom: 85px;
+			z-index: 100;
+			
+			.button {
+				font-size: .8em;
+				padding: 1em 3em;
+				z-index: 100;
+				&:hover {
+					
+					color: #33acb7;
+						}
+			}			
+}		
+	
+
 

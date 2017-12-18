@@ -15,13 +15,13 @@ Rails.application.routes.draw do
   get '/shop', to: 'store#index'
   resources :charges
 
-  get 'chat' => 'conversations#show'
+  get 'users/:id/chat' => 'conversations#show'
   
   
   devise_for :users
 
   
-    get 'users/:id/chat' => 'users#index'
+    get '/chat' => 'users#index'
   
 
   
