@@ -47,6 +47,9 @@ Rails.application.config.assets.precompile += %w( navBar_dropdown.js )
 	#Line for TypingText.js
 Rails.application.config.assets.precompile += %w( TypingText.js )
 
+    #Line for store.js
+Rails.application.config.assets.precompile += %w( store.js )
+
 	#Line for mobile vesrion of the website
 Rails.application.config.assets.precompile += %w( mobile.js )
 
@@ -82,7 +85,8 @@ Rails.application.config.assets.precompile += %w( user_index.css.scss )
 Rails.application.config.assets.precompile += %w( store_index.css )
 #Css for forum index.html.erb
 Rails.application.config.assets.precompile += %w( forum.css )
-
+#Css for products index.html.erb
+Rails.application.config.assets.precompile += %w( store.css )
 #Css for user show.html.erb
 Rails.application.config.assets.precompile += %w( user_show.css.scss )
 #Css for about.html.erb

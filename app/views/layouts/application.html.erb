@@ -20,6 +20,8 @@
     <%= javascript_include_tag 'application', 'users.js', 'chat.js',  'scroll_top_arrow', 'navBar_fadein', 'navBar_dropdown', 'tinymce.js', 'TypingText.js' ,'sidebar_beehive_fade_in.js', 'logo.js', 'mobile.js', 'data-turbolinks-track'=> "reload" %>
     <%= stylesheet_link_tag "/jqtouch/jqtouch.min.css", "/jqtouch/themes/apple/theme.min.css" %>
     <%= javascript_include_tag "/jqtouch/jquery.1.3.2.min.js", "/jqtouch/jqtouch.min.js", "mobile" %>
+
+    <%= yield %>
     
     
 
@@ -56,197 +58,205 @@
   </head>
 
   <body> 
-    <p class= "notice"><%= notice %></p>
-    <p class= "alert"><%= alert %></p>
 
-     
-      <p>
-        <% if mobile_device? %>
-          <%= link_to "Full Site", :mobile => 0 %>
-        <% else %>
-          <%= link_to "", :mobile => 1 %>
-        <% end %>
-      </p>
+    <div id="container">
+      <p class= "notice"><%= notice %></p>
+      <p class= "alert"><%= alert %></p>
 
-
-      
-      	<div id="sidebar"> 
-
-          <div id="navBar">
-            <li class="category"></li>
-            <% if current_page?(root_path) %>
-              <li><%= link_to "About Me", about_path %></li> 
-            <% end %>  
-          </div>      
-
-
-          <li id="categories_stable">Categories</li>
-
-          <div id="category_slides_in">  
-            <% Category.all.each do |category| %> 
-              <li class="category_style"> 
-                <span><%= link_to category.name, posts_path(category: category.name) %></span>
-              </li>
-            <% end %>
-          </div>          
-
-          <% if current_page?(root_path) %>
-            <%= link_to root_path do %>
-              <div id="logo">          
-                <img><%= image_tag "TOBEE logo 280.png", :class => "style_image" %></img>   
-              </div>   
-            <% end %> 
-          <% else  %>
-            <%= link_to root_path do %>
-                <div id="logo_pages">          
-                  <img><%= image_tag "TOBEE logo 280.png", :class => "style_image_pages" %></img>   
-                </div>   
-              <% end %>             
-          <% end %>         
-
-          <% if user_signed_in? %>
-                <%= link_to current_user do %>
-                  <div id="personal_icon">          
-                      <img><%= image_tag "personal icon 1.png" %></img>   
-                  </div>   
-                <% end %>              
-          <% end%>
-
-      		
-          <% if current_user.present? %>
-      		  <p class="sign_in"><%= link_to "", new_user_session_path %></p>
+       
+        <p>
+          <% if mobile_device? %>
+            <%= link_to "Full Site", :mobile => 0 %>
+          <% else %>
+            <%= link_to "", :mobile => 1 %>
           <% end %>
-      	</div>
-      
-    	<div id="main_content">
+        </p>
+
+
         
+        	<div id="sidebar"> 
 
-        <% flash.each do |name, msg| %>
-        <%= content_tag(:div, msg, class: "alert") %>
-        <% end %>
-
-        <%= yield %>
-
-
-        <button onclick="topFunction()" id="myBtn"><%= image_tag "up arrow 1.png", :class => "style_arrow"  %></button> 
-            
-    	</div>	
-
+            <div id="navBar">
+              <li class="category">
+              <% if current_page?(root_path) %>
+                <p><%= link_to "About Me", about_path %></p> 
+                <p><%= link_to "Beehive", "" %></p>
+              <% end %>  
+              </li>
+            </div>      
 
 
-      <% if current_page?(root_path) %>
-        <div id="sidebar_right">
-          <a class="what_is_beehive_style">
-            <%= image_tag "what is to bee 2.png", :class => "default", :type =>"image" %>
-            <%= image_tag "what is to bee 1.png", :class => "hover", :type =>"image" %>
-          </a>
-          <div id="sidebar_beehive_slide_in">
-            <p>Beehive of artists in service of </br> the world</p>
-          </div>
+            <li id="categories_stable"><p>Categories</p></li>
 
-          <% if current_page?(root_path) %>
-            <%= link_to new_user_session_path do %>
-              <div class="bee">
-                <img><%= image_tag "flying bee body.png", :class =>"bee-body"%></img>
-                <img><%= image_tag "flying bee left wing.png", :class =>"bee-wing-left"%></img>
-                <img><%= image_tag "flying bee right wing.png", :class =>"bee-wing-right"%></img>
-              </div>
-            <% end %>
-          <% end %> 
+            <div id="category_slides_in">  
+              <% Category.all.each do |category| %> 
+                <li class="category_style"> 
+                  <span><%= link_to category.name, posts_path(category: category.name) %></span>
+                </li>
+              <% end %>
+            </div>          
+
+            <% if current_page?(root_path) %>
+              <%= link_to root_path do %>
+                <div id="logo">          
+                  <img><%= image_tag "TOBEE logo 280.png", :class => "style_image" %></img>   
+                </div>   
+              <% end %> 
+            <% else  %>
+              <%= link_to root_path do %>
+                  <div id="logo_pages">          
+                    <img><%= image_tag "TOBEE logo 280.png", :class => "style_image_pages" %></img>   
+                  </div>   
+                <% end %>             
+            <% end %>         
 
             <% if user_signed_in? %>
-              <div class="buttons">
-                <% if current_user.has_role? :admin %>
-                  <%= link_to new_post_path do %>                       
-                      <img class="button"><%= image_tag "new post.png"%></img>   
-                  <% end %>
-                <% end %>
-                <%= link_to destroy_user_session_path do %>                       
-                    <img class="button"><%= image_tag "log out.png"%></img>   
-                <% end %>
-              </div>  
-            <% end %>  
+                  <%= link_to current_user do %>
+                    <div id="personal_icon">          
+                        <img><%= image_tag "personal icon 1.png" %></img>   
+                    </div>   
+                  <% end %>              
+            <% end%>
+
+        		
+            <% if current_user.present? %>
+        		  <p class="sign_in"><%= link_to "", new_user_session_path %></p>
+            <% end %>
+        	</div>
+        
+      	<div id="main_content">
           
-                 
-            <!-- <% LanguageCategory.all.each do |language_category| %> 
-              <li class="button"> <span><%= link_to language_category.name, posts_path(language_category: language_category.name) %></span></li> 
-            <% end %>   
-            -->          
-                   
-          <div id="popup">
-            <a href="https://github.com/SUKItheFox"><img><%= image_tag "SUKItheFox9.png", :style=>"width: 65px;", :alt=>"beetle" %></img> <span> &copy;2017 </br> by SUKItheFox.</br> All rights reserved. </span></a>
-          </div> 
-    		
-    	  </div>
-      <% end %> 
+
+          <% flash.each do |name, msg| %>
+          <%= content_tag(:div, msg, class: "alert") %>
+          <% end %>
+
+          
 
 
-      <% unless current_page?(current_user) || current_page?(forum_path) || current_page?(forumposts_path)%>
-        <div id="header"> 
+          <button onclick="topFunction()" id="myBtn"><%= image_tag "up arrow 1.png", :class => "style_arrow"  %></button> 
 
-          <% if current_page?(root_path) %>
-            <div class="homepage_header_style">
-              <p>To Bee</p>
-              <h1>inspired</h1>
+
+              
+      	</div>	
+
+
+
+        <% if current_page?(root_path) %>
+          <div id="sidebar_right">
+            <a class="what_is_beehive_style">
+              <%= image_tag "what is to bee 2.png", :class => "default", :type =>"image" %>
+              <%= image_tag "what is to bee 1.png", :class => "hover", :type =>"image" %>
+            </a>
+            <div id="sidebar_beehive_slide_in">
+              <p>Beehive of artists in service of </br> the world</p>
             </div>
 
-          <% end %>
-          <li>
-            <% if @category_id == 5 %>
-            <%= image_tag "header Beehive.png", :class => "category_header_style"  %>
+            <% if current_page?(root_path) %>
+              <%= link_to new_user_session_path do %>
+                <div class="bee">
+                  <img><%= image_tag "flying bee body.png", :class =>"bee-body"%></img>
+                  <img><%= image_tag "flying bee left wing.png", :class =>"bee-wing-left"%></img>
+                  <img><%= image_tag "flying bee right wing.png", :class =>"bee-wing-right"%></img>
+                </div>
+              <% end %>
+            <% end %> 
 
-            <% elsif @category_id == 6 %> 
-            <%= image_tag "header Life.png", :class => "category_header_style"  %>
+              <% if user_signed_in? %>
+                <div class="buttons">
+                  <% if current_user.has_role? :admin %>
+                    <%= link_to new_post_path do %>                       
+                        <img class="button"><%= image_tag "new post.png"%></img>   
+                    <% end %>
+                  <% end %>
+                  <%= link_to destroy_user_session_path do %>                       
+                      <img class="button"><%= image_tag "log out.png"%></img>   
+                  <% end %>
+                </div>  
+              <% end %>  
+            
+                   
+              <!-- <% LanguageCategory.all.each do |language_category| %> 
+                <li class="button"> <span><%= link_to language_category.name, posts_path(language_category: language_category.name) %></span></li> 
+              <% end %>   
+              -->          
+                     
+            <div id="popup">
+              <a href="https://github.com/SUKItheFox"><img><%= image_tag "SUKItheFox9.png", :style=>"width: 65px;", :alt=>"beetle" %></img> <span> &copy;2017 </br> by SUKItheFox.</br> All rights reserved. </span></a>
+            </div> 
+      		
+      	  </div>
+        <% end %> 
 
-            <% elsif @category_id == 7 %>
-            <%= image_tag "header Music.png", :class => "category_header_style"  %>
 
-            <% elsif @category_id == 8 %>
-            <%= image_tag "header Photography.png", :class => "category_header_style"  %>
+        <% unless current_page?(current_user) || current_page?(forum_path) || current_page?(forumposts_path)%>
+          <div id="header"> 
 
+            <% if current_page?(root_path) %>
+              <div class="homepage_header_style">
+                <p>To Bee</p>
+                <h1>inspired</h1>
+              </div>
 
-            <% else %>
-            <p> </p>
-                    
             <% end %>
-          </li> 
-          <% if current_page?(root_path) %>
-            <script>
-              var titles = [
-                  'in harmony',
-                  'healthy',
-                  'present',
-                  'curious',
-                  'inspired'
-              ];
+            <li>
+              <% if @category_id == 5 %>
+              <%= image_tag "header Beehive.png", :class => "category_header_style"  %>
 
-              $(window).scroll(function(){
-                  var pos = $(this).scrollTop();
-                  
-                  if(pos < 100) {
-                      $('h1').slideUp().text(titles[0]);
-                  }
-                  if(pos > 100) {
-                      $('h1').slideDown();
-                  }
-                  if(pos > 200) {
-                      $('h1').text(titles[1]);
-                  }
-                  if(pos > 300) {
-                      $('h1').text(titles[2]);
-                  }
-                  if(pos > 400) {
-                      $('h1').text(titles[3]);
-                  }
-                  if(pos > 500) {
-                      $('h1').text(titles[4]);
-                  }
-              });
+              <% elsif @category_id == 6 %> 
+              <%= image_tag "header Life.png", :class => "category_header_style"  %>
 
-            </script>    
-          <% end %>       
-        </div> 
-      <% end %>  
-    
+              <% elsif @category_id == 7 %>
+              <%= image_tag "header Music.png", :class => "category_header_style"  %>
+
+              <% elsif @category_id == 8 %>
+              <%= image_tag "header Photography.png", :class => "category_header_style"  %>
+
+
+              <% else %>
+              <p> </p>
+                      
+              <% end %>
+            </li> 
+            <% if current_page?(root_path) %>
+              <script>
+                var titles = [
+                    'in harmony',
+                    'healthy',
+                    'present',
+                    'curious',
+                    'inspired'
+                ];
+
+                $(window).scroll(function(){
+                    var pos = $(this).scrollTop();
+                    
+                    if(pos < 100) {
+                        $('h1').slideUp().text(titles[0]);
+                    }
+                    if(pos > 100) {
+                        $('h1').slideDown();
+                    }
+                    if(pos > 200) {
+                        $('h1').text(titles[1]);
+                    }
+                    if(pos > 300) {
+                        $('h1').text(titles[2]);
+                    }
+                    if(pos > 400) {
+                        $('h1').text(titles[3]);
+                    }
+                    if(pos > 500) {
+                        $('h1').text(titles[4]);
+                    }
+                });
+
+              </script>    
+            <% end %>       
+          </div> 
+        <% end %>  
+
+      
+    </div>     
   </body>
 </html>

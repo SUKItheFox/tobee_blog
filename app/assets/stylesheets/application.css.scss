@@ -39,7 +39,13 @@ a {
 	color: inherit;
 }
 	
+#container {
 	
+    padding: 0;
+    margin: 0 auto;
+    min-width: 1000px;
+    min-height: 1000px;
+}	
 	
 
 #main_content {	
@@ -119,10 +125,7 @@ a {
 	}
 	#post_content {
 		padding: 8em 1em;
-		
-		
-
-		
+			
 
 		.title {
 			font-weight: 500;
@@ -304,7 +307,7 @@ a {
 	
 		
 	#navBar {
-		top: 185px;
+		top: 165px;
 		list-style: none;
 		color: #000000;
 		position: absolute;
@@ -313,37 +316,41 @@ a {
 		width: 100%;
 
 			 
-		.category {
-			font-weight: bold;			
-			font-size: 1.2em;
-			text-transform: uppercase;
-			color: #cafffe;				
-			z-index: 100;
-		}	
-			
-			  
-		li {
-			padding: 0em 1.4em;
-			z-index: 100;
-			text-align: left;
-			font-weight: bold;
-			
-			font-size: 1.2em;
+		.category {	
+			padding: 0em;
 
-			a {
-				color: #000000;
-				text-decoration: none;
-				transition: all 0.4s ease;
-				z-index: 100;
-				font-weight: bold;
-				&:hover {
-					color: #cafffe;
-					position: static;
-					z-index: 100;
-				}
+
+		
+
+			p::first-letter {
+			  font-weight: bold;
+			  color: #7F1824;
 			}
 				
+				  
+			p {
+				padding: 0em 1.4em 0em;
+				z-index: 100;
+				text-align: left;
+				font-weight: bold;				
+				font-size: 1.2em;
+
+				a {
+					color: #000000;
+					text-decoration: none;
+					transition: all 0.4s ease;
+					z-index: 100;
+					font-weight: bold;
+					&:hover {
+						color: #cafffe;
+						position: static;
+						z-index: 100;
+					}
+				}
+					
+			}
 		}
+
 
 		
 		.active {
@@ -357,7 +364,7 @@ a {
 	}
 
 	#categories_stable {
-		top: 205px;
+		top: 230px;
 		padding: 0.3em 1.4em;
 		list-style: none;
 		color: #000000;
@@ -365,10 +372,17 @@ a {
 		
 		font-size: 1.2em;
 		position: absolute;
+
+		p::first-letter {
+		  font-weight: bold;
+		  color: #7F1824;
+		}
 	}
 
+
+
 	#category_slides_in {
-		top: 230px;
+		top: 255px;
 		list-style: none;
 		font-weight: bold;
 		position: absolute;
@@ -549,9 +563,9 @@ a {
 	}
 
 	@keyframes ani-bee {
-		0%{ right:20px;transform: rotate(300deg);}
+		0%{ right:15px;transform: rotate(300deg);}
 		50% {right:950px;transform: rotate(40deg);}
-		100% {right:20px;transform: rotate(-400deg);}
+		100% {right:15px;transform: rotate(-400deg);}
 	}	
 
 

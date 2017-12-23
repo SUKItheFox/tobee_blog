@@ -13,6 +13,7 @@
 //= depend_on_asset "bootstrap.js"
 
 //= require private_pub
+//=require store
 //= require piggybak/piggybak-application
 //= require rails-ujs
 //= require bootstrap

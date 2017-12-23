@@ -1,0 +1,26 @@
+
+!!!
+%html
+%head
+	%title To Bee Shop
+	= stylesheet_link_tag    'store', media: 'all', 'data-turbolinks-track' => true
+	%link{ rel: "stylesheet", href: "http://fonts.googleapis.com/css?family=Lato:300,400,700", type: "text/css"}
+	%link{:rel => "stylesheet", :href => "http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"}/
+	= javascript_include_tag 'application', 'data-turbolinks-track' => false
+	= csrf_meta_tags
+
+%body.product_form
+
+	#product_content	
+		%h1= raw(@product.name)
+		%p= raw(@product.description)
+
+
+		
+
+
+	= link_to "Edit", edit_product_path(@product)
+	= link_to "Delete", product_path(@product), method: :delete, data: { confirm: "Are you sure about the 'delete'?"}
+	= link_to "Store", shop_path
+
+	

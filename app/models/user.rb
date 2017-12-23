@@ -6,12 +6,13 @@ class User < ApplicationRecord
 
   def before_add_method(role)
     # do something before it gets added
+    assign_default_role
   end
 
   belongs_to :role
 
   def admin?
-    role_id == 2 # If you have id == 0 for admin
+    role_id == 1 # If you have id == 0 for admin
   end
 
 
@@ -41,6 +42,7 @@ class User < ApplicationRecord
   has_many :comments
   has_many :forumposts
   has_many :forumcomments
+  has_many :products
 
   acts_as_orderer
 

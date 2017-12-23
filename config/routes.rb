@@ -12,8 +12,7 @@ Rails.application.routes.draw do
   
 
   
-  get '/shop', to: 'store#index'
-  resources :charges
+  
 
   get 'users/:id/chat' => 'conversations#show'
   
@@ -48,10 +47,16 @@ Rails.application.routes.draw do
   get '/personal_page', to: 'pages#personal_page'
   get '/forum', to: 'forumposts#index'
 
-  resources :products, only: :show
+
+  
   resources :forumposts do
     resources :forumcomments
   end  
+
+  
+  get '/shop', to: 'products#index'
+
+  resources :products
 
   
 end
