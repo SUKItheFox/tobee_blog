@@ -5,7 +5,16 @@ class UsersController < ApplicationController
   	
   end
 
-  
+  def create
+    @user = User.new(params[:newuser])
+    @user.add_role(:newuser)
+
+      if @user.save
+        redirect_to users_path, :notice => "Welcome to To Bee family!"
+      else
+        render "new"
+      end
+  end
 
 
   def index
@@ -16,6 +25,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+
   def edit
     @profile = current_user.profile
   end
@@ -24,5 +34,7 @@ class UsersController < ApplicationController
 
   def cannot?
   end 
+
+  
 
 end

@@ -46,6 +46,7 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about' 
   get '/personal_page', to: 'pages#personal_page'
   get '/forum', to: 'forumposts#index'
+  get '/avatar', to: 'pages#index'
 
 
   

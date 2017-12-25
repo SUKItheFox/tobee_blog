@@ -4,12 +4,12 @@ body {
   
 }
 #about_container {
-		padding: 3em ;
+		padding: 3vw 3vh ;
 		
 		#profile_image {
-			width: 300px;
+			width: 20%;
 			float: left;
-			margin-right: 2em;
+			margin-right: 2vw;
 			img {
 				width: 100%;
 				border-radius: 0.35em;
@@ -20,7 +20,7 @@ body {
 				font-weight: 500;
 			}
 			p {
-				font-size: 1.1em;
+				font-size: 2vh;
 				line-height: 1.75;
 			}
 			a {
@@ -29,6 +29,6 @@ body {
 				text-decoration: none;
 			}
 		}
-	}
+}	
 
-
+	

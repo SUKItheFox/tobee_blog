@@ -4,6 +4,16 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+    #sidebar {
+      display: none;
+    }
+
+    #sidebar_right {
+      display: none;
+    }
+    #header {
+      display: none;
+    }
 
 }
 .store_container {
@@ -14,20 +24,20 @@
 }
 
 .vertical-menu {
-    width: 200px; 
-    margin-left: 250px;
-    margin-top: 32px;
+    width: 13vw; 
+    margin-left: -2vw;
+    margin-top: -9vh;
     z-index: 95;
     
 }
 
 .vertical-menu a {
     color: black; 
-    padding: 3px;
+    padding: 2vw;
     text-decoration: none; 
     font-weight: 500;
-    font-size: 2.6em;
-    line-height: 95px;
+    font-size: 2vw;
+    line-height: 9vh;
     
     
 }
@@ -45,8 +55,8 @@
 
 #home_logo {
   position: absolute;
-  margin-top: -520px;
-  margin-left: 550px;
+  margin-top: -54vh;
+  margin-left: 65.5vw;
 
   
   img {

@@ -4,17 +4,9 @@
 		<meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
 		<%= stylesheet_link_tag    'user_index', media: 'all', 'data-turbolinks-track'=> "reload" %>
 	</head>	
-	<style>
-	     #sidebar
-	     {
-	     display: none;
-	     }
-	     #sidebar_right
-	     {
-	     display: none;
-	     }
+	
+
 	     
-	</style>
     <body class= "user_container">
 	  <div class="vertical-menu">
 	      <a> <%= link_to "Personal", current_user %></a>

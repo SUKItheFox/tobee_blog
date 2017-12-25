@@ -4,6 +4,8 @@
     %title To Bee Shop
     = javascript_include_tag "store"
     = stylesheet_link_tag    'store', media: 'all', 'data-turbolinks-track' => true
+
+
 %body.store_body    
     %div#container
         #arrow-left.arrow
@@ -18,6 +20,7 @@
             .slide-content
             %span Card
         #arrow-right.arrow
+           
 
         :javascript
             let sliderImages = document.querySelectorAll(".slide"),
@@ -69,6 +72,8 @@
             });
 
             startSlide();
+
+
 
 
            

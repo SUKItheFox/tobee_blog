@@ -20,11 +20,36 @@
 @import "bootstrap";
 
 
+@media screen and (max-width: 320px) { 
+	.what_is_beehive_style {
+		width: 40%;
+		a img.hover {
+    	width: 40%;
+	}
+	a img.default {
+	    width: 40%;
+	}
+	a:hover img.hover {
+	    width: 40%;
+	}
+	a:hover img.default {
+	    width: 40%;
+	}
+	}
+	@viewport { width: 320px; } }   
+@media screen and (min-width: 768px) and (max-width: 959px) {
+	.what_is_beehive_style {
+		width: 60%;
+	}
+	@viewport { width: 768px; } }
+
+
+
 body {
 	height: 100%;
 	width: 100%;
-	min-width: 1000px;
-	min-height: 1000px;
+	min-width: 100vw;
+	min-height: 100vh;
 	padding: 0;
 	margin: 0 auto;
 	
@@ -41,18 +66,23 @@ a {
 	
 #container {
 	
-    padding: 0;
-    margin: 0 auto;
-    min-width: 1000px;
-    min-height: 1000px;
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	self-align: center;
+	width: 100%;    
+    min-width: 100vw;
+    min-height: 100vh;
 }	
 	
 
 #main_content {	
-	margin-left: 250px;
-	margin-right: 250px;
-	margin-top: 100px;
-	z-index: 10;
+	margin-left: 13vw;
+	margin-right: 13vw;
+	margin-top: 8vh;
+	float: center;
+	z-index: 90;
 	
 
 		
@@ -61,8 +91,8 @@ a {
 	    opacity: 1;
 		display: none; /* Hidden by default */
 	    position: fixed; /* Fixed/sticky position */
-	    bottom: 20px; /* Place the button at the bottom of the page */
-	    left: 260px; /* Place the button px from the right */
+	    bottom: 1.6vh; /* Place the button at the bottom of the page */
+	    left: 13.6vw; /* Place the button px from the right */
 	    z-index: 20; /* Make sure it does not overlap */
 	    border: none; /* Remove borders */
 	    color: none;
@@ -78,6 +108,7 @@ a {
 	}
 
 	.style_arrow {
+		width: 90%;
 		
 	}
 
@@ -85,13 +116,19 @@ a {
 	
 	.post_wrapper {		
 		
-		margin-top: 1em;
+		margin-top: 1vh;
+		padding: 1vw 1vh;
 		self-align: center;
-		width: 100%;
+		
+		
+
 		
 
 		.title {
 			margin: 0px;
+
+			
+
 			
 			
 
@@ -124,36 +161,38 @@ a {
 		}
 	}
 	#post_content {
-		padding: 8em 1em;
+		padding: 8vh 1vw;
 			
 
 		.title {
 			font-weight: 500;
+			width: 100%;
+			height: 100%;
 			text-decoration: none;
 			color: #2a2f35;
-			font-size: 2.5em;
+			font-size: 2vh;
 			margin-bottom: 0;
 		}
 		.body {
-			font-size: 1.1em;
+			font-size: 1.1vh;
 			line-height: 1.75;
 		}
 		.date_and_author {
 			color: #9eafba;
-			margin: .5em 0 2em 0;
+			margin: .5vh 0 2vw 0;
 		}
 		#comments {
 			h2 {
-				margin: 3em 0 1em 0;
-				border-bottom: 1px solid #d6dce0;
-				padding-bottom: 0.5em;
+				margin: 3vw 0 1vh 0;
+				border-bottom: 1vh solid #d6dce0;
+				padding-bottom: 0.5vh;
 			}
 			h3 {
-				margin-top: 2em;
+				margin-top: 2vh;
 			}
 			.comment {
-				border-bottom: 1px solid #d6dce0;
-				padding: 1.5em 2em;
+				border-bottom: 1vh solid #d6dce0;
+				padding: 1.5vw 2vh;
 				.clear_both {
 					clear: both;
 				}
@@ -163,17 +202,17 @@ a {
 				.comment_content {
 					float: left;
 					.comment_name {
-						margin: 1em 0 0 0;
-						font-size: 0.7em;
+						margin: 1vw 0 0 0;
+						font-size: 1.5vh;
 						text-transform: uppercase;
 					}
 					.comment_body {
-						font-size: 1.2em;
-						margin: 0.2em 0 0 0;
+						font-size: 2vh;
+						margin: 0.2vw 0 0 0;
 					}
 					.comment_time {
-						margin-top: 1.2em;
-						font-size: .8em;
+						margin-top: 1.2vh;
+						font-size: 1.2vh;
 					}
 				}
 				.button {
@@ -186,12 +225,12 @@ a {
 		}
 	}
 	#page_wrapper {
-		padding: 3em;
+		padding: 1vh 1vw;
 		
 		#profile_image {
-			width: 300px;
+			width: 80%;
 			float: left;
-			margin-right: 2em;
+			margin-right: 2vw;
 			img {
 				width: 100%;
 				border-radius: 0.35em;
@@ -202,7 +241,7 @@ a {
 				font-weight: 500;
 			}
 			p {
-				font-size: 1.1em;
+				font-size: 1.2vh;
 				line-height: 1.75;
 			}
 			a {
@@ -218,7 +257,7 @@ a {
 	}
 	input[type="text"], input[type="email"], input[type="password"], textarea {
 		width: 90%;
-		border: 1px solid #d6dce0;
+		border: 1px solid outset #d6dce0;
 		border-radius: .35em;
 		margin-top: 10px;
 		padding: .5em 1em;
@@ -233,13 +272,12 @@ a {
 	input[type="submit"] {
 		outline: none;
 		background: transparent;
-		border: 1px solid #d6dce0;
+		border: 1px solid outset #d6dce0;
 		padding: .5em 1.5em;
 		font-size: 1em;
-		border-radius: 1.5em;
 		margin-left: 0em;
 		&:hover {
-			border: 1px solid #33acb7;
+			border: 1px solid inset #33acb7;
 			color: #33acb7;
 		}
 	}
@@ -251,15 +289,15 @@ a {
 
 
 #sidebar {
-	width: 250px;
+	float: left;
 	position: fixed;
-	left:0;
+	width: 13vw;
+	left: 0;
 	top: 0;
 	height: 100%;
 	background-image: url("left sidebar 2");
-	float:left;
-	padding: 7em 0 0 0;
 	z-index: 90;
+
 
 
 	
@@ -274,8 +312,8 @@ a {
 		.style_image {
 			position: absolute;
 			width: 130%;
-			margin-top: -150px;
-			left: 62px;
+			margin-top: -2.5vh;
+			left: 3.2vw;
 			z-index: 95;
 			/*img-shadow: 10px 10px 5px white;*/
 			transition: all 3s ease;
@@ -294,8 +332,8 @@ a {
 		.style_image_pages {
 			position: absolute;
 			width: 80%;
-			margin-top: -130px;
-			left: 17px;
+			margin-top: -1vh;
+			left: 0.8vw;
 			z-index: 95;
 		}
 	}
@@ -307,33 +345,34 @@ a {
 	
 		
 	#navBar {
-		top: 165px;
+		top: 17.8%;
 		list-style: none;
 		color: #000000;
 		position: absolute;
 		text-align: left;
 		z-index: 100;
 		width: 100%;
+		line-height: 0.8vh;
 
 			 
 		.category {	
-			padding: 0em;
-
-
+			
+			
+			
 		
 
 			p::first-letter {
 			  font-weight: bold;
 			  color: #7F1824;
 			}
-				
-				  
-			p {
-				padding: 0em 1.4em 0em;
+			
+			.beehive {
+				padding: 0vh 1.4vw 0vh;
 				z-index: 100;
 				text-align: left;
 				font-weight: bold;				
-				font-size: 1.2em;
+				font-size: 1.7vh;
+
 
 				a {
 					color: #000000;
@@ -341,6 +380,32 @@ a {
 					transition: all 0.4s ease;
 					z-index: 100;
 					font-weight: bold;
+					
+					&:hover {
+						color: #cafffe;
+						position: static;
+						z-index: 100;
+					}
+				}
+					
+			}
+				
+				  
+			.about {
+				padding: 0vh 1.4vw 0vh;
+				z-index: 100;
+				text-align: left;
+				font-weight: bold;				
+				font-size: 1.7vh;
+
+
+				a {
+					color: #000000;
+					text-decoration: none;
+					transition: all 0.4s ease;
+					z-index: 100;
+					font-weight: bold;
+					
 					&:hover {
 						color: #cafffe;
 						position: static;
@@ -364,13 +429,13 @@ a {
 	}
 
 	#categories_stable {
-		top: 230px;
-		padding: 0.3em 1.4em;
+		top: 21%;
+		padding: 0.3vh 1.4vw;
 		list-style: none;
 		color: #000000;
 		font-weight: bold;
 		
-		font-size: 1.2em;
+		font-size: 1.7vh;
 		position: absolute;
 
 		p::first-letter {
@@ -382,14 +447,13 @@ a {
 
 
 	#category_slides_in {
-		top: 255px;
+		top: 24%;
 		list-style: none;
 		font-weight: bold;
 		position: absolute;
 		text-align: left;
-		padding: 0.3em 2em;
-		padding-right: 6.5em;
-		padding-left: 2.5em;
+		padding-right: 6vw;
+		padding-left: 2vw;
 		width: 100%;
 		transition: all 0.5s ease;
 		-moz-transition: all 0.5s ease; /* Firefox 4 */
@@ -400,9 +464,9 @@ a {
 
 	.category_style {
 		display: inline;
-		padding: 0em 0em;
+		padding: 0 0;
 		list-style: none;
-		letter-spacing: -1px;
+		letter-spacing: 0.2vw;
 		font-weight: bold;
 		z-index: 100;
 
@@ -412,7 +476,7 @@ a {
 		z-index: 100;
 		text-align: left;
 		font-weight: bold;
-		font-size: 1.2em;
+		font-size: 1.7vh;
 		
 
 			a {
@@ -447,17 +511,19 @@ a {
 
 	#personal_icon {
 		position: absolute;
-		width: 10px;  
-		bottom: 15px;
-		left: 35px;
+		width: 3vw;
+		height: 21vh;   
+		bottom: 1vh;
+		left: 3vw;
 		z-index: 90;
 	}
 }
+
 #header {	     
 		position: fixed;
 		top: 0;
 		width: 100%;
-		height:100px;
+		height:10vh;
 		opacity: 100;
 		margin: 0 auto;
 		z-index: 10;
@@ -465,7 +531,7 @@ a {
 
 
 	.homepage_header_style {
-		border-bottom: 3.3px solid black;
+		border-bottom: 0.3vh solid black;
 		background-image: url("header");
 		top: 0;
 		width: 100%;
@@ -474,21 +540,21 @@ a {
 		p {
 			list-style: none;
 			color: #ffffff;
-			font-size: 5em;
-			margin-left: 400px;
+			font-size: 8vh;
+			margin-left: 22vw;
 			z-index: 100;
 		}	
 		h1 {
-		    margin-left: 710px;
-		    margin-top: 17px;
+		    margin-left: 38vw;
+		    margin-top: -9vh;
 		    color: #66d9ff;
-		    height: 30px;
-		    line-height: 90px;
-		    font-size: 3em;
-		    position: fixed;
+		    height: 3vh;
+		    line-height: 5vh;
+		    font-size: 4vh;
 		    width: 100%;
-		    top: 0px;
+		    top: 0vh;
 		    display: none;
+		    z-index: 100;
 		}
 		
 	}
@@ -496,9 +562,9 @@ a {
 		position: inline;
 		self-align: center;
 		top: 0;
-		margin-left: 245px;
+		margin-left: 12vw;
 		width: 100%;
-		height:100px;
+		height:10vh;
 		z-index: 20;
 
 	}	
@@ -507,8 +573,9 @@ a {
 
 
 #sidebar_right {
-	width: 250px;
+	width: 13vw;
 	position: fixed;
+	float: right;
 	right: 0;
 	top: 0;
 	bottom: 0;
@@ -519,8 +586,7 @@ a {
 
 
 	.bee{
-		margin-top: 150px;
-
+		margin-top: 15vh;
 		position:relative;
 		animation: ani-bee 10s ease infinite;
 		transform-origin: 10% 10%;
@@ -529,6 +595,7 @@ a {
 
 	.bee-wing-left,.bee-wing-right,.bee-body{
 		position:absolute;
+		width: 6.5vh;
 
 	}
 
@@ -563,71 +630,77 @@ a {
 	}
 
 	@keyframes ani-bee {
-		0%{ right:15px;transform: rotate(300deg);}
-		50% {right:950px;transform: rotate(40deg);}
-		100% {right:15px;transform: rotate(-400deg);}
+		0%{ right:0vw;transform: rotate(360deg);}
+		50% {right:65vw;transform: rotate(80deg);}
+		100% {right:0vw;transform: rotate(-720deg);}
 	}	
 
 
 	
 	.what_is_beehive_style {
 		position: absolute;
-		margin-left: 2em;
-		width: 50%;
-		margin-top: 15px;
+		margin-left: 1.5vw;
+		width: 90%;		
+		margin-top: 1.5vh;
 		z-index: 90;
 	}
 	a img.hover {
+		width: 90%;
     	display: none;
-    	border-bottom: 4px solid black;
-		border-left: 4px solid black;
-		border-right: 4px solid black;
-		border-top: 4px solid black;
+    	border-bottom: 0.2vh solid black;
+		border-left: 0.2vw solid black;
+		border-right: 0.2vw solid black;
+		border-top: 0.2vh solid black;
 	}
 	a img.default {
+		width: 90%;
 	    display: inherit;
-	    border-bottom: 4px solid black;
-		border-left: 4px solid black;
-		border-right: 4px solid black;
-		border-top: 4px solid black;
+	    border-bottom: 0.2vh solid black;
+		border-left: 0.2vw solid black;
+		border-right: 0.2vw solid black;
+		border-top: 0.2vh solid black;
 	}
 	a:hover img.hover {
+		width: 90%;
 	    display: inherit;
-	    border-bottom: 4px solid black;
-		border-left: 4px solid black;
-		border-right: 4px solid black;
-		border-top: 4px solid black;
+	    border-bottom: 0.2vh solid black;
+		border-left: 0.2vw solid black;
+		border-right: 0.2vw solid black;
+		border-top: 0.2vh solid black;
 	}
 	a:hover img.default {
+		width: 90%;
 	    display: none;
-	    border-bottom: 4px solid black;
-		border-left: 4px solid black;
-		border-right: 4px solid black;
-		border-top: 4px solid black;
+	    border-bottom: 0.2vh solid black;
+		border-left: 0.2vw solid black;
+		border-right: 0.2vw solid black;
+		border-top: 0.2vh solid black;
 	}
 
-	p {
-		position: absolute;
-		
-		font-size: 1.7em;
-		font-family: 'Cutive Mono';
-		font-weight: bold;
-		left: 2em;
-		line-spacing: .5em;
-		margin-top: 235px;
-		z-index: 90;
-
-	}
+	
 
 	#sidebar_beehive_slide_in {
 		position: absolute;
-		word-spacing: 0em;
+		word-spacing: 0vw;
 		width: 100%;
 		transition: all 0.5s ease;
 		-moz-transition: all 0.5s ease; /* Firefox 4 */
 		-webkit-transition: all 0.5s ease; /* Safari and Chrome */
 		-o-transition: all 0.5s ease; /* Opera */
 		z-index: 100;
+
+		p {
+		position: absolute;
+		
+		font-size: 1.4vw;
+		font-family: 'Cutive Mono';
+		font-weight: bold;
+		left: 2vw;
+		line-spacing: .5vh;
+		margin-top: 91%;
+		z-index: 90;
+
+	}
 	}		
 
 
@@ -680,8 +753,8 @@ a {
 
 	#popup { 
 		position: fixed;
-		margin-left: 172px;
-		bottom: 6px;
+		margin-left: 9vw;
+		bottom: 0.2vh;
 		z-index: 100;
 		 }
 	#popup img {
@@ -694,17 +767,17 @@ a {
 		display: inline;
 		text-align: center;
 		font-weight: bold;
-		padding: 1px 2px;
-		bottom: 1px;
+		padding: 0vw .5vh;
+		bottom: 0vh;
 		
 	}
 
 	#popup a span {
 		display: none;
 		position: absolute;
-		bottom: 1px;
+		bottom: 0vh;
 		font-weight: bold;
-			font-size: 1em;
+			font-size: 0.5vw .5vh;
 			text-align: center;
 			color: #252525;
 	}
@@ -723,10 +796,10 @@ a {
 	#popup a:hover span {
 		display: inline;
 		position: absolute;
-		bottom: -16px;
-		left: -12.5em;
+		bottom: -1.9vh;
+		left: -8.5vw;
 		font-weight: bold;
-			font-size: .85em;
+			font-size: .8vw;
 			text-align: center;
 			color: #252525;
 		
@@ -762,13 +835,17 @@ a {
 .buttons {
 			position: absolute;
 			float: right;
-			margin-left: 12.2em;
-			bottom: 85px;
+			margin-left: 10vw;
+			bottom: 9vh;
 			z-index: 100;
+
+			img{
+				width: 5vh;
+			}
 			
 			.button {
-				font-size: .8em;
-				padding: 1em 3em;
+				font-size: .8vw;
+				padding: 1vh 3vw;
 				z-index: 100;
 				&:hover {
 					

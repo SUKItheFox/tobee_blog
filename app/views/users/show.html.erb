@@ -6,28 +6,6 @@
 	
 	   <%= stylesheet_link_tag    'user_show', media: 'all', 'data-turbolinks-track'=> "reload" %>
 
-
-
-     <style>
-     #sidebar
-     {
-     display: none;
-     }
-     #sidebar_right
-     {
-     display: none;
-     }
-     #header
-     {
-     display: none;
-     }
-     #main_content {  
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 0px;
-        z-index: 0;
-      }
-     </style>
    </head>	
   <body class= "user_container">
 
@@ -47,29 +25,25 @@
     <% end %> 
 
       <% if user_signed_in? %>
-              <div class="buttons">
+              <div class="ui_buttons">
                 <% if current_user.has_role? :admin %>
                   <%= link_to new_post_path do %>                       
-                      <img><%= image_tag "new post.png"%></img>   
+                      <img class= 'ui_button'><%= image_tag "new post.png"%></img>   
                   <% end %>
                 <% end %>
                 <%= link_to destroy_user_session_path do %>                       
-                    <img><%= image_tag "log out.png"%></img>   
+                    <img class= 'ui_button'><%= image_tag "log out.png"%></img>   
                 <% end %>
                 <%= link_to current_user do %>
-                  <div id="personal_icon">          
+                  <div id="ui_personal_icon">          
                       <img><%= image_tag "personal icon 1.png" %></img>   
                   </div>   
                 <% end %>
                 
               </div>
-          <% end%>
+      <% end%>
 
           
-          <% if current_user.present? %>
-            <p class="sign_in"><%= link_to "", new_user_session_path %></p>
-          <% end %>
-        </div>
       
 
     <div id="background_container">
@@ -83,7 +57,7 @@
      
        
     </div>
-    <%= link_to "Edit profile ", edit_user_registration_path , :class=> "btn-oldschool" , :type=>"button"%>
+    <%= link_to "Edit account ", edit_user_registration_path , :class=> "btn-oldschool" , :type=>"button"%>
 
 
   </body>

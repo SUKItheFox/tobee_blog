@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
 	before_action :prepare_for_mobile
 	before_action :configure_permitted_parameters, if: :devise_controller?
 	before_action :set_last_page
+
 	def set_last_page
 	  if !request.xhr? && !request.url.match(/users\/sign_in/) && !request.url.match(/users\/sign_out/)
 	    session[:return_to] = request.url
@@ -16,29 +17,30 @@ class ApplicationController < ActionController::Base
 	  session[:return_to] || root_url
 	end
 	
-		protected
+	protected
 
-		def configure_permitted_parameters
-		 devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :email, :password, :password_confirmation])
-		 devise_parameter_sanitizer.permit(:sign_in, keys: [ :login, :password, :password_confirmation])
-		 devise_parameter_sanitizer.permit(:account_update, keys: [:username, :email, :password, :password_confirmation, :current_password])
-		end
+	def configure_permitted_parameters
+		devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :email, :password, :password_confirmation,:remember_me, :role, :avatar, :avatar_cache])
+		devise_parameter_sanitizer.permit(:sign_in, keys: [ :login, :password, :password_confirmation])
+		devise_parameter_sanitizer.permit(:account_update, keys: [:username, :email, :password, :password_confirmation, :current_password, :avatar, :avatar_cache, :remove_avatar])
 
-		private
+	end
 
-		def mobile_device?
-		  if session[:mobile_param]
-		    session[:mobile_param] == "1"
-		  else
-		    request.user_agent =~ /Mobile|webOS/
-		  end
-		end
-		helper_method :mobile_device?
+	private
 
-		def prepare_for_mobile
-		  session[:mobile_param] = params[:mobile] if params[:mobile]
-		  request.format = :mobile if mobile_device?
-		end  
+	def mobile_device?
+	  if session[:mobile_param]
+	    session[:mobile_param] == "1"
+	  else
+	    request.user_agent =~ /Mobile|webOS/
+	  end
+	end
+	helper_method :mobile_device?
+
+	def prepare_for_mobile
+	  session[:mobile_param] = params[:mobile] if params[:mobile]
+	  request.format = :mobile if mobile_device?
+	end  
 
 
 end
