@@ -24,7 +24,7 @@
       </div>   
     <% end %> 
 
-      <% if user_signed_in? %>
+    <% if user_signed_in? %>
               <div class="ui_buttons">
                 <% if current_user.has_role? :admin %>
                   <%= link_to new_post_path do %>                       
@@ -50,8 +50,14 @@
     <div id="background_container">
       <div class="user_content">
       <img src="">
-        <p><h3>Welcome back, <%= @user.username %>!</h3>
-        Your introducing: Lorem ipsum dolor sit amet, consectetur adipisicing       elit. Ea, repellat dolore nisi, id omnis, necessitatibus     mollitia distinctio delectus soluta eveniet accusantium       quas veritatis aliquam! Ea architecto beatae inventore       qui quisquam?</p>
+        <p><h3> Edit Profile, <%= @user.username %>!</h3></p>
+        <%= form_for(@user) do |f| %>
+			<%= f.label :username %>
+			<%= f.text_field :username %><br />
+			
+			<%= f.submit "Save Changes" %>
+        <% end %>
+
       <small>wwwco</small>
       </div>
      
@@ -67,3 +73,6 @@
 
   </body>
 </html>  
+
+
+

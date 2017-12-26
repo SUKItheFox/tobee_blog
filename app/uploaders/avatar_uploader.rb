@@ -34,7 +34,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   def default_url(*args)
-    ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default-avatar.gif"].compact.join('_'))
+    ActionController::Base.helpers.asset_path("fallback/" + [version_name, "personal icon 1.png"].compact.join('_'))
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:

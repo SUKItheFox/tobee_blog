@@ -1,15 +1,17 @@
 class User < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
+
   rolify :before_add => :before_add_method
-  belongs_to :role
+  belongs_to :role, optional: true
 
-  after_create :assign_default_role
+  
 
 
-  def assign_default_role
-    self.add_role(:newuser) if self.roles.blank?
-      
+  def before_add_method(role)
+    # do something before it gets added
+    assign_default_role
   end
+
 
   
   def admin?
@@ -22,6 +24,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+
+  validates :username, presence: true
   # User Avatar Validation
   validates_integrity_of  :avatar
   validates_processing_of :avatar
@@ -42,10 +46,10 @@ class User < ActiveRecord::Base
 
   private
 
-    def before_add_method(role)
-      # do something before it gets added
-      assign_default_role
+    def assign_default_role
+      self.add_role(:newuser) if self.roles.blank?      
     end
+
 
     def avatar_size_validation
       errors[:avatar] << "should be less than 500KB" if avatar.size > 0.5.megabytes

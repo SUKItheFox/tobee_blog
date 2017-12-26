@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
-
+  before_action :authenticate_user!, only: [:edit, :update]
+  before_action :check_authorization, only: [:edit, :update]
+  before_action :set_user
   def show
-  	@user = User.find(params[:id])
-  	
+  	 	
   end
 
   def create
@@ -27,14 +28,36 @@ class UsersController < ApplicationController
 
 
   def edit
-    @profile = current_user.profile
   end
+
+  def update
+    if @user.update(user_params)
+      redirect_to @user
+    else
+      flash.now[:alert] =  "Something went wrong. Hope you don't mind trying again!"
+      render :edit
+    end
+  end  
+
   def can?
   end
 
   def cannot?
   end 
 
-  
+  private
+    def check_authorization
+      unless current_user.id == params[:id].to_i
+        redirect_to root_url
+      end
+    end    
+
+    def set_user
+      @user = User.find(params[:id])
+    end  
+
+    def user_params
+      params.require(:user).permit(:username)
+    end
 
 end
