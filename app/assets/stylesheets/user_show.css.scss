@@ -70,7 +70,7 @@
 .ui_buttons {
       position: absolute;
       float: right;
-      margin-left: 10vw;
+      margin-left: -0.5vw;
       bottom: 17vh;
       z-index: 100;
 
@@ -90,9 +90,16 @@
   left: -11vw;
   z-index: 90;
 
-  img{
-    width: 100%;
-  }
+  
+}  
+
+#ui_avatar {
+  position: absolute;
+  bottom: 25vh;
+  left: 13vw;
+  z-index: 90;
+
+  
 }  
 
 
@@ -102,6 +109,13 @@
   margin-top: -28vh;
   height: 45vh;
   width: 45vw;
+
+
+  .personal_image  {
+    border: 1px solid #d9d9d9;
+    width: auto;
+    height: 25vh;
+  }
 }
 
 .btn-oldschool {
@@ -128,14 +142,14 @@
 .round-image-50 {
     background-color: white;
     border: 1px solid #d9d9d9;
-    border-radius: 25px;
-    -moz-border-radius: 25px;
-    -webkit-border-radius: 25px;
-    height: 50px;
-    width: 50px;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    height: 100px;
+    width: 100px;
     overflow: hidden;
     text-align: center;
     img { width: 100% }
 }
 
-  
+

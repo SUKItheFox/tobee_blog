@@ -5,6 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
+gem 'carrierwave', '~> 0.9'
+gem 'carrierwave-dropbox', '~> 1.2', '>= 1.2.1'
+gem 'dropbox-sdk', '~> 1.6', '>= 1.6.5'
 gem 'simple_form', '~> 3.5'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem "cancan"
@@ -23,13 +27,12 @@ gem 'bourbon', '~> 4.3', '>= 4.3.4'
 gem 'jquery', '~> 0.0.1'
 gem 'vanilla-ujs', '~> 1.3'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
-gem 'carrierwave'
 gem 'mini_magick'
-gem 'fog'
 gem 'paperclip'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'sprockets', '~> 3.7', '>= 3.7.1'
 gem 'devise', '~> 4.3'
+
 gem 'private_pub'
 gem 'thin'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

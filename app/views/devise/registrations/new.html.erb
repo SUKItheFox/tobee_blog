@@ -27,13 +27,10 @@
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
-   
-    <div class="field">
-      <%= f.label :avatar do %>
-        <%= f.file_field :avatar %>
-        <%= f.hidden_field :avatar_cache %>
-      <% end %>
-    </div>
+    
+    <% Avatar.all.each do |a| %>
+      <%= link_to image_tag("/images/avatars#{a.filename}"), profile_pictures_path(avatar_id: a.id), method: :post %>
+    <% end %>
    
     <div class="actions">
       <%= f.submit "Sign up" %>

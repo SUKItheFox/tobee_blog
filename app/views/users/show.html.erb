@@ -33,15 +33,14 @@
                 <% end %>
                 <%= link_to destroy_user_session_path do %>                       
                     <img class= 'ui_button'><%= image_tag "log out.png"%></img>   
-                <% end %>
-                <%= link_to current_user do %>
-                  <div id="ui_personal_icon">          
-                      <img><%= image_tag "personal icon 1.png" %></img>   
-                  </div>                   
-                <% end %>
-                
+                <% end %>                
               </div>
-        <li class="round-image-50"><%= image_tag(current_user.avatar.url) %></li>
+              <%= link_to current_user do %>
+                  <div id="ui_avatar">           
+                        
+                  </div>                   
+              <% end %>
+        
       <% end%>
 
           
@@ -52,6 +51,7 @@
       <img src="">
         <p><h3>Welcome back, <%= @user.username %>!</h3>
         Your introducing: Lorem ipsum dolor sit amet, consectetur adipisicing       elit. Ea, repellat dolore nisi, id omnis, necessitatibus     mollitia distinctio delectus soluta eveniet accusantium       quas veritatis aliquam! Ea architecto beatae inventore       qui quisquam?</p>
+        
       <small>wwwco</small>
       </div>
      
@@ -60,7 +60,7 @@
     </div>
     <%= link_to "Edit account ", edit_user_registration_path , :class=> "btn-oldschool" , :type=>"button"%>
 
-    <%= link_to "Edit personal page ", edit_user_path(@user) , :class=> "btn-oldschool" , :type=>"button"%>
+    <%= link_to "Edit personal page ", edit_user_path , :class=> "btn-oldschool" , :type=>"button"%>
 
 
 

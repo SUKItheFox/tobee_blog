@@ -1,8 +1,11 @@
-class User < ActiveRecord::Base
-  mount_uploader :avatar, AvatarUploader
+class User < ApplicationRecord
+  
 
   rolify :before_add => :before_add_method
   belongs_to :role, optional: true
+  has_one :profile_picture
+  has_one :avatar, through: :profile_picture
+
 
   
 
@@ -25,10 +28,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 
-  validates :username, presence: true
-  # User Avatar Validation
-  validates_integrity_of  :avatar
-  validates_processing_of :avatar
+  validates :username, presence: true 
 
   has_many :conversations, :foreign_key => :sender_id       
  
@@ -51,12 +51,10 @@ class User < ActiveRecord::Base
     end
 
 
-    def avatar_size_validation
-      errors[:avatar] << "should be less than 500KB" if avatar.size > 0.5.megabytes
-    end  
+     
 
     def user_params
-      params.require(:user).permit(:name, :username, :email, :password, :password_confirmation, :role)
+      params.require(:user).permit(:name, :username, :email, :password, :password_confirmation, :role, :avatar)
     end
 
     

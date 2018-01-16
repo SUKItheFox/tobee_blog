@@ -4,7 +4,7 @@
     
   	<title>To Bee Blog</title>
 	
-	   <%= stylesheet_link_tag    'user_show', media: 'all', 'data-turbolinks-track'=> "reload" %>
+	   <%= stylesheet_link_tag 'user_show', media: 'all', 'data-turbolinks-track'=> "reload" %>
 
    </head>	
   <body class= "user_container">
@@ -34,14 +34,10 @@
                 <%= link_to destroy_user_session_path do %>                       
                     <img class= 'ui_button'><%= image_tag "log out.png"%></img>   
                 <% end %>
-                <%= link_to current_user do %>
-                  <div id="ui_personal_icon">          
-                      <img><%= image_tag "personal icon 1.png" %></img>   
-                  </div>                   
-                <% end %>
+                
                 
               </div>
-        <li class="round-image-50"><%= image_tag(current_user.avatar.url) %></li>
+        
       <% end%>
 
           
@@ -50,12 +46,14 @@
     <div id="background_container">
       <div class="user_content">
       <img src="">
-        <p><h3> Edit Profile, <%= @user.username %>!</h3></p>
-        <%= form_for(@user) do |f| %>
-			<%= f.label :username %>
-			<%= f.text_field :username %><br />
-			
-			<%= f.submit "Save Changes" %>
+        <p><h3> Edit Profile, <%= :username %>!</h3></p>
+        <%= form_for(@user, html: { multipart: true }) do |f| %>
+    			<%= f.label :username %><br />
+    			<%= f.text_field :username %><br />
+
+    			<%= f.file_field :avatar %><br />
+  			
+  			  <%= f.submit "Save Changes" %><br />
         <% end %>
 
       <small>wwwco</small>
@@ -64,10 +62,7 @@
      
        
     </div>
-    <%= link_to "Edit account ", edit_user_registration_path , :class=> "btn-oldschool" , :type=>"button"%>
-
-    <%= link_to "Edit personal page ", edit_user_path(@user) , :class=> "btn-oldschool" , :type=>"button"%>
-
+    
 
 
 

@@ -63,8 +63,8 @@
 }
 
 .message_buttons {
-	top: 220px;
-	right: 590px;
+	top: 22vh;
+	right: 14vw;
 	position: absolute;
 	
 }
@@ -73,30 +73,84 @@ td {
 	word-spacing: 100em;
 	font-weight: bold;
 	}
-.btn {
+#home_logo {
+  position: absolute;
+  margin-top: -54vh;
+  margin-left: 65.5vw;
+
+  
+  img {
+  
+  position: absolute;
+  z-index: 95;
+  img-shadow: 10px 10px 5px white;
+  -webkit-filter: drop-shadow(2px 1px 1px rgba(255,255,255,.7) );
+  filter: drop-shadow(3px 3px 2px rgba(255,255,255,.7) );
+  }
+}
+
+.ui_buttons {
+      position: absolute;
+      float: right;
+      margin-left: -0.5vw;
+      bottom: 17vh;
+      z-index: 100;
+
+      img{
+        width: 5vh;     
+      }     
+} 
+
+.ui_buttons img:active {          
+  color: #ffffff;
+  border: 2px outset white;
+}
+
+#ui_personal_icon {
+  position: absolute;
+  bottom: -1vh;
+  left: -11vw;
+  z-index: 90;
+
+  
+}  
+
+#ui_avatar {
+  position: absolute;
+  bottom: 25vh;
+  left: 13vw;
+  z-index: 90;
+
+  
+}  
+
+
+.upload_container {
+  position: fixed;
+  width: 42vw;
+  height: 15vh;
+  left: 35vw;
+  top: 37vh;
+  margin: 0 auto;
+  border: 4.5px solid black;
+  border-style: double;
+  background: #FDFAA7;
+  
+  border-radius: .5em;
+}
+
+.btn-uploadoldschool {
     color: black;
     border: 2px outset white;
     background: transparent;
+    padding: 0.5vh 0.5vw;
     text-decoration: none;
 }
-.btn:hover {
+.btn-uploadoldschool:hover {
     color: #00008B;
-    background:  #C8ECF9;
     text-decoration: none;
 }
-.btn:active {
+.btn-uploadoldschool:active {
     border-style: inset;
-    background:  #C8ECF9;
 }
 
-.upload_container {
-  width: 80%;
-  bottom: 20%;
-  margin-top: -20em;
-  max-width: 1140px;
-  margin: 0 auto;
-  border: 5px solid outset black;
-  background: transparent;
-  padding: 0em 35%;
-  border-radius: .5em;
-}

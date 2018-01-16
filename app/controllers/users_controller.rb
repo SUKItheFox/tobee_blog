@@ -1,13 +1,18 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:edit, :update]
   before_action :check_authorization, only: [:edit, :update]
-  before_action :set_user
+  before_action :set_user, only: [:edit, :update]
+
+  attr_accessor  :email, :username
+
+  
   def show
-  	 	
+  	@user = User.find(params[:id])
   end
 
   def create
-    @user = User.new(params[:newuser])
+
+    @user = User.new(user[:newuser])
     @user.add_role(:newuser)
 
       if @user.save
@@ -27,7 +32,8 @@ class UsersController < ApplicationController
   end
 
 
-  def edit
+  def edit    
+    @user = User.find(params[:id])
   end
 
   def update
@@ -53,11 +59,11 @@ class UsersController < ApplicationController
     end    
 
     def set_user
-      @user = User.find(params[:id])
+     @user = User.find(params[:id])
     end  
 
     def user_params
-      params.require(:user).permit(:username)
+      params.require(:user).permit(:id, :username, :role, :user_id, :email, :password, :password_confirmation )
     end
 
 end

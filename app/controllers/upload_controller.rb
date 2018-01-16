@@ -13,7 +13,8 @@ class UploadController < ApplicationController
   	File.open(Rails.root.join('public','files', uploadedFile.original_filename), 'wb') do |f|
   		f.write(uploadedFile.read)
   	end
-  	redirect_to current_user	
+  	redirect_to current_user, :notice =>	"Thanks for your upload!"
+    
 
   end
 

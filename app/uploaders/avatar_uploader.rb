@@ -5,9 +5,22 @@ class AvatarUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :fog
+  #if Rails.env.production?
+    storage :file
+  #else
+  #  storage :file
+  #end
   # storage :fog
-
+  #def initialize
+     # CarrierWave.configure do |config|
+        #config.dropbox_app_key = ENV["APP_KEY"]
+        #config.dropbox_app_secret = ENV["APP_SECRET"]
+        #config.dropbox_access_token = ENV["ACCESS_TOKEN"]
+        #config.dropbox_access_token_secret = ENV["ACCESS_TOKEN_SECRET"]
+        #config.dropbox_user_id = ENV["USER_ID"]
+        #config.dropbox_access_type = "dropbox"
+      #end
+  #end
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
@@ -34,7 +47,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   def default_url(*args)
-    ActionController::Base.helpers.asset_path("fallback/" + [version_name, "personal icon 1.png"].compact.join('_'))
+    ActionController::Base.helpers.asset_path("fallback/" + ["personal icon 1.png"].compact.join)
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:

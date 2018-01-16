@@ -70,10 +70,15 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    carrierwave (1.2.1)
-      activemodel (>= 4.0.0)
-      activesupport (>= 4.0.0)
+    carrierwave (0.11.2)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
       mime-types (>= 1.16)
+      mimemagic (>= 0.3.0)
+    carrierwave-dropbox (1.2.1)
+      carrierwave (~> 0.9)
+      dropbox-sdk (~> 1.6)
     childprocess (0.8.0)
       ffi (~> 1.0, >= 1.0.11)
     climate_control (0.2.0)
@@ -102,6 +107,12 @@ GEM
       warden (~> 1.2.3)
     domain_name (0.5.20170404)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
+    dropbox-sdk (1.6.5)
+      json
     em-http-request (1.1.5)
       addressable (>= 2.3.4)
       cookiejar (!= 0.3.1)
@@ -126,6 +137,8 @@ GEM
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.5.1)
     ffi (1.9.18)
+    figaro (1.1.1)
+      thor (~> 0.14)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
     fog (1.42.0)
@@ -197,6 +210,9 @@ GEM
     fog-dnsimple (1.0.0)
       fog-core (~> 1.38)
       fog-json (~> 1.0)
+    fog-dropbox (0.0.1)
+      dropbox-sdk
+      fog-core
     fog-dynect (0.0.3)
       fog-core
       fog-json
@@ -520,10 +536,15 @@ DEPENDENCIES
   byebug
   cancan
   capybara (~> 2.13)
-  carrierwave
+  carrierwave (~> 0.9)
+  carrierwave-dropbox (~> 1.2, >= 1.2.1)
   coffee-rails (~> 4.2)
   devise (~> 4.3)
+  dotenv-rails
+  dropbox-sdk (~> 1.6, >= 1.6.5)
+  figaro
   fog
+  fog-dropbox
   haml (~> 5.0, >= 5.0.4)
   jbuilder (~> 2.5)
   jquery (~> 0.0.1)

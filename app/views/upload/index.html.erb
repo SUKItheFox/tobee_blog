@@ -18,49 +18,26 @@
     <body class= "user_container">
 	  <div class="vertical-menu">
 	      <a> <%= link_to "Personal", current_user %></a>
-	      <a> <%= link_to "Chat", {:controller=>"users", :action=>"index"} ,:class=>"active" %></a>
+	      <a> <%= link_to "Chat", {:controller=>"users", :action=>"index"} %></a>
 	      <a> <%= link_to "Forum", forum_path %></a>
 	      <a> <%= link_to "Shop", shop_path %></a>
-	      <a> <%= link_to "Upload", upload_path %></a>
+	      <a> <%= link_to "Upload", upload_path,:class=>"active" %></a>
 	  </div> 
 
-	  	<% if user_signed_in? %>
-              <div class="buttons">
-                <% if current_user.has_role? :admin %>
-                  <%= link_to new_post_path do %>                       
-                      <img><%= image_tag "new post.png"%></img>   
-                  <% end %>
-                <% end %>
-                <%= link_to destroy_user_session_path do %>                       
-                    <img><%= image_tag "log out.png"%></img>   
-                <% end %>
-                <%= link_to current_user do %>
-                  <div id="personal_icon">          
-                      <img><%= image_tag "personal icon 1.png" %></img>   
-                  </div>   
-                <% end %>
-                
-              </div>
-          <% end%>
-
-      		
-          <% if current_user.present? %>
-      		  <p class="sign_in"><%= link_to "", new_user_session_path %></p>
-          <% end %>
-      	</div>
+	  
 
       	<div class="upload_container">
-			      <h1>Upload a file</h1>
+			    <h1>- UPLOAD A FILE -</h1>
+			    <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp Here you can upload files that you want to share with To Bee founder Levien</p>
 			<%= form_for :upload, url: upload_uploadFile_path do |f| %>
-				<%= f.file_field :file %><br/>
-				<%= f.submit :UPLOAD! %>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp <%= f.file_field :file, :class=> "btn-uploadoldschool" %>
+				<br/>
+				<br/>
+				<br/>
+				<%= f.submit :UPLOAD!, :class=> "btn-uploadoldschool" %>
 			<% end %>
 
-			<h1>Download a file</h1>
-			<%= form_for :download, url: upload_admin_downloadFile_path do |f| %>
-				<%= f.text_field :fileName %><br/>
-				<%= f.submit :DoWNLOAD! %>
-			<% end %>	
+				
 		</div>	
   	</body>
 </html>  

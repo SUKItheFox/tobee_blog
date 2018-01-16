@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   
 
   
-  
+  resources :profile_pictures, only: [ :create ]
 
   get 'users/:id/chat' => 'conversations#show'
   
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   
-    get '/chat' => 'users#index'
+  get '/chat' => 'users#index'
   
 
   
@@ -60,6 +60,5 @@ Rails.application.routes.draw do
   get '/shop', to: 'products#index'
 
   resources :products
-
   
 end
