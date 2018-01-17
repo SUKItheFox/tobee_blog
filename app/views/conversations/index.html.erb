@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
+    <%= stylesheet_link_tag    'user_index', media: 'all', 'data-turbolinks-track'=> "reload" %>
+  </head> 
+  
+
+       
+    <body class= "user_container">
+      <div class="vertical-menu">
+          <a> <%= link_to "Personal", current_user %></a>
+          <a> <%= link_to "Chat", conversations_path ,:class=>"active" %></a>
+          <a> <%= link_to "Forum", forum_path %></a>
+          <a> <%= link_to "Shop", shop_path %></a>
+          <a> <%= link_to "Upload", upload_path %></a>
+      </div> 
+
+        
+        
+        
+
+      <div class="ui_segment1">
+       <h3>To Bee Messanger</h3>
+
+       <div class="ui_list1">
+        <p>Previous conversations: </p>
+        <div class="item">
+         <% @conversations.each do |conversation| %>
+         <% if conversation.sender_id == current_user.id ||      conversation.recipient_id == current_user.id %>
+          <% if conversation.sender_id == current_user.id %>
+            <% recipient = User.find(conversation.recipient_id) %>
+          <% else %>
+            <% recipient = User.find(conversation.sender_id) %>
+          <% end %>
+          <%= link_to recipient.username,   conversation_messages_path(conversation)%>
+         <% end %>
+        <% end %>
+        </div>
+       </div>
+      </div>
+
+      <div class="ui_segment2">
+       <h3>All Bees</h3>
+        <div class="ui_list2">
+         <% @users.each do |user| %>
+          <% if user.id != current_user.id %>
+           <div class="item2">
+         <%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post', :class => "btn-start-conversation" %> <%= user.username %>
+       </div>
+        <% end %>
+       <% end %>
+       </div>
+      </div>
+
+
+
+   
+    </body>
+</html>  

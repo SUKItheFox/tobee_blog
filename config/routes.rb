@@ -14,13 +14,13 @@ Rails.application.routes.draw do
   
   resources :profile_pictures, only: [ :create ]
 
-  get 'users/:id/chat' => 'conversations#show'
+  get 'users/:id/chat' => 'messages#index'
   
   
   devise_for :users
 
   
-  get '/chat' => 'users#index'
+  get '/chat' => 'conversations#index'
   
 
   

@@ -18,7 +18,7 @@
     <body class= "user_container">
 	  <div class="vertical-menu">
 	      <a> <%= link_to "Personal", current_user %></a>
-	      <a> <%= link_to "Chat", {:controller=>"users", :action=>"index"} %></a>
+	      <a> <%= link_to "Chat", conversations_path %></a>
 	      <a> <%= link_to "Forum", forum_path %></a>
 	      <a> <%= link_to "Shop", shop_path %></a>
 	      <a> <%= link_to "Upload", upload_path,:class=>"active" %></a>
@@ -36,9 +36,18 @@
 				<br/>
 				<%= f.submit :UPLOAD!, :class=> "btn-uploadoldschool" %>
 			<% end %>
-
+			<% if user_signed_in? %>
+				<% if current_user.has_role? :admin %>
+            		<%= link_to upload_admin_url do %>  
+            			<p> &nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp LÕVI, GO TO DOWNLOAD FROM HERE </p>
+            		<% end %>
+            	<% end %>
+            <% end %>		 
 				
 		</div>	
+
+
+		
   	</body>
 </html>  
 

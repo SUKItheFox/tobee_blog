@@ -84,7 +84,10 @@ a {
 	float: center;
 	z-index: 90;
 	
-
+	.alert {
+		left: 10.5vw;
+		top: 3vh;
+	}
 		
 	#myBtn {
 		background-color: transparent; /* Add a background */
@@ -429,7 +432,7 @@ a {
 	}
 
 	#categories_stable {
-		top: 21%;
+		top: 24.8%;
 		padding: 0.3vh 1.4vw;
 		list-style: none;
 		color: #000000;
@@ -447,7 +450,7 @@ a {
 
 
 	#category_slides_in {
-		top: 24%;
+		top: 27.5%;
 		list-style: none;
 		font-weight: bold;
 		position: absolute;

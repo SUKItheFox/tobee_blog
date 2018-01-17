@@ -1,3 +1,6 @@
+
+@import "semantic-ui";
+
 .user_container { 
   background: url('personal page.png') no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -61,18 +64,95 @@
   filter: drop-shadow(3px 3px 2px rgba(255,255,255,.7) );
   }
 }
+.ui_segment {
+  bottom: 45.5vh;
+  left: 36vw;
+  position: fixed;
+  .header_username {
+    p {
+    color: #7f1824;
+    }
+  }
+  
+}
+.ui_reply_form {
+  top: 55vh;
+  left: 36vw;
+  position: fixed;
 
-.message_buttons {
+  .field {
+    width: 45vw;
+  }
+  .form-control {
+    background: transparent;
+    border: 2.5px solid black;
+    border-style: inset;
+    font-size: 1vw;
+    font-family: Cutive Mono;
+  }
+  
+}
+.ui_segment1 {
 	top: 22vh;
-	right: 14vw;
-	position: absolute;
+	left: 46vw;
+	position: fixed;
+  display: inline-block;
+  .ui_list1 {
+    font-size: 0.8vw;
+    color: #7F1824;
+
+    p {
+      font-size: 1vw;
+      margin-left: 2.5vw;
+      color: #000000;
+    }
+  }
+  h3 {
+    font-weight: 200;
+    font-stretch: expanded;
+    font-size: 2vw;
+    background: black;
+    border: 4px solid black;
+    border-style: outset;
+    padding: 1vw 1vh;
+    color: #C8ECF9;
+  }
+
 	
 }
+.ui_segment2 {
+  top: 34vh;
+  left: 33vw;
+  position: fixed;
+  display: inline-block;
+  h3 {
+    text-decoration: underline;
+    font-weight: 400;
+    font-stretch: expanded;
+    font-size: 2vw;
+  }
+  .item2 {
+    font-size: 0.8vw;
+  }
+}
 
-td { 
-	word-spacing: 100em;
-	font-weight: bold;
-	}
+
+.btn-start-conversation {
+  display: inline-block;
+  color: black;
+  border: 2px outset white;
+  background: transparent;
+  padding: 0.5vh 0.5vw;
+  text-decoration: none;
+}  
+.btn-start-conversation:hover {
+    color: #7f1824;
+    text-decoration: none;
+}
+.btn-start-conversation:active {
+    border-style: inset;
+}
+
 #home_logo {
   position: absolute;
   margin-top: -54vh;

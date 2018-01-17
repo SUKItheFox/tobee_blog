@@ -8,6 +8,7 @@ end
 
 gem 'carrierwave', '~> 0.9'
 gem 'carrierwave-dropbox', '~> 1.2', '>= 1.2.1'
+gem 'semantic-ui-sass'
 gem 'dropbox-sdk', '~> 1.6', '>= 1.6.5'
 gem 'simple_form', '~> 3.5'
 gem 'haml', '~> 5.0', '>= 5.0.4'
