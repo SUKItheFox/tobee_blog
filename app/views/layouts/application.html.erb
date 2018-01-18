@@ -99,7 +99,7 @@
               <li class="category">
               <% if current_page?(root_path) %>
                 <p class="about"><%= link_to "About Me", about_path %></p> 
-                <p class="beehive"><%= link_to "Beehive", "" %></p>
+                <p class="beehive"><%= link_to "Beehive", beehive_path %></p>
               <% end %>  
               </li>
             </div>      
@@ -145,10 +145,12 @@
       
         <% if current_page?(root_path) %>
           <div id="sidebar_right">
-            <a class="what_is_beehive_style">
-              <%= image_tag "what is to bee 2.png", :class => "default", :type =>"image" %>
-              <%= image_tag "what is to bee 1.png", :class => "hover", :type =>"image" %>
-            </a>
+            <%= link_to beehive_path do %>
+              <div class="what_is_beehive_style">
+                <%= image_tag "what is to bee 2.png", :class => "default", :type =>"image" %>
+                <%= image_tag "what is to bee 1.png", :class => "hover", :type =>"image" %>
+              </div>
+            <% end %>  
             <div id="sidebar_beehive_slide_in">
               <p>Beehive of artists in service of </br> the world</p>
             </div>

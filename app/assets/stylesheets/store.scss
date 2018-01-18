@@ -2,6 +2,7 @@
 
 body.store_body {
 	background-color: #FDFAA7;
+  top:  0vh;
 
  	  #sidebar {
   		display: none;
@@ -21,6 +22,7 @@ body.store_body {
 }
 
 body.store_body, #slider,.wrap,.slide-content {
+  top: 0;
   margin: 0;
   padding: 0;
   font-family: Cutive Mono;
@@ -40,16 +42,17 @@ body.store_body, #slider,.wrap,.slide-content {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  top: 0vh;
 }
 
 .slide1 {
-  background: url("cut out 1.png");
+  background: url("product_organizer.png");
 }
 .slide2 {
-  background-image: url("https://static.pexels.com/photos/302892/pexels-photo-302892.jpeg");
+  background-image: url("product_shirt.png");
 }
 .slide3 {
-  background-image: url("https://static.pexels.com/photos/226633/pexels-photo-226633.jpeg");
+  background-image: url("product_patch.png");
 }
 
 .slide-content {
@@ -58,12 +61,17 @@ body.store_body, #slider,.wrap,.slide-content {
   justify-content: center;
   align-items: center;
   text-align: center;
+  top: 2vh;
 }
 
 .slide-content span {
-  font-size: 5em;
-  color: #fff;
+  font-size: 3vw;
+  color: #7F1824;
+  z-index: 10;
+  top: 2vh;
 }
+
+
 
 .arrow {
   cursor: pointer;
@@ -91,7 +99,7 @@ body.store_body, #slider,.wrap,.slide-content {
 
 
 
- .product_form {
+.product_form {
  	background-color: #FDFAA7;
 
  	#sidebar {

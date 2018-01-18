@@ -46,6 +46,7 @@ Rails.application.routes.draw do
   post 'upload/uploadFile'  => 'upload#uploadFile' 
   post 'upload/admin/downloadFile'  => 'upload#downloadFile'  
   get '/about', to: 'pages#about' 
+  get '/beehive', to: 'pages#beehive'
   get '/personal_page', to: 'pages#personal_page'
   get '/forum', to: 'forumposts#index'
   get '/avatar', to: 'pages#index'
