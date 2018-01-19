@@ -22,7 +22,6 @@ body.store_body {
 }
 
 body.store_body, #slider,.wrap,.slide-content {
-  top: 0;
   margin: 0;
   padding: 0;
   font-family: Cutive Mono;
@@ -42,35 +41,291 @@ body.store_body, #slider,.wrap,.slide-content {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  top: 0vh;
+  
 }
 
 .slide1 {
   background: url("product_organizer.png");
+
+  .slide-content {
+    display: flex;
+    flex-direction: column;
+    top: 0vh;
+    left: 10vw;
+
+    #logo {
+      position: absolute;
+      top: 7vh;
+      
+
+      .shop_logo {
+        margin-left: 61vw;
+
+        z-index: 10;
+      }  
+
+    }
+
+    span {
+      font-size: 3vw;
+      color: #7F1824;
+      margin-top: 19vh;
+      margin-left: 35vw;
+    }
+    p1 {
+      font-size: 1vw;
+      color: #000000;
+      margin-top: 49vh;
+      margin-left: 57vw;
+    }
+
+    .shop_arrow {
+      position: absolute;
+      top: 86vh; 
+      left: 48%;
+      background-color: transparent; /* Add a background */
+          opacity: 1;
+          cursor: pointer; /* Add a mouse pointer on hover */
+          border-radius: 10px; /* Rounded corners */
+    }
+    .shop_arrow:hover {
+      background-color: #7F1824; /* Add a background on hover */
+    }
+
+    #product_info {
+      .photo_detail_1 {
+        position: absolute;
+        top: 100vh;
+        left: 20vw;
+      }
+      .photo_detail_2 {
+        position: absolute;
+        top: 100vh;
+        left: 33.5vw;
+      }
+      .photo_detail_3 {
+        position: absolute;
+        top: 125vh;
+        left: 20vw;
+      }
+      .photo_detail_4 {
+        position: absolute;
+        top: 125vh;
+        left: 33.5vw;
+      }
+
+      p2 {
+        position: absolute;
+        width: 46vw;
+        top: 100vh;
+        left: 46vw;
+      }
+      p3 {
+        position: absolute;
+        width: 46vw;
+        top: 125vh;
+        left: 46vw;
+      }
+      p4 {
+        position: absolute;
+        width: 46vw;
+        top: 155vh;
+        left: 46vw;
+        font-weight: 700;
+        font-size: 1vw;
+        font-style: italic;
+      }
+    }
+  }
 }
 .slide2 {
   background-image: url("product_shirt.png");
+  .slide-content {
+    display: flex;
+    flex-direction: column;
+    top: 0vh;
+    left: 10vw;
+
+    #logo {
+      position: absolute;
+      top: 0vh;
+      
+
+      .shop_logo {
+        margin-left: 62vw;          
+        z-index: 10;
+      }  
+
+    }
+
+    span {
+      font-size: 3vw;
+      color: #7F1824;
+      margin-top: 7vh;
+      margin-left: 30vw;
+    }
+    p1 {
+      font-size: 1vw;
+      color: #000000;
+      margin-top: 67vh;
+      margin-left: 53vw;
+    }
+
+    .shop_arrow {
+      position: absolute;
+      top: 86vh; 
+      left: 48%;
+      background-color: transparent; /* Add a background */
+          opacity: 1;
+          cursor: pointer; /* Add a mouse pointer on hover */
+          border-radius: 10px; /* Rounded corners */
+    }
+    .shop_arrow:hover {
+      background-color: #7F1824; /* Add a background on hover */
+    }
+
+    #product_info {
+      .photo_detail_1 {
+        position: absolute;
+        top: 100vh;
+        left: 20vw;
+      }
+      .photo_detail_2 {
+        position: absolute;
+        top: 100vh;
+        left: 33.5vw;
+      }
+      .photo_detail_3 {
+        position: absolute;
+        top: 125vh;
+        left: 20vw;
+      }
+      .photo_detail_4 {
+        position: absolute;
+        top: 125vh;
+        left: 33.5vw;
+      }
+
+      p2 {
+        position: absolute;
+        width: 46vw;
+        top: 100vh;
+        left: 46vw;
+      }
+      p3 {
+        position: absolute;
+        width: 46vw;
+        top: 125vh;
+        left: 46vw;
+      }
+      p4 {
+        position: absolute;
+        width: 46vw;
+        top: 155vh;
+        left: 46vw;
+        font-weight: 700;
+        font-size: 1vw;
+        font-style: italic;
+      }
+    }
+  }
 }
 .slide3 {
   background-image: url("product_patch.png");
-}
+  .slide-content {
+    display: flex;
+    flex-direction: column;
+    top: 0vh;
+    left: 10vw;
+    
+    #logo {
+      position: absolute;
+      
 
-.slide-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  top: 2vh;
-}
+      .shop_logo {
+        margin-left: 60vw;     
+        margin-top: 20vh;     
+        z-index: 10;
+      }  
 
-.slide-content span {
-  font-size: 3vw;
-  color: #7F1824;
-  z-index: 10;
-  top: 2vh;
-}
+    }
 
+    span {
+      font-size: 3vw;
+      color: #7F1824;
+      margin-top: 27vh;
+      margin-left: 39vw;
+    }
+    p1 {
+      font-size: 1vw;
+      color: #000000;
+      margin-top: 42vh;
+      margin-left: 46vw;
+    }
+
+    .shop_arrow {
+      position: absolute;
+      top: 86vh; 
+      left: 48%;
+      
+    }
+    #storeBtn {
+      background-color: transparent; /* Add a background */
+          opacity: 1;
+          cursor: pointer; /* Add a mouse pointer on hover */
+          border-radius: 10px; /* Rounded corners */
+    }
+    #storeBtn:hover {
+      background-color: #7F1824; /* Add a background on hover */
+    }
+    
+
+    #product_info {
+      .photo_detail_1 {
+        position: absolute;
+        top: 100vh;
+        left: 20vw;
+      }
+      .photo_detail_2 {
+        position: absolute;
+        top: 100vh;
+        left: 33.5vw;
+      }
+      .photo_detail_3 {
+        position: absolute;
+        top: 125vh;
+        left: 20vw;
+      }
+      .photo_detail_4 {
+        position: absolute;
+        top: 125vh;
+        left: 33.5vw;
+      }
+
+      p2 {
+        position: absolute;
+        width: 46vw;
+        top: 100vh;
+        left: 46vw;
+      }
+      p3 {
+        position: absolute;
+        width: 46vw;
+        top: 125vh;
+        left: 46vw;
+      }
+      p4 {
+        position: absolute;
+        width: 46vw;
+        top: 155vh;
+        left: 46vw;
+        font-weight: 700;
+        font-size: 1vw;
+        font-style: italic;
+      }
+    }
+  }
+}
 
 
 .arrow {

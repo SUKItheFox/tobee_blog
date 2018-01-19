@@ -66,7 +66,7 @@ Rails.application.config.assets.precompile += %w( mobile )
 
 
 	
-
+Rails.application.config.assets.precompile += %w( index.png )
 Rails.application.config.assets.precompile += %w( page up.png )
 Rails.application.config.assets.precompile += %w( favicon-32x32.png )
 Rails.application.config.assets.precompile += %w( left sidebar 2 )
