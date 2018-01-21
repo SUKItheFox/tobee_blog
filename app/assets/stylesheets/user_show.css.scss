@@ -23,21 +23,19 @@
 
 .vertical-menu {
     width: 13vw; 
-    margin-left: -2vw;
-    margin-top: -9vh;
+    margin-left: 1vw;
+    margin-top: 9.5vh;
     z-index: 95;
     
 }
 
 .vertical-menu a {
     color: black; 
-    padding: 2vw;
+    display: block;
     text-decoration: none; 
     font-weight: 500;
     font-size: 2vw;
-    line-height: 9vh;
-    
-    
+    line-height: 9vh;    
 }
 
 .vertical-menu a:hover {
@@ -109,6 +107,10 @@
   margin-top: -28vh;
   height: 45vh;
   width: 45vw;
+
+  .user_content {
+    margin-top: 9vh;
+  }
 
 
   .personal_image  {

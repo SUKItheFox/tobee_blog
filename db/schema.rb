@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180104111702) do
+ActiveRecord::Schema.define(version: 20180121115052) do
 
   create_table "adjustments", force: :cascade do |t|
     t.string "source_type"
@@ -316,6 +316,12 @@ ActiveRecord::Schema.define(version: 20180104111702) do
     t.datetime "updated_at"
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
     t.index ["name"], name: "index_roles_on_name"
+  end
+
+  create_table "uploads", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "userfile"
   end
 
   create_table "users", force: :cascade do |t|

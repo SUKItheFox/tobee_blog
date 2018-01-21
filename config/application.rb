@@ -52,7 +52,7 @@ module Blog
     config.assets.precompile += %w( left sidebar.png )
     config.assets.precompile += %w( right sidebar.png )
     
-    
+   
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

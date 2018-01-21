@@ -21,7 +21,7 @@
 	      <a> <%= link_to "Chat", conversations_path %></a>
 	      <a> <%= link_to "Forum", forum_path %></a>
 	      <a> <%= link_to "Shop", shop_path %></a>
-	      <a> <%= link_to "Upload", upload_path,:class=>"active" %></a>
+	      <a> <%= link_to "Upload", "", :class=>"active" %></a>
 	  </div> 
 
 	  
@@ -29,22 +29,17 @@
       	<div class="upload_container">
 			    <h1>- UPLOAD A FILE -</h1>
 			    <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp Here you can upload files that you want to share with To Bee founder Levien</p>
-			<%= form_for :upload, url: upload_uploadFile_path do |f| %>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp <%= f.file_field :file, :class=> "btn-uploadoldschool" %>
-				<br/>
-				<br/>
-				<br/>
-				<%= f.submit :UPLOAD!, :class=> "btn-uploadoldschool" %>
-			<% end %>
-			<% if user_signed_in? %>
-				<% if current_user.has_role? :admin %>
-            		<%= link_to upload_admin_url do %>  
-            			<p> &nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp LÕVI, GO TO DOWNLOAD FROM HERE </p>
-            		<% end %>
-            	<% end %>
-            <% end %>		 
+
+			<%= form_for :upload, :html => {:multipart => true} do |f| %>  
+				<%= f.file_field :userfile %>
+				<%= f.submit :userfile, :class=> "btn-uploadoldschool" %>
+			<% end %>	
+			
 				
 		</div>	
+
+		
+
 
 
 		
