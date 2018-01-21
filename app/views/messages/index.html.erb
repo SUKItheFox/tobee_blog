@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>To Bee</title>
     <meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
     <%= stylesheet_link_tag    'user_index', media: 'all', 'data-turbolinks-track'=> "reload" %>
   </head> 
@@ -13,14 +14,15 @@
           <a> <%= link_to "Chat", conversations_path ,:class=>"active" %></a>
           <a> <%= link_to "Forum", forum_path %></a>
           <a> <%= link_to "Shop", shop_path %></a>
-          <a> <%= link_to "Upload", upload_path %></a>
+          <a> <%= link_to "Upload", "upload#index" %></a>
       </div> 
       
       
-
-      <% if @over_ten %>
-       <%= link_to 'Show Previous', '?m=all' %>
-      <% end %>
+      <div class='show_previous'>
+        <% if @over_four %>
+         <%= link_to 'Show Previous', '?m=all' %>
+        <% end %>
+      </div>  
 
       <div class="ui_segment">
         <% @messages.each do |message| %>

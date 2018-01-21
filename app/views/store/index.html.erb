@@ -2,7 +2,7 @@
 <html>
   <head>
     
-  	<title>To Bee Blog</title>
+  	<title>To Bee Shop</title>
 	
 	   <%= stylesheet_link_tag    'store_index', media: 'all', 'data-turbolinks-track'=> "reload" %>
 
@@ -37,7 +37,7 @@
       <a> <%= link_to "Chat", conversations_path %></a>
       <a> <%= link_to "Forum", forum_path %></a>
       <a> <%= link_to "Shop", shop_path, :class=>"active" %></a>
-      <a> <%= link_to "Upload", upload_path %></a>
+      <a> <%= link_to "Upload", "upload#index" %></a>
     </div> 
 
     <%= link_to root_path do %>

@@ -5,7 +5,7 @@ class User < ApplicationRecord
   belongs_to :role, optional: true
   has_one :profile_picture
   has_one :avatar, through: :profile_picture
-  has_many :uploads
+  
 
   
 

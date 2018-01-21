@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Upload to your personal page</title>
+<title>To Bee</title>
 <%= stylesheet_link_tag    'personal_page', media: 'all', 'data-turbolinks-track'=> "reload" %>
 <script>
 
@@ -18,7 +18,7 @@
       <a> <%= link_to "Chat", conversations_path  %></a>
       <a> <%= link_to "Forum", forum_path %></a>
       <a> <%= link_to "Shop", shop_path %></a>
-      <a> <%= link_to "Upload", upload_path, :class=>"active" %></a>
+      <a> <%= link_to "Upload", "upload#index", :class=>"active" %></a>
   </div> 
 
   <%= link_to root_path do %>

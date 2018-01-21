@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>To Bee Upload</title>
 <html>
 	<head>
 		<meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
@@ -21,7 +22,7 @@
 	      <a> <%= link_to "Chat", conversations_path %></a>
 	      <a> <%= link_to "Forum", forum_path %></a>
 	      <a> <%= link_to "Shop", shop_path %></a>
-	      <a> <%= link_to "Upload", "", :class=>"active" %></a>
+	      <a> <%= link_to "Upload", "upload#index", :class=>"active" %></a>
 	  </div> 
 
 	  

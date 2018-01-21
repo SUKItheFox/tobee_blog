@@ -8,7 +8,7 @@ class UploadController < ApplicationController
     @upload = Upload.new(upload_params)
     
     if @upload.save
-      redirect_to upload_path, :notice => "Thanks for your upload!"
+      redirect_to @upload, :notice => "Thanks for your upload!"
     else
       redirect_to root_path, :notice => "Something went wrong!"
     end 

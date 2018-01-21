@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>To Bee Chat</title>
     <meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
     <%= stylesheet_link_tag    'user_index', media: 'all', 'data-turbolinks-track'=> "reload" %>
   </head> 
@@ -13,7 +14,7 @@
           <a> <%= link_to "Chat", conversations_path ,:class=>"active" %></a>
           <a> <%= link_to "Forum", forum_path %></a>
           <a> <%= link_to "Shop", shop_path %></a>
-          <a> <%= link_to "Upload", upload_path %></a>
+          <a> <%= link_to "Upload", "upload#index" %></a>
       </div> 
 
         
