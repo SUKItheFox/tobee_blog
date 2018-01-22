@@ -1,0 +1,1 @@
+$(document).on("scroll",function(){$(document).scrollTop()>=130?$("#sidebar_beehive_slide_in").fadeOut():$("#sidebar_beehive_slide_in").fadeIn()});

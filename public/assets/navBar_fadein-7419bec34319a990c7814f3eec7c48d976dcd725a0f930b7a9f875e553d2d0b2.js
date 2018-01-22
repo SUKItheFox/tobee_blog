@@ -1,0 +1,1 @@
+$(document).on("scroll",function(){$(document).scrollTop()>=130?$("#category_slides_in").fadeOut():$("#category_slides_in").fadeIn()});

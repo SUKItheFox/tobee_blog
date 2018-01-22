@@ -1,0 +1,157 @@
+/* line 1, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+.user_container {
+  background: url("personal page.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Cutive Mono';
+  width: 100%;
+}
+/* line 10, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+.user_container #sidebar {
+  display: none;
+}
+/* line 14, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+.user_container #sidebar_right {
+  display: none;
+}
+/* line 17, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+.user_container #header {
+  display: none;
+}
+
+/* line 25, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+.vertical-menu {
+  width: 13vw;
+  margin-left: 1vw;
+  margin-top: 9.5vh;
+  z-index: 95;
+}
+
+/* line 33, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+.vertical-menu a {
+  color: black;
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 2vw;
+  line-height: 9vh;
+}
+
+/* line 42, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+.vertical-menu a:hover {
+  color: #ffffff;
+}
+
+/* line 47, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+.vertical-menu a.active {
+  color: #ffffff;
+}
+
+/* line 53, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+#home_logo {
+  position: absolute;
+  margin-top: -54vh;
+  margin-left: 65.5vw;
+}
+/* line 59, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+#home_logo img {
+  position: absolute;
+  z-index: 95;
+  img-shadow: 10px 10px 5px white;
+  -webkit-filter: drop-shadow(2px 1px 1px rgba(255, 255, 255, 0.7));
+  filter: drop-shadow(3px 3px 2px rgba(255, 255, 255, 0.7));
+}
+
+/* line 69, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+.ui_buttons {
+  position: absolute;
+  float: right;
+  margin-left: -0.5vw;
+  bottom: 17vh;
+  z-index: 100;
+}
+/* line 76, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+.ui_buttons img {
+  width: 5vh;
+}
+
+/* line 81, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+.ui_buttons img:active {
+  color: #ffffff;
+  border: 2px outset white;
+}
+
+/* line 86, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+#ui_personal_icon {
+  position: absolute;
+  bottom: -1vh;
+  left: -11vw;
+  z-index: 90;
+}
+
+/* line 95, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+#ui_avatar {
+  position: absolute;
+  bottom: 25vh;
+  left: 13vw;
+  z-index: 90;
+}
+
+/* line 105, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+#background_container {
+  display: block;
+  margin-left: 21vw;
+  margin-top: -28vh;
+  height: 45vh;
+  width: 45vw;
+}
+/* line 112, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+#background_container .user_content {
+  margin-top: 9vh;
+}
+/* line 117, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+#background_container .personal_image {
+  border: 1px solid #d9d9d9;
+  width: auto;
+  height: 25vh;
+}
+
+/* line 124, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+.btn-oldschool {
+  margin-left: 21vw;
+  margin-top: -40vh;
+  color: black;
+  width: 0.5vw;
+  height: 0.3vh;
+  border: 2px outset white;
+  background: transparent;
+  padding: 0.5vh 0.5vw;
+  text-decoration: none;
+}
+
+/* line 135, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+.btn-oldschool:hover {
+  color: #00008B;
+  text-decoration: none;
+}
+
+/* line 139, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+.btn-oldschool:active {
+  border-style: inset;
+}
+
+/* line 145, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+.round-image-50 {
+  background-color: white;
+  border: 1px solid #d9d9d9;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  text-align: center;
+}
+/* line 155, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/user_show.css.scss */
+.round-image-50 img {
+  width: 100%;
+}

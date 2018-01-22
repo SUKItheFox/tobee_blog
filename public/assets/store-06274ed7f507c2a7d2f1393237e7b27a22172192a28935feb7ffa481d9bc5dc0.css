@@ -1,0 +1,546 @@
+/* line 3, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+body.store_body {
+  background-color: #FDFAA7;
+  top: 0vh;
+  width: 100%;
+}
+/* line 8, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+body.store_body #sidebar {
+  display: none;
+}
+/* line 12, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+body.store_body #sidebar_right {
+  display: none;
+}
+/* line 16, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+body.store_body #header {
+  display: none;
+}
+
+/* line 25, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+body.store_body, #slider, .wrap, .slide-content {
+  margin: 0;
+  padding: 0;
+  font-family: Cutive Mono;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* line 36, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.wrap {
+  position: relative;
+}
+
+/* line 41, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 48, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide1 {
+  background: url("product_organizer.png");
+}
+/* line 51, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide1 .slide-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 0vh;
+  left: 10vw;
+}
+/* line 57, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide1 .slide-content #logo {
+  position: absolute;
+  top: 7vh;
+}
+/* line 62, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide1 .slide-content #logo .shop_logo {
+  margin-left: 61vw;
+  z-index: 10;
+}
+/* line 70, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide1 .slide-content span {
+  font-size: 3vw;
+  color: #7F1824;
+  margin-top: 19vh;
+  margin-left: 35vw;
+}
+/* line 76, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide1 .slide-content p1 {
+  font-size: 1vw;
+  color: #000000;
+  margin-top: 49vh;
+  margin-left: 57vw;
+}
+/* line 83, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide1 .slide-content .shop_arrow {
+  position: absolute;
+  top: 86vh;
+  left: 48%;
+  background-color: transparent;
+  /* Add a background */
+  opacity: 1;
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  border-radius: 10px;
+  /* Rounded corners */
+}
+/* line 92, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide1 .slide-content .shop_arrow:hover {
+  background-color: #7F1824;
+  /* Add a background on hover */
+}
+/* line 97, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide1 .slide-content #product_info .photo_detail_1 {
+  position: absolute;
+  top: 100vh;
+  left: 20vw;
+}
+/* line 102, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide1 .slide-content #product_info .photo_detail_2 {
+  position: absolute;
+  top: 100vh;
+  left: 33.5vw;
+}
+/* line 107, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide1 .slide-content #product_info .photo_detail_3 {
+  position: absolute;
+  top: 125vh;
+  left: 20vw;
+}
+/* line 112, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide1 .slide-content #product_info .photo_detail_4 {
+  position: absolute;
+  top: 125vh;
+  left: 33.5vw;
+}
+/* line 118, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide1 .slide-content #product_info p2 {
+  position: absolute;
+  width: 46vw;
+  top: 100vh;
+  left: 46vw;
+}
+/* line 124, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide1 .slide-content #product_info p3 {
+  position: absolute;
+  width: 46vw;
+  top: 125vh;
+  left: 46vw;
+}
+/* line 130, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide1 .slide-content #product_info p4 {
+  position: absolute;
+  width: 46vw;
+  top: 155vh;
+  left: 46vw;
+  font-weight: 700;
+  font-size: 1vw;
+  font-style: italic;
+}
+
+/* line 142, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide2 {
+  background-image: url("product_shirt.png");
+}
+/* line 144, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide2 .slide-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 0vh;
+  left: 10vw;
+}
+/* line 150, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide2 .slide-content #logo {
+  position: absolute;
+  top: 0vh;
+}
+/* line 155, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide2 .slide-content #logo .shop_logo {
+  margin-left: 62vw;
+  z-index: 10;
+}
+/* line 162, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide2 .slide-content span {
+  font-size: 3vw;
+  color: #7F1824;
+  margin-top: 7vh;
+  margin-left: 30vw;
+}
+/* line 168, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide2 .slide-content p1 {
+  font-size: 1vw;
+  color: #000000;
+  margin-top: 67vh;
+  margin-left: 53vw;
+}
+/* line 175, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide2 .slide-content .shop_arrow {
+  position: absolute;
+  top: 86vh;
+  left: 48%;
+  background-color: transparent;
+  /* Add a background */
+  opacity: 1;
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  border-radius: 10px;
+  /* Rounded corners */
+}
+/* line 184, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide2 .slide-content .shop_arrow:hover {
+  background-color: #7F1824;
+  /* Add a background on hover */
+}
+/* line 189, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide2 .slide-content #product_info .photo_detail_1 {
+  position: absolute;
+  top: 100vh;
+  left: 20vw;
+}
+/* line 194, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide2 .slide-content #product_info .photo_detail_2 {
+  position: absolute;
+  top: 100vh;
+  left: 33.5vw;
+}
+/* line 199, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide2 .slide-content #product_info .photo_detail_3 {
+  position: absolute;
+  top: 125vh;
+  left: 20vw;
+}
+/* line 204, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide2 .slide-content #product_info .photo_detail_4 {
+  position: absolute;
+  top: 125vh;
+  left: 33.5vw;
+}
+/* line 210, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide2 .slide-content #product_info p2 {
+  position: absolute;
+  width: 46vw;
+  top: 100vh;
+  left: 46vw;
+}
+/* line 216, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide2 .slide-content #product_info p3 {
+  position: absolute;
+  width: 46vw;
+  top: 125vh;
+  left: 46vw;
+}
+/* line 222, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide2 .slide-content #product_info p4 {
+  position: absolute;
+  width: 46vw;
+  top: 155vh;
+  left: 46vw;
+  font-weight: 700;
+  font-size: 1vw;
+  font-style: italic;
+}
+
+/* line 234, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide3 {
+  background-image: url("product_patch.png");
+}
+/* line 236, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide3 .slide-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 0vh;
+  left: 10vw;
+}
+/* line 242, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide3 .slide-content #logo {
+  position: absolute;
+}
+/* line 246, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide3 .slide-content #logo .shop_logo {
+  margin-left: 60vw;
+  margin-top: 20vh;
+  z-index: 10;
+}
+/* line 254, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide3 .slide-content span {
+  font-size: 3vw;
+  color: #7F1824;
+  margin-top: 27vh;
+  margin-left: 39vw;
+}
+/* line 260, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide3 .slide-content p1 {
+  font-size: 1vw;
+  color: #000000;
+  margin-top: 42vh;
+  margin-left: 46vw;
+}
+/* line 267, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide3 .slide-content .shop_arrow {
+  position: absolute;
+  top: 86vh;
+  left: 48%;
+  background-color: transparent;
+  /* Add a background */
+  opacity: 1;
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  border-radius: 10px;
+  /* Rounded corners */
+}
+/* line 276, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide3 .slide-content .shop_arrow:hover {
+  background-color: #7F1824;
+  /* Add a background on hover */
+}
+/* line 282, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide3 .slide-content #product_info .photo_detail_1 {
+  position: absolute;
+  top: 100vh;
+  left: 20vw;
+}
+/* line 287, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide3 .slide-content #product_info .photo_detail_2 {
+  position: absolute;
+  top: 100vh;
+  left: 33.5vw;
+}
+/* line 292, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide3 .slide-content #product_info .photo_detail_3 {
+  position: absolute;
+  top: 125vh;
+  left: 20vw;
+}
+/* line 297, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide3 .slide-content #product_info .photo_detail_4 {
+  position: absolute;
+  top: 125vh;
+  left: 33.5vw;
+}
+/* line 303, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide3 .slide-content #product_info p2 {
+  position: absolute;
+  width: 46vw;
+  top: 100vh;
+  left: 46vw;
+}
+/* line 309, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide3 .slide-content #product_info p3 {
+  position: absolute;
+  width: 46vw;
+  top: 125vh;
+  left: 46vw;
+}
+/* line 315, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.slide3 .slide-content #product_info p4 {
+  position: absolute;
+  width: 46vw;
+  top: 155vh;
+  left: 46vw;
+  font-weight: 700;
+  font-size: 1vw;
+  font-style: italic;
+}
+
+/* line 329, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* line 339, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+#arrow-left {
+  border-width: 30px 40px 30px 0;
+  border-color: transparent #fff transparent transparent;
+  left: 0;
+  margin-left: 30px;
+}
+
+/* line 346, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+#arrow-right {
+  border-width: 30px 0 30px 40px;
+  border-color: transparent transparent transparent #fff;
+  right: 0;
+  margin-right: 30px;
+}
+
+/* line 355, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.product_form {
+  background-color: #FDFAA7;
+}
+/* line 358, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.product_form #sidebar {
+  display: none;
+}
+/* line 362, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.product_form #sidebar_right {
+  display: none;
+}
+/* line 365, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.product_form #header {
+  display: none;
+}
+
+/* line 369, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.user_container {
+  background: url("personal page.png") no-repeat center center fixed;
+  background-size: cover;
+}
+/* line 376, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.user_container #sidebar {
+  display: none;
+}
+/* line 380, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.user_container #sidebar_right {
+  display: none;
+}
+/* line 383, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.user_container #header {
+  display: none;
+}
+
+/* line 388, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.vertical-menu {
+  width: 13vw;
+  margin-left: -2vw;
+  margin-top: -9vh;
+  z-index: 95;
+}
+
+/* line 396, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.vertical-menu {
+  width: 13vw;
+  margin-left: 1vw;
+  margin-top: 9.5vh;
+  z-index: 95;
+}
+
+/* line 404, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.vertical-menu a:hover {
+  color: #ffffff;
+}
+
+/* line 409, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.vertical-menu a.active {
+  color: #ffffff;
+}
+
+/* line 414, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+#home_logo {
+  position: absolute;
+  margin-top: -54vh;
+  margin-left: 65.5vw;
+}
+/* line 420, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+#home_logo img {
+  position: absolute;
+  z-index: 95;
+  img-shadow: 10px 10px 5px white;
+  -webkit-filter: drop-shadow(2px 1px 1px rgba(255, 255, 255, 0.7));
+  filter: drop-shadow(3px 3px 2px rgba(255, 255, 255, 0.7));
+}
+
+/* line 431, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.wrapper {
+  width: 60%;
+  max-width: 1140px;
+  margin: 0 auto;
+  border: 5px solid outset black;
+}
+
+/* line 438, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 443, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 449, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+#products {
+  background: transparent;
+  padding: 2em 5%;
+  border-radius: .5em;
+  border: px solid outset black;
+}
+/* line 454, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+#products .product {
+  margin: 1em 0;
+  padding: 1em 0;
+  border-bottom: 1px solid #D1d1d1;
+}
+/* line 459, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+#products .product .title {
+  margin: 0;
+}
+/* line 461, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+#products .product .title a {
+  color: #397CAC;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 1.25rem;
+}
+/* line 468, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+#products .product .date {
+  margin-top: .25rem;
+  font-size: 0.9rem;
+  color: #B2BAC2;
+}
+
+/* line 476, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+.button {
+  color: #7F1824;
+  border: 1px solid outset #397CAC;
+  padding: .5em 1em;
+  border-radius: 0.2em;
+  text-decoration: none;
+  margin-right: 2%;
+}
+
+/* line 485, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+#product_content {
+  background: white;
+  padding: 2em 5%;
+  border-radius: .5em;
+}
+/* line 489, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+#product_content h1 {
+  font-weight: 100;
+  font-size: 2em;
+  color: #000000;
+  margin-top: 0;
+}
+/* line 496, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/store.scss */
+#product_content p {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.5;
+}

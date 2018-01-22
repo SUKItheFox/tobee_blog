@@ -1,0 +1,67 @@
+/* line 1, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/personal_page.css.scss */
+.user_container {
+  background: url("personal page.png") no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+}
+/* line 8, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/personal_page.css.scss */
+.user_container #sidebar {
+  display: none;
+}
+/* line 12, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/personal_page.css.scss */
+.user_container #sidebar_right {
+  display: none;
+}
+/* line 15, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/personal_page.css.scss */
+.user_container #header {
+  display: none;
+}
+
+/* line 20, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/personal_page.css.scss */
+#home_logo {
+  position: absolute;
+  margin-top: -54vh;
+  margin-left: 65.5vw;
+}
+/* line 26, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/personal_page.css.scss */
+#home_logo img {
+  position: absolute;
+  z-index: 95;
+  img-shadow: 10px 10px 5px white;
+  -webkit-filter: drop-shadow(2px 1px 1px rgba(255, 255, 255, 0.7));
+  filter: drop-shadow(3px 3px 2px rgba(255, 255, 255, 0.7));
+}
+
+/* line 35, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/personal_page.css.scss */
+.vertical-menu {
+  width: 13vw;
+  margin-left: 1vw;
+  margin-top: 9.5vh;
+  z-index: 95;
+}
+
+/* line 43, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/personal_page.css.scss */
+.vertical-menu a {
+  color: black;
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 2vw;
+  line-height: 9vh;
+}
+
+/* line 52, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/personal_page.css.scss */
+.vertical-menu a:hover {
+  color: #ffffff;
+}
+
+/* line 57, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/personal_page.css.scss */
+.vertical-menu a.active {
+  color: #ffffff;
+}
+
+/* line 61, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/personal_page.css.scss */
+#background_container {
+  display: block;
+  margin-left: 280px;
+}
