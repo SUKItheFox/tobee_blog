@@ -34,11 +34,11 @@ Rails.application.routes.draw do
   resources :posts do
   	resources :comments
   	resources :about
-    resources :users
+    
       	
   end
 
-  resources :users
+ 
   	
   root "posts#index"
 
