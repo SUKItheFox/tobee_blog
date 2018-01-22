@@ -16,10 +16,12 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 #Line for create.js.erb
 Rails.application.config.assets.precompile += %w( create.js.erb )
 
-#Line for chat.js
-Rails.application.config.assets.precompile += %w( chat.js )
+
 #Line for users.js
 Rails.application.config.assets.precompile += %w( users.js )
+
+#Line for tinymce.js
+Rails.application.config.assets.precompile += %w( tinymce.js )
 
  
 
@@ -93,8 +95,7 @@ Rails.application.config.assets.precompile += %w( user_show.css.scss )
 Rails.application.config.assets.precompile += %w( about.css )
 #Css for personal_page.html.erb
 Rails.application.config.assets.precompile += %w( personal_page.css.scss )
-#Css for chat.html.erb
-Rails.application.config.assets.precompile += %w( chat.css )
+
 
 
 

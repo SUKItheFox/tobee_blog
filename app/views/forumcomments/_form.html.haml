@@ -1,3 +1,14 @@
-= simple_form_for([@forumpost, @forumpost.forumcomments.build]) do |f|
-  = f.input :forumcomment
-  = f.submit
+!!!
+%html
+%head
+    %title To Bee Forum
+    = stylesheet_link_tag    'forum', media: 'all', 'data-turbolinks-track' => true
+    %link{ rel: "stylesheet", href: "http://fonts.googleapis.com/css?family=Lato:300,400,700", type: "text/css"}
+    %link{:rel => "stylesheet", :href => "http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"}/
+    = csrf_meta_tags
+
+%body.forum_form  
+
+    = simple_form_for([@forumpost, @forumpost.forumcomments.build]) do |f|
+        = f.input :forumcomment, :label => "Comment"
+        = f.submit "Post Comment"

@@ -1,7 +1,17 @@
+!!!
+%html
+%head
+	%title To Bee Forum
+	= stylesheet_link_tag    'forum', media: 'all', 'data-turbolinks-track' => true
+	%link{ rel: "stylesheet", href: "http://fonts.googleapis.com/css?family=Lato:300,400,700", type: "text/css"}
+	%link{:rel => "stylesheet", :href => "http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"}/
+	= csrf_meta_tags
+
 .forumcomment.clearfix
 	.content
 		%p.forumcomment_content= forumcomment.forumcomment
 		%p.forumcomment_author= forumcomment.user.username
 	.buttons
-		= link_to "Edit", edit_forumpost_forumcomment_path(forumcomment.forumpost, forumcomment)
-		= link_to "Delete", [forumcomment.forumpost, forumcomment], method: :delete, data: { confirm: "Are you sure?" }	
+		- unless forumcomment.user != current_user 
+			= link_to "Edit", edit_forumpost_forumcomment_path(forumcomment.forumpost, forumcomment)
+			= link_to "Delete", [forumcomment.forumpost, forumcomment], method: :delete, data: { confirm: "Are you sure?" }

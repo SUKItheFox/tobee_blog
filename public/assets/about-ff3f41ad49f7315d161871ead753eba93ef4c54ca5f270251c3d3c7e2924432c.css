@@ -1,0 +1,36 @@
+/* line 1, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/about.css.scss */
+body {
+  background-color: #ffffff;
+  top: 0px;
+}
+
+/* line 6, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/about.css.scss */
+#about_container {
+  padding: 3vw 3vh;
+}
+/* line 9, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/about.css.scss */
+#about_container #profile_image {
+  width: 20%;
+  float: left;
+  margin-right: 2vw;
+}
+/* line 13, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/about.css.scss */
+#about_container #profile_image img {
+  width: 100%;
+  border-radius: 0.35em;
+}
+/* line 19, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/about.css.scss */
+#about_container #content h1 {
+  font-weight: 500;
+}
+/* line 22, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/about.css.scss */
+#about_container #content p {
+  font-size: 2vh;
+  line-height: 1.75;
+}
+/* line 26, /home/bumblebee/tobee_blog/blog/app/assets/stylesheets/about.css.scss */
+#about_container #content a {
+  color: #33acb7;
+  font-weight: 700;
+  text-decoration: none;
+}

@@ -20,7 +20,6 @@
 //= require bootstrap-sprockets
 //= require jquery
 //= require vanilla-ujs
-//= require chat
 //= require turbolinks
 //= require_tree .
 //= require tinymce

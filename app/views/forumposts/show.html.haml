@@ -5,7 +5,6 @@
 	= stylesheet_link_tag    'forum', media: 'all', 'data-turbolinks-track' => true
 	%link{ rel: "stylesheet", href: "http://fonts.googleapis.com/css?family=Lato:300,400,700", type: "text/css"}
 	%link{:rel => "stylesheet", :href => "http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"}/
-	= javascript_include_tag 'application', 'data-turbolinks-track' => false
 	= csrf_meta_tags
 
 %body.forum_form
@@ -26,9 +25,9 @@
 			%hr/
 			%br/
 
-
-	= link_to "Edit", edit_forumpost_path(@forumpost)
-	= link_to "Delete", forumpost_path(@forumpost), method: :delete, data: { confirm: "Are you sure about the 'delete'?"}
+	- unless @forumpost.user != current_user
+		= link_to "Edit", edit_forumpost_path(@forumpost)
+		= link_to "Delete", forumpost_path(@forumpost), method: :delete, data: { confirm: "Are you sure about the 'delete'?"}
 	= link_to "Forum Home", forum_path
 
 	.wrapper

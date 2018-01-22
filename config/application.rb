@@ -30,6 +30,7 @@ module Blog
     config.load_defaults 5.1
 
     config.assets.precompile += %w( tinymce.min.js )
+    config.assets.precompile += %w( tinymce.js )
     config.assets.precompile += %w( scroll_top_arrow.js )
     #Line for logo.js
     config.assets.precompile += %w( logo.js )

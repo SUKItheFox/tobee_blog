@@ -2,7 +2,7 @@ class ForumcommentsController < ApplicationController
 
 	def create
 		@forumpost = Forumpost.find(params[:forumpost_id])
-		@forumcomment = @forumpost.forumcomments.create(params[:forumcomment].permit(:forumcomment))
+		@forumcomment = @forumpost.forumcomments.create(params[:forumcomment].permit(:forumcomment, :user_id, :name, :body, :username))
 		@forumcomment.user_id = current_user.id if current_user
 		@forumcomment.save
 
