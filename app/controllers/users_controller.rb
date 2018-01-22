@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
   def create
 
-    @user = User.new(user_params)
+    @user = User.new(user[:newuser])
     @user.add_role(:newuser)
 
       if @user.save
