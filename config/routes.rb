@@ -33,12 +33,11 @@ Rails.application.routes.draw do
   get 'users/:id' => 'users#show', as: :user
   resources :posts do
   	resources :comments
-  	resources :about
-    
+  	resources :about    
       	
   end
 
- 
+  resources :users
   	
   root "posts#index"
 
