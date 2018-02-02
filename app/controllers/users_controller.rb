@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     @user.add_role(:newuser)
 
       if @user.save
-        redirect_to users_path, :notice => "Welcome to To Bee family!"
+        redirect_to root_path, :notice => "Welcome to To Bee family!"
       else
         render "new"
       end
