@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(version: 20180121115052) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "reset_password_token"
     t.index ["email"], name: "index_admins_on_email", unique: true
-    t.index [nil], name: "index_admins_on_reset_password_token", unique: true
   end
 
   create_table "avatars", force: :cascade do |t|
